@@ -1,0 +1,81 @@
+.pshow-gallery .image-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.pshow-gallery .big-box {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+}
+
+.pshow-gallery .big-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pshow-gallery .small-boxes {
+  display: flex;
+  gap: 20px;
+}
+
+.pshow-gallery .small-boxes img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.pshow-gallery .small-boxes img:hover {
+  border: 2px solid #000;
+  /* Adds hover effect */
+}
+
+.zoomed-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoomed-image img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.pshow-dropdown .form-select {
+  border: 1px solid #1E1E1E;
+  padding: 3px 15px;
+  border-radius: 0px;
+}
+
+.p-show-bg-1 {
+  background-image: url("../assets/images/1-look.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25vh;
+  position: relative;
+}
+
+.p-show-bg-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+
+

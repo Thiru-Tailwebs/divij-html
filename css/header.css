@@ -1,0 +1,158 @@
+
+.small-header {
+  background-color: #737373;
+  /* Light background */
+}
+
+.small-header .contact-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.logo-tw {
+  width: 50%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+
+.left-nav-items .nav-link {
+  margin-right: 30px;
+}
+
+.right-nav-items .nav-link {
+  margin-left: 30px;
+}
+
+.navbar-nav .nav-link {
+  color: #222222;
+  /* Text color */
+  transition: color 0.3s;
+  /* Transition for hover effect */
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 11;
+}
+
+.main-header hr {
+  border: none;
+  height: 1.5px;
+  background-color: #A4A4A4;
+  /* Divider line color */
+}
+
+/* Hamburger Icon Color */
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+  /* Hamburger icon color */
+}
+
+.search-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-box {
+  position: absolute;
+  right: calc(100% + 0px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  border: 1px solid #ddd;
+  padding: 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.search-box.active {
+  width: 250px;
+  opacity: 1;
+  padding: 0 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul li:hover>ul {
+  display: block;
+}
+
+nav ul li:hover .nav-link {
+  border-bottom: 3px solid #010101D4;
+}
+
+nav ul li ul a {
+  font-weight: 300;
+  color: #000000;
+  font-size: 16px;
+  margin: 10px 0px;
+  text-decoration: none;
+}
+
+nav ul li ul a:hover {
+  text-decoration: underline;
+}
+
+nav ul ul {
+  background: #FFFFFF;
+  padding: 40px;
+  text-align: center;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: auto;
+  left: 0px;
+}
+
+.nav-img-position {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  text-align: left;
+  background: #0000004D;
+  width: -webkit-fill-available;
+  padding: 7px;
+}
+
+/* Responsive Styling for Mobile Views */
+@media (max-width: 576px) {
+  
+
+}
+
+/* Tablet (iPad Air/Pro) */
+@media (min-width: 768px) {
+  
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+  
+}

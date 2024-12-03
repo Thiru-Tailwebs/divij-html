@@ -1,0 +1,30 @@
+.garment-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.garment-image-container img {
+  max-width: 100%;
+  display: block;
+}
+
+.garment-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000B5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.garment-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+

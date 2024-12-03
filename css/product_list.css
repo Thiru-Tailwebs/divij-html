@@ -1,0 +1,355 @@
+.p-list-bg {
+  background-image: url("../assets/images/p-list-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+}
+
+.p-list-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+.p-list-bg1 {
+  background-image: url("../assets/images/p-list-banner1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+
+.p-text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* General Styles */
+.filter-section .filter-btn {
+  border: none;
+  background: none;
+  text-align: left;
+  position: relative;
+  padding-right: 30px;
+  /* Adjust padding to create space for arrow */
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #131313;
+}
+
+.filter-sticky {
+  position: sticky;
+  top: 20px; /* Adjust to control the distance from the top */
+  z-index: 10; /* Ensure it's above other content */
+  max-height: 100vh; /* Make sure it doesn't overflow */
+  overflow-y: auto; /* Add scroll if the content overflows */
+  padding-right: 10px; /* Optional for better spacing */
+}
+
+/* Arrow styles */
+/* Arrow styles */
+.filter-section .filter-btn .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(360deg);
+  /* Arrow pointing to the right */
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/images/product-arrow-right.png');
+  /* Change this to your right arrow image */
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+/* When the dropdown is open (expanded), rotate the arrow upwards */
+.filter-section .filter-btn[aria-expanded="true"] .arrow {
+  transform: translateY(-50%) rotate(0deg);
+  /* Arrow pointing upwards */
+  background-image: url('../assets/images/product-arrow-up.png');
+  /* Change this to your up arrow image */
+}
+
+/* Remove padding and background for collapse */
+.filter-section .collapse {
+  padding-left: 10px;
+  background: none;
+}
+
+.filter-section .form-check-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #3a3a3a;
+}
+
+/* Ensure that the search input and sort dropdown stay in place */
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-input-wrapper {
+  position: absolute;
+  top: 0;
+  right: 100%;
+    /* Position the input to the left of the search button */
+  width: 0;
+  /* Initially hidden */
+  overflow: hidden;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  /* Full width of the wrapper */
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-wrapper.active .search-input-wrapper {
+  width: 250px;
+  /* Expand the input to this width when active */
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hide the border for the sort dropdown */
+.no-border {
+  border: none;
+  background-color: transparent;
+  appearance: none;
+}
+
+.product-container {
+  position: relative;
+  /* Adjust as needed */
+  height: 300px;
+  /* Adjust as needed */
+}
+
+.product-container .slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.product-container .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 1;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent overflow */
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  /* Use visibility instead of display */
+  opacity: 0;
+  /* Set opacity to fade in */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for visibility */
+}
+
+.product-slider .slider-item {
+  height: 100%;
+  width: 100%;
+}
+
+.product-slider .slider-item img {
+  width: 100%;
+}
+
+.buy-now {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 10px 20px;
+  background-color: #F1F1F1;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  /* Hidden initially */
+  opacity: 0;
+  /* Set opacity for smooth fade-in */
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.image-wrapper:hover .product-image {
+  opacity: 0;
+}
+
+.image-wrapper:hover .product-slider,
+.image-wrapper:hover .buy-now {
+  visibility: visible;
+  opacity: 1;
+  /* Smooth fade-in for slider and button */
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #fff;
+  border: 0.35px solid #A1A1A1;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  /* Position above the button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* General styles for pagination */
+.product-pagination {
+  font-family: "Nunito", sans-serif;
+  /* Replace with your desired font-family */
+}
+
+/* Style for the pagination numbers (no borders) */
+.product-pagination .page-link {
+  color: #222222;
+  /* Number text color */
+  background-color: transparent;
+  /* No background color */
+  border: none;
+  /* No border for numbers */
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  /* Spacing between numbers */
+}
+
+/* Style for the navigation buttons (Next and Last) */
+.product-pagination .page-item:last-child .page-link,
+/* Last button */
+.product-pagination .page-item:nth-last-child(2) .page-link {
+  /* Next button */
+  border: 1px solid #222222;
+  /* Thicker black border for buttons */
+  color: #222222;
+  /* Button text color */
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 30px;
+  /* No background color for buttons */
+}
+
+/* Hover effect for the pagination numbers */
+.product-pagination .page-link:hover {
+  color: #222222;
+  /* Hover text color for numbers */
+  background-color: transparent;
+  /* No background color on hover */
+  border: none;
+  /* Keep no border for numbers */
+}
+
+/* Hover effect for the Next and Last buttons */
+.product-pagination .page-item:last-child .page-link:hover,
+.product-pagination .page-item:nth-last-child(2) .page-link:hover {
+  color: #222222;
+  /* Hover text color */
+  background-color: transparent;
+  /* No background color */
+  border-color: #222222;
+  /* Keep black border */
+}
+
+/* Style for the active pagination number */
+.product-pagination .page-item.active .page-link {
+  color: #ffffff;
+  /* Active text color */
+  background-color: #000000;
+  /* Active background color */
+  border-color: #000000;
+  /* Active border color (only for active) */
+}
+
+/* Style for disabled pagination buttons */
+.product-pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  /* Disabled text color */
+  background-color: transparent;
+  /* No background color */
+  border: none;
+  /* No border for disabled numbers */
+}
+
+.product-pagination .page-item:last-child .page-link {
+  border-radius: 0px;
+}
+
+.product-pagination .page-link:focus {
+  box-shadow: none;
+}

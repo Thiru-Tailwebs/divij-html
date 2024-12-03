@@ -1,0 +1,652 @@
+/* text-styles */
+
+.text-style-1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+}
+
+.text-style-2 {
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  font-size: 30px;
+  color: #000000;
+}
+
+.text-style-3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.text-style-4 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #131313;
+}
+
+.text-style-5 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* font-size */
+
+.fs-12-tw {
+  font-size: 12px;
+}
+
+.fs-14-tw {
+  font-size: 14px;
+}
+
+.fs-16-tw {
+  font-size: 16px;
+}
+
+.fs-18-tw {
+  font-size: 18px;
+}
+
+.fs-20-tw {
+  font-size: 20px;
+}
+
+.fs-22-tw {
+  font-size: 22px;
+}
+
+.fs-24-tw {
+  font-size: 24px;
+}
+
+.fs-25-tw {
+  font-size: 25px;
+}
+
+.fs-34-tw {
+  font-size: 34px;
+}
+
+.fs-40-tw {
+  font-size: 40px;
+}
+
+.fs-70-tw {
+  font-size: 60px;
+}
+
+/* font-weight */
+
+.fw-400-tw {
+  font-weight: 400;
+}
+
+.fw-600-tw {
+  font-weight: 600;
+}
+
+/* color */
+
+.white-tw {
+  color: #ffffff;
+}
+
+.black-1-tw {
+  color: #3A3A3A;
+}
+
+.black-2-tw {
+  color: #131313;
+}
+
+.black-3-tw {
+  color: #1E1E1E;
+}
+
+.black-4-tw {
+  color: #000000;
+}
+
+.black-5-tw {
+  color: #222222;
+}
+
+.blue-1-tw {
+  color: #2EB0FA;
+}
+
+.grey-1-tw {
+  color: #737373;
+}
+
+.grey-2-tw {
+  color: #ABABAB;
+}
+
+.grey-3-tw {
+  color: #818181;
+}
+
+.grey-4-tw {
+  color: #A4A4A4;
+}
+
+.grey-5-tw {
+  color: #757575;
+}
+
+.grey-6-tw {
+  color: #A3A3A3;
+}
+
+.red-tw {
+ color: #F83939;
+}
+
+.sandal-1-tw {
+  color: #A5845A;
+}
+
+/* bg-color */
+
+.bg-sandal-tw {
+  background-color: #FFF5E8;
+}
+
+.bg-sandal-tw-1 {
+  background-color: #F5F4F0;
+}
+
+.bg-white-1-tw {
+  background-color: #FAFAFA;
+}
+
+.bg-black-tw {
+  background-color: #000000;
+}
+
+.bg-blue-tw {
+  background-color: #0A206F;
+}
+
+.bg-black1-tw {
+  background-color: #131313;
+}
+
+.bg-black2-tw {
+  background-color: #0F0F0F;
+}
+
+.bg-black3-tw {
+  background-color: #171717;
+}
+
+.bg-grey-tw {
+  background-color: #D9D9D9
+}
+
+.bg-grey-tw-1 {
+  background-color: #F3F3F3;
+}
+
+.bg-grey-tw-2 {
+  background-color: #F8F8F8;
+}
+
+.bg-grey-tw-3 {
+  background-color: #737373;
+}
+
+.bg-green-tw {
+  background-color: #374957;
+}
+
+/* border-radius */
+
+.br-25 {
+  border-radius: 25px;
+}
+
+/* margin */
+
+.mt-10-tw {
+  margin-top: 10px;
+}
+
+.mt-15-tw {
+  margin-top: 15px;
+}
+
+.mt-20-tw {
+  margin-top: 20px;
+}
+
+.mt-30-tw {
+  margin-top: 30px;
+}
+
+.mt-50-tw {
+  margin-top: 50px;
+}
+
+.mt-70-tw {
+  margin-top: 70px;
+}
+
+.mt-90-tw {
+  margin-top: 90px;
+}
+
+.mt-25-em {
+  margin-top: 25em;
+}
+
+.mt--30 {
+  margin-top: -30px;
+}
+
+.mt--18em {
+  margin-top: -18em;
+}
+
+.my-50-tw {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.my-90-tw {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.mx-50-tw {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.mx-60-tw {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.ml-15-tw {
+  margin-left: 15px;
+}
+
+.ml-30-tw {
+  margin-left: 30px;
+}
+
+.mr-50-tw {
+  margin-right: 50px;
+}
+
+/* padding */
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.p-50 {
+  padding: 50px;
+}
+
+.p-80 {
+  padding: 80px;
+}
+
+.pt-30-tw {
+  padding-top: 30px;
+}
+
+.pt-50-tw {
+  padding-top: 50px;
+}
+
+.pr-5em {
+  padding-right: 5em;
+}
+
+.py-0-tw {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-70-tw {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.py-30-tw {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.py-50-tw {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.px-50-tw {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.padding-style-1 {
+  padding: 30px 20px !important;
+}
+
+.padding-style-2 {
+  padding: 50px 70px !important;
+}
+
+/* width */
+
+.w-80p-tw {
+  width: 80%;
+}
+
+.w-70p-tw {
+  width: 70%;
+}
+
+.w-50p-tw {
+  width: 50%;
+}
+
+.w-35p-tw {
+  width: 35%;
+}
+
+.w-30p-tw {
+  width: 30%;
+}
+
+.w-20p-tw {
+  width: 20%;
+}
+
+.w-13p-tw {
+  width: 13%;
+}
+
+.w-50px-tw {
+  width: 50px;
+}
+
+.w-60px-tw {
+  width: 60px;
+}
+
+.w-25px-tw {
+  width: 25px;
+}
+
+.w-20px-tw {
+  width: 20px;
+}
+
+/* height */
+
+.h-70vh-tw {
+  height: 70vh;
+} 
+
+.h-500-tw {
+  height: 500px;
+}
+
+.h-60px-tw {
+  height: 60px;
+}
+
+.h-25px-tw {
+  height: 25px;
+}
+
+.h-20px-tw {
+  height: 20px;
+}
+
+/* btn-styles */
+
+.btn-style-1 {
+  background-color: #A5845A;
+  border-radius: 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.btn-style-1:hover {
+  background-color: #A5845A;
+  color: #ffffff;
+}
+
+.btn-style-2 {
+  background-color: #ffffff;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+  padding: 15px 10px;
+}
+
+.btn-style-2:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-style-3 {
+  background-color: transparent;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 1px;
+  border: 1.5px solid #ffffff;
+}
+
+.btn-style-3:hover {
+  color: #ffffff;
+  border-radius: 1px;
+  border: 1.5px solid #ffffff;
+}
+
+.btn-style-4 {
+  background-color: #1E1E1E;
+  padding: 20px;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 0px;
+}
+
+.btn-style-4:hover {
+  color: #ffffff;
+}
+
+.btn-style-5 {
+  background-color: #131313;
+  border-radius: 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 15px 10px;
+}
+
+.btn-style-5:hover {
+  color: #FFFFFF;
+}
+
+/* card-styles */
+
+.card-style-1 {
+  background-color: #ffffff;
+  border: 0.5px solid #818181;
+  padding: 40px 20px 20px 20px;
+}
+
+.card-style-2 {
+  background-color: #A5845A;
+  border: 1px solid #A5845A;
+  padding: 30px 20px;
+}
+
+/* border-styles */
+
+.border-1-tw {
+  border-bottom: 1px solid #000000;
+}
+
+.border-2-tw {
+  border: 1px solid #C4C4C4
+}
+
+.border-3-tw {
+  border-top: 2px solid #131313;
+}
+
+.border-4-tw {
+  border-top: 1px solid #222222;
+}
+
+.border-5-tw {
+  border: 4px solid #A5845A;
+}
+
+.border-6-tw {
+  border-bottom: 0.6px solid #C4C4C4;
+}
+
+.border-bottom-1-tw {
+  border-bottom: 1px solid #1E1E1E;
+}
+
+.border-bottom-2-tw {
+  border-bottom: 1px solid #ffffff;
+}
+
+.border-style-1-tw {
+  border-right: 2px solid #A5845A;
+  height: 20px;
+}
+
+.border-right-1-tw {
+  border-right: 0.3px solid #000000;
+}
+
+/* position-styles */
+
+.position-style-1 {
+  position: absolute;
+  top: -12%;
+  /* Adjust this value to control how much of the image is outside */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-10 {
+  bottom: 10px;
+}
+
+.right-10 {
+  right: 10px;
+}
+
+/* other-styles */
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-through {
+  text-decoration: line-through;
+}
+
+.lh-normal {
+  line-height: normal;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.color-style {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.new-tag {
+  background-color: #91928f;
+  border-radius: 0px;
+  padding: 3px 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.new-tag-1 {
+  background-color: #FFFFFF;
+  border-radius: 0px;
+  padding: 3px 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #131313;
+}
+
+.full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.opacity-20p {
+  opacity: 20%;
+}
+
+.opacity-60p {
+  opacity: 60%;
+}
+
+
+
+
+

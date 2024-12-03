@@ -1,0 +1,92 @@
+.p-style-bg {
+  background-image: url("../assets/images/page_style_banner.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+
+.p-style-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+/* Ensure equal height for columns */
+.page-equal-height-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.page-full-height-image {
+  width: 100%;
+  height: 600px;
+  /* Ensures the image takes full height of the column */
+  object-fit: cover;
+}
+
+/* Overlay text */
+.page-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF99;
+  padding: 15px 80px;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+  width: 70%;
+}
+
+.page-overlay-text h2 {
+  font-size: 27px;
+  margin-bottom: 0px;
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  color: #000000;
+}
+
+.page-card-1 {
+  background-color: #FFF5E8;
+  padding: 30px;
+}
+
+.page-card-1 h5 {
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.page-card-1 p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6A6A6A;
+}
+
+.page-card-1 a{
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Flexbox adjustments for equal height cards and columns */
+.d-flex.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+

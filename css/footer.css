@@ -1,0 +1,10 @@
+#newsletterEmail {
+  border: none;
+  border-bottom: 1px solid #4b4b4b;
+  border-radius: 0px;
+}
+
+#newsletterEmail:focus {
+  color: #fff;
+  box-shadow: none;
+}

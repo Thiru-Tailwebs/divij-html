@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- slick-carosuel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/customize.css">
+
+  <title>Divij</title>
+</head>
+
+<body>
+
+  <!-- Small Header -->
+  <div class="small-header py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-right contact-text">Contact Us? <span class="ms-2 fw-400-tw">|</span> <span
+              class="ms-2 fw-400-tw"><a href="tel:+1-888-263-2406" class="white-tw">+1-888-263-2406</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Header -->
+  <header class="main-header py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- logo-tw -->
+        <div class="col-6 col-md-4">
+          <div class="logo-tw">
+            <a href="index.html">
+              <img src="assets/images/divij-logo.png" alt="logo-tw" class="img-fluid">
+            </a>
+          </div>
+        </div>
+  
+        <!-- Images and Hamburger Menu -->
+        <div class="col-6 col-md-8 d-flex justify-content-end align-items-center">
+          <div class="header-images d-flex align-items-center justify-content-end">
+            <img src="assets/images/user-icon.png" alt="Profile" class="w-13p-tw ms-3">
+            <img src="assets/images/store-icon.png" alt="Store" class="w-13p-tw ms-3">
+            <img src="assets/images/search-icon.png" alt="Search" class="w-13p-tw ms-3">
+          </div>
+          <!-- Hamburger Button -->
+          <div class="d-lg-none d-md-block ms-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <hr class="my-3">
+    <div class="container">
+      <!-- Navigation with Hamburger Menu -->
+      <nav class="navbar navbar-expand-lg py-0-tw">
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Left side Nav (Tailored, Shirts, etc.) -->
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 left-nav-items">
+            <li class="nav-item">
+              <a class="nav-link" href="product_list.html">Tailored</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product_show.html">Shirts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customize.html">Suits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trousers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blazers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vests</a>
+            </li>
+          </ul>
+  
+          <!-- Right side Nav (About Us, etc.) -->
+          <ul class="navbar-nav right-nav-items">
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page_style.html">Find Your Style</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Book an Appointment</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="custom-first-section"> 
+    <div class="d-flex">
+      <div class="bg-grey-tw-2 w-50">
+        <div class="container">
+          <div class="p-50">
+            <div class="d-flex align-items-center">
+              <!-- Dropdown converted to Select -->
+              <div class="dropdown custom-drop me-2 w-100">
+                <select class="form-select dropdown-toggle-customize" aria-label="Select an option">
+                  <option selected disabled>HEMRAJANI BUSINESS PRESENTS</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <!-- Save Button -->
+              <button class="btn btn-primary save-button">Save</button>
+            </div>
+            <div class="mt-50-tw">
+              <div class="d-flex justify-content-between align-items-center border-6-tw">
+                <div class="text-style-4 grey-3-tw py-4"> 
+                  Fabric
+                </div>
+                <div class="text-style-4 grey-3-tw">
+                  Cherry Bomb and Sky Blue checks
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw cursor-pointer" onclick="showSecondSection('collar')">
+                <div class="text-style-4 black-2-tw py-4">
+                  Collar
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Traditional Spread (2.875 x 1.75)
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw cursor-pointer" onclick="showSecondSection('cuff')">
+                <div class="text-style-4 black-2-tw py-4">
+                  Cuffs
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Single Button Rounded
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw cursor-pointer" onclick="showSecondSection('front')">
+                <div class="text-style-4 black-2-tw py-4">
+                  Front
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Placket Front
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw cursor-pointer">
+                <div class="text-style-4 black-2-tw py-4">
+                  Back
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Plain Back
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw cursor-pointer">
+                <div class="text-style-4 black-2-tw py-4">
+                  Pocket
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    No Pockets
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw cursor-pointer">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw">
+                <div class="text-style-4 black-2-tw py-4">
+                  Buttons
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Mother of Pearl Buttons
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw cursor-pointer">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw">
+                <div class="text-style-4 black-2-tw py-4">
+                  Monogram
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    None
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw cursor-pointer">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center border-6-tw">
+                <div class="text-style-4 black-2-tw py-4">
+                  Sizing
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="text-style-4 black-2-tw">
+                    Dress Shirt Sizing
+                  </div>
+                  <div class="ms-3">
+                    <img src="assets/images/cutom-right-arrow.png" class="w-25px-tw h-25px-tw cursor-pointer">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="text-style-4 black-2-tw py-4">
+                  More
+                </div>
+              </div>
+            </div>
+            <div class="mt-30-tw">
+              <div class="text-style-3 fs-16-tw">
+                Do you have any special Requests?
+              </div>
+              <div class="mt-20-tw">
+                <textarea class="form-control" id="specialInstructions" rows="4"
+                  placeholder="Special Instructions"></textarea>
+              </div>
+              <div class="d-flex align-items-center mt-20-tw">
+                <div>
+                  <img src="assets/images/custom-question.png" class="w-20px-tw h-20px-tw">
+                </div>
+                <div class="black-1-tw text-style-4 ms-3">
+                  Facing issues in Customization?
+                </div>
+                <div class="ms-2"> 
+                  <a href="" class="text-style-1 fs-16-tw blue-1-tw">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-50">
+        <div class="p-50">
+          <div class="d-flex align-items-center border-6-tw">
+            <div class="">
+              <img src="assets/images/custom-fibric.png" class="w-60px-tw h-60px-tw">
+            </div>
+            <div class="ml-30-tw">
+              <div class="text-style-4 black-1-tw"> 
+                The Verginia Sky Blue End to End
+              </div>
+              <div class="text-style-1 grey-3-tw fs-16-tw mt-1">
+                H-041201
+              </div>
+            </div>
+          </div>
+          <div class="mt-50-tw">
+            <div class="custom-image-container">
+              <img id="custom-main-image" src="assets/images/custom-big-img.png" alt="Big Image" class="custom-big-image">
+              <div class="custom-thumbnail-container">
+                <img src="assets/images/custom-small-img.png" alt="Thumbnail 1" class="custom-thumbnail active" onclick="changeImage('assets/images/custom-small-img.png', this)">
+                <img src="assets/images/custom-fibric.png" alt="Thumbnail 2" class="custom-thumbnail" onclick="changeImage('assets/images/custom-fibric.png', this)">
+              </div>
+              <div class="mt-20-tw text-style-4 black-3-tw">
+                HEMRAJANI PREMIUM COLLECTION
+              </div>
+            </div>
+          </div>
+          <div class="mt-50-tw">
+            <div class="bg-sandal-tw p-50">
+              <div class="row"> 
+                <div class="col-md-7">
+                  <div class="text-style-3 fs-18-tw black-3-tw">
+                    Actual Price :
+                  </div>
+                  <div class="mt-30-tw">
+                    <div class="text-style-3 fs-18-tw black-3-tw">
+                      Customisation charges:
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="text-right">
+                    <div class="text-style-4 fs-18-tw black-3-tw">
+                      $ 3150.00
+                    </div>
+                    <div class="mt-30-tw">
+                      <div class="text-style-4 fs-18-tw black-3-tw">
+                        $ 0.00
+                      </div>
+                    </div>
+                    <div class="mt-30-tw">
+                      <div class="border-bottom-1-tw">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-30-tw">
+                    <div class="d-flex justify-content-between align-items-center"> 
+                      <div class="text-style-4 fs-20-tw black-3-tw">
+                        Sub-total:
+                      </div>
+                      <div class="text-style-5 fs-20-tw black-3-tw">
+                        $ 3150.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-50-tw text-center">
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <a href="" class="btn btn-style-4 w-100">ADD TO BAG</a>
+                    </div>
+                  </div>
+                  <div class="col-md-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <section id="custom-second-section" style="display: none;">
+    <div class="d-flex">
+      <div class="w-50 p-50">
+        <div class="container-fluid">
+          <div class="d-flex cursor-pointer" onclick="hideSecondSection()">
+            <div class="me-3">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="text-style-1 fs-16-tw black-3-tw">
+              Back
+            </div>
+          </div>
+          <div class="row mt-20-tw">
+            <!-- Sidebar -->
+            <nav class="col-md-3">
+              <div class="customs-sidebar">
+                <ul class="nav flex-column" id="custom-tab-container">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#collar" id="collar-tab" data-bs-toggle="tab">Collar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#cuff" data-bs-toggle="tab">Cuffs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#front" data-bs-toggle="tab">Front</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#back" data-bs-toggle="tab">Back</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#pocket" data-bs-toggle="tab">Pocket</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#buttons" data-bs-toggle="tab">Buttons</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#monogram" data-bs-toggle="tab">Monogram</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#sizing" data-bs-toggle="tab">Sizing</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <!-- Main Content -->
+            <main class="col-md-9 customs-content">
+              <div class="tab-content">
+                <!-- Collar Tab -->
+                <div class="tab-pane fade show active" id="collar">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item border-right-1-tw">
+                      <a class="nav-link active" href="#collar-styles" data-bs-toggle="tab">Styles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#collar-sizes" data-bs-toggle="tab">Sizes</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="collar-styles">
+                      <div class="img-grid">
+                        <div class="img-item selected">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-1.jpg" alt="Traditional Tuxedo">
+                          <p>Traditional Tuxedo</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-2.jpg" alt="Casual Spread Collar">
+                          <p>Casual Spread Collar</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-3.jpg" alt="Bright Contrast 6/20x">
+                          <p>Bright Contrast 6/20x</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-4.jpg" alt="Traditional Button Down">
+                          <p>Traditional Button Down</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-5.jpg" alt="Exotic Spread Collar">
+                          <p>Exotic Spread Collar</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-6.jpg" alt="English Wide Spread">
+                          <p>English Wide Spread</p>
+                        </div>
+                        <div class="img-item">
+                          <div class="tick-icon"></div>
+                          <img src="assets/images/cusb-7.jpg" alt="English Cutaway">
+                          <p>English Cutaway</p>
+                        </div>
+                        <div class="img-item">
+                          <!-- <button class="btn btn-outline-secondary w-100">More Options</button> -->
+                           <div class="m-auto d-flex justify-content-center align-items-center h-100">
+                            <a class="text-style-1" href="#">
+                              MORE OPTIONS
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="collar-sizes">
+                      <div class="container custom-styles mt-4">
+                        <div class="row mb-4 align-items-center">
+                          <div class="col-5">
+                            <label class="text-style-4 black-4-tw">Point Length</label>
+                          </div>
+                          <div class="col-2">
+                            <div class="multiply-symbol">×</div>
+                          </div>
+                          <div class="col-5">
+                            <label class="text-style-4 black-4-tw">Back Height</label>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-5">
+                            <select class="form-select">
+                              <option selected>3.75</option>
+                            </select>
+                          </div>
+                          <div class="col-2">
+                            <div class="multiply-symbol">×</div>
+                          </div>
+                          <div class="col-5">
+                            <select class="form-select">
+                              <option selected>1.25</option>
+                            </select>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4 mt-4">
+                          <p class="text-style-4 black-4-tw mb-3">Collar Stiffness:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="soft">
+                            <label class="form-check-label" for="soft">Soft</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="medium" checked>
+                            <label class="form-check-label" for="medium">Medium</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="stiff">
+                            <label class="form-check-label" for="stiff">Stiff</label>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4">
+                          <p class="text-style-4 black-4-tw mb-3">Collar Stays:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stays" id="permanent">
+                            <label class="form-check-label" for="permanent">Permanent</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stays" id="removal" checked>
+                            <label class="form-check-label" for="removal">Removal</label>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4">
+                          <p class="text-style-4 black-4-tw mb-3">White Collar & Cuffs:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="none">
+                            <label class="form-check-label" for="none">None</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="cuffs" checked>
+                            <label class="form-check-label" for="cuffs">White Collar Cuffs</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="collarOnly">
+                            <label class="form-check-label" for="collarOnly">White Collar Only</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Cuffs Tab -->
+                <div class="tab-pane fade" id="cuff">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item border-right-1-tw">
+                      <a class="nav-link active" href="#cuffs-styles" data-bs-toggle="tab">Styles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#cuffs-sizes" data-bs-toggle="tab">Sizes</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="cuffs-styles">
+                    <div class="img-grid">
+                      <div class="img-item selected">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cuff-1.jpg" alt="Traditional Tuxedo">
+                        <p>Traditional Tuxedo</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-2.jpg" alt="Casual Spread Collar">
+                        <p>Casual Spread Collar</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-3.jpg" alt="Bright Contrast 6/20x">
+                        <p>Bright Contrast 6/20x</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-4.jpg" alt="Traditional Button Down">
+                        <p>Traditional Button Down</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-5.jpg" alt="Exotic Spread Collar">
+                        <p>Exotic Spread Collar</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-6.jpg" alt="English Wide Spread">
+                        <p>English Wide Spread</p>
+                      </div>
+                      <div class="img-item">
+                        <div class="tick-icon"></div>
+                        <img src="assets/images/cusb-7.jpg" alt="English Cutaway">
+                        <p>English Cutaway</p>
+                      </div>
+                      <div class="img-item">
+                        <!-- <button class="btn btn-outline-secondary w-100">More Options</button> -->
+                        <div class="m-auto d-flex justify-content-center align-items-center h-100">
+                          <a class="text-style-1" href="#">
+                            MORE OPTIONS
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="cuffs-sizes">
+                      <div class="container custom-styles mt-4">
+                        <div class="row mb-4 align-items-center">
+                          <div class="col-5">
+                            <label class="text-style-4 black-4-tw">Point Length</label>
+                          </div>
+                          <div class="col-2">
+                            <div class="multiply-symbol">×</div>
+                          </div>
+                          <div class="col-5">
+                            <label class="text-style-4 black-4-tw">Back Height</label>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col-5">
+                            <select class="form-select">
+                              <option selected>3.75</option>
+                            </select>
+                          </div>
+                          <div class="col-2">
+                            <div class="multiply-symbol">×</div>
+                          </div>
+                          <div class="col-5">
+                            <select class="form-select">
+                              <option selected>1.25</option>
+                            </select>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4 mt-4">
+                          <p class="text-style-4 black-4-tw mb-3">Collar Stiffness:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="soft">
+                            <label class="form-check-label" for="soft">Soft</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="medium" checked>
+                            <label class="form-check-label" for="medium">Medium</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stiffness" id="stiff">
+                            <label class="form-check-label" for="stiff">Stiff</label>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4">
+                          <p class="text-style-4 black-4-tw mb-3">Collar Stays:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stays" id="permanent">
+                            <label class="form-check-label" for="permanent">Permanent</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stays" id="removal" checked>
+                            <label class="form-check-label" for="removal">Removal</label>
+                          </div>
+                        </div>
+                      
+                        <div class="mb-4">
+                          <p class="text-style-4 black-4-tw mb-3">White Collar & Cuffs:</p>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="none">
+                            <label class="form-check-label" for="none">None</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="cuffs" checked>
+                            <label class="form-check-label" for="cuffs">White Collar Cuffs</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="collar" id="collarOnly">
+                            <label class="form-check-label" for="collarOnly">White Collar Only</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Repeat similar structure for other tabs (Front, Back, Pocket, etc.) -->
+                <div class="tab-pane fade" id="front">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item border-right-1-tw">
+                      <a class="nav-link active" href="#front-styles" data-bs-toggle="tab">Styles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#front-sizes" data-bs-toggle="tab">Sizes</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="front-styles">
+                      <!-- Content for Front Styles -->
+                      <p>Front Stles Content</p>
+                    </div>
+                    <div class="tab-pane fade" id="front-sizes">
+                      <!-- Content for Front Sizes -->
+                      <p>Front Sizes Content</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <div class="row mt-20-tw">
+            <div class="col-md-6">
+              <div class="">
+                <a href="" class="btn btn-style-5 w-100">Complete Customization</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="">
+                <a href="" class="btn btn-style-2 w-100">Next Customization</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-grey-tw-2 w-50">
+        <div class="p-50">  
+          <div class="text-center">
+            <img src="" class="custom-step-2-img" alt="step-2-big">
+          </div>
+          <div class="mt-70-tw text-center">
+            <div class="text-style-3 fs-16-tw black-1-tw">
+              The Verginia Sky Blue End to End
+            </div>
+            <div class="mt-10-tw">
+              <div class="text-style-4 fs-18-tw">
+                HEMRAJANI PREMIUM COLLECTION
+              </div>
+            </div>
+          </div>
+          <div class="mt-70-tw">
+            <div class="d-flex align-items-center justify-content-center">
+              <div>
+                <img src="assets/images/custom-question.png" class="w-20px-tw h-20px-tw">
+              </div>
+              <div class="black-1-tw text-style-4 ms-3">
+                Facing issues in Customization?
+              </div>
+              <div class="ms-2">
+                <a href="" class="text-style-1 fs-16-tw blue-1-tw">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-90-tw">
+            <div class="bg-sandal-tw p-30">
+              <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-style-4 fs-14-tw black-3-tw">
+                      Actual Price :
+                    </div>
+                    <div class="text-style-4 fs-14-tw black-3-tw">
+                      $ 3150.00
+                    </div>
+                  </div>
+                  <div class="mt-20-tw">
+                    <div class="d-flex justify-content-between">
+                      <div class="text-style-4 fs-14-tw black-3-tw">
+                        Customisation charges:
+                      </div>
+                      <div class="text-style-4 fs-14-tw black-3-tw">
+                        $ 0.00
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-20-tw">
+                    <div class="border-bottom-1-tw"></div>
+                  </div>
+                  <div class="mt-20-tw">
+                    <div class="d-flex justify-content-between">
+                      <div class="text-style-1 fs-16-tw black-3-tw">
+                        Sub-total:
+                      </div>
+                      <div class="text-style-1 fs-16-tw black-3-tw">
+                        $ 3150.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="bg-black-tw py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="pe-4">
+              <div class="text-style-2 white-tw fs-25-tw">
+                Guaranteed Fit
+              </div>
+              <div class="mt-10-tw">
+                <div class="text-style-3 white-tw">
+                  Enjoy a timelessly exquisite custom suiting and tailoring experience delivered in harmony .
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pe-4">
+              <div class="text-style-2 white-tw fs-25-tw">
+                Free 90-Day Returns
+              </div>
+              <div class="mt-10-tw">
+                <div class="text-style-3 white-tw">
+                  Enjoy a timelessly exquisite custom suiting and tailoring experience delivered in harmony .
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pe-4">
+              <div class="text-style-2 white-tw fs-25-tw">
+                Free Shipping over $250
+              </div>
+              <div class="mt-10-tw">
+                <div class="text-style-3 white-tw">
+                  Enjoy a timelessly exquisite custom suiting and tailoring experience delivered in harmony .
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pe-4">
+              <div class="text-style-2 white-tw fs-25-tw">
+                Expert Help
+              </div>
+              <div class="mt-10-tw">
+                <div class="text-style-3 white-tw">
+                  Enjoy a timelessly exquisite custom suiting and tailoring experience delivered in harmony .
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="mt-30-tw">
+    <div>
+      <img src="assets/images/footer-img.jpg" alt="footer-img" class="w-100">
+    </div>
+  </section>
+
+  <script>
+    // Define the functions globally
+    function showSecondSection(tabId) {
+      // Hide the first section with animation
+      const firstSection = document.getElementById('custom-first-section');
+      if (firstSection) firstSection.classList.add('hidden');
+
+      // Show the second section with animation
+      const secondSection = document.getElementById('custom-second-section');
+      if (secondSection) secondSection.classList.add('active');
+
+      // Activate the corresponding tab in the second section
+      const tabs = document.querySelectorAll('#custom-tab-container .nav-link');
+      tabs.forEach(tab => {
+        const targetId = tab.getAttribute('href').slice(1);
+        if (targetId === tabId) {
+          tab.classList.add('active');
+          const targetTab = document.getElementById(tabId);
+          if (targetTab) targetTab.classList.add('show', 'active');
+        } else {
+          tab.classList.remove('active');
+          const targetTab = document.getElementById(targetId);
+          if (targetTab) targetTab.classList.remove('show', 'active');
+        }
+      });
+    }
+
+    function hideSecondSection() {
+      // Hide the second section with animation
+      const secondSection = document.getElementById('custom-second-section');
+      if (secondSection) secondSection.classList.remove('active');
+
+      // Show the first section with animation
+      const firstSection = document.getElementById('custom-first-section');
+      if (firstSection) firstSection.classList.remove('hidden');
+    }
+
+    // Your existing event listeners stay the same
+    document.addEventListener('DOMContentLoaded', () => {
+        // Function to update the main image
+        const updateMainImage = (tabId) => {
+          const activeTab = document.querySelector(`#${tabId}`);
+          if (!activeTab) return;
+
+          const firstImage = activeTab.querySelector('.img-item img');
+          const mainImage = document.querySelector('.custom-step-2-img');
+          if (firstImage && mainImage) {
+            mainImage.src = firstImage.src;
+            mainImage.alt = firstImage.alt;
+          }
+        };
+
+        // Function to handle image click
+        const handleImageClick = (event) => {
+          const clickedImage = event.target.closest('.img-item');
+          if (!clickedImage) return;
+
+          // Remove 'selected' class from all img-items
+          const imgItems = clickedImage.closest('.img-grid').querySelectorAll('.img-item');
+          imgItems.forEach(item => item.classList.remove('selected'));
+
+          // Add 'selected' class to the clicked image
+          clickedImage.classList.add('selected');
+
+          // Update the main image
+          const mainImage = document.querySelector('.custom-step-2-img');
+          const clickedImg = clickedImage.querySelector('img');
+          if (mainImage && clickedImg) {
+            mainImage.src = clickedImg.src;
+            mainImage.alt = clickedImg.alt;
+          }
+        };
+
+        // Add event listeners to all img-item elements for click events
+        const imgItems = document.querySelectorAll('.img-item');
+        imgItems.forEach(item => {
+          item.addEventListener('click', handleImageClick);
+        });
+
+        // Event listener for Bootstrap tab shown event
+        const tabLinks = document.querySelectorAll('a[data-bs-toggle="tab"]');
+        tabLinks.forEach((tabLink) => {
+          tabLink.addEventListener('shown.bs.tab', (event) => {
+            const tabId = event.target.getAttribute('href').substring(1); // Get the tab content ID
+            updateMainImage(tabId);
+          });
+        });
+
+        // Initialize the main image with the first tab's first image
+        const firstTab = document.querySelector('.tab-pane.show.active');
+        if (firstTab) {
+          updateMainImage(firstTab.id);
+        }
+      });
+
+    function changeImage(src, element) {
+      document.getElementById("custom-main-image").src = src;
+      const thumbnails = document.querySelectorAll(".custom-thumbnail");
+      thumbnails.forEach(thumbnail => thumbnail.classList.remove("active"));
+      element.classList.add("active");
+    }
+
+  </script>
+  
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- slick-carosuel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- match-height -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
