@@ -1,0 +1,148 @@
+.book-bg {
+  background-image: url("../assets/images/book-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+}
+
+.p-list-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+.book-bg i {
+  font-size: 20px;
+  color: #fff;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  border: 0.3px solid #fff;
+  display: flex;
+}
+
+.book-section {
+  position: relative;
+}
+
+.book-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.book-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+.book-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.book-overlay h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+#map {
+  height: 600px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+/* Add custom styles for active tab indication */
+.location-card.active .overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Add these new styles to your existing CSS */
+.indicator-line {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #000;
+  margin-top: 20px;
+}
+
+.active-indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 25%;
+  /* Width of one column */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid #000;
+  margin: 0 auto;
+}
+
+.country-name {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  border-bottom: 2px solid #000;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Position calculations for each country */
+/* .book-card[data-tab="united-states"].active ~ .indicator-line .active-indicator {
+    left: 0;
+}
+
+.book-card[data-tab="hong-kong"].active ~ .indicator-line .active-indicator {
+    left: 25%;
+}
+
+.book-card[data-tab="canada"].active ~ .indicator-line .active-indicator {
+    left: 50%;
+}
+
+.book-card[data-tab="united-kingdom"].active ~ .indicator-line .active-indicator {
+    left: 75%;
+} */

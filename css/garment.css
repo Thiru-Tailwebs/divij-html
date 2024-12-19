@@ -28,3 +28,295 @@
   z-index: 2;
 }
 
+.garment-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  height: 350px;
+}
+
+.measure-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  height: 350px;
+}
+
+.garment-card:hover {
+  background-color: #FEF1DF;
+  color: black;
+  background-image: none !important;
+  border: 1px solid #C4C4C4;
+  cursor: pointer;
+}
+
+.measure-card:hover {
+  background-color: #FEF1DF;
+  color: black;
+  background-image: none !important;
+  border: 1px solid #C4C4C4;
+  cursor: pointer;
+}
+
+.garment-card:hover .garment-card-title {
+  color: #1E1E1E;
+}
+
+.measure-card:hover .measure-card-title {
+  color: #1E1E1E;
+}
+
+.garment-card:hover .border-bottom-2-tw {
+  border-bottom: 1px solid #000000;
+}
+
+.garment-card:hover .garment-card-text {
+  color: #222222;
+}
+
+.measure-card:hover .measure-card-text {
+  color: #222222;
+}
+
+.garment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000B5;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.measure-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000B5;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.garment-card:hover::before {
+  opacity: 0;
+}
+
+.measure-card:hover::before {
+  opacity: 0;
+}
+
+.garment-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.measure-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.garment-card-title {
+  font-size: 35px;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "DM Serif Display", system-ui;
+}
+
+.measure-card-title {
+  font-size: 35px;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "DM Serif Display", system-ui;
+}
+
+.garment-card-text {
+  font-family: "Nunito", sans-serif;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.measure-card-text {
+  font-family: "Nunito", sans-serif;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Background images */
+.garment-card.dress-shirt {
+  background-image: url('../assets/images/feat-3.jpg');
+}
+
+.garment-card.casual-shirt {
+  background-image: url('../assets/images/ga-casual.png');
+}
+
+.garment-card.jacket {
+  background-image: url('../assets/images/ga-jacket.png');
+}
+
+.garment-card.trousers {
+  background-image: url('../assets/images/ga-trousers.png');
+}
+
+.garment-card.vest {
+  background-image: url('../assets/images/ga-vest.png');
+}
+
+.measure-card.size-profiler {
+  background-image: url('../assets/images/feat-2.jpg');
+}
+
+.measure-card.fitting-garment {
+  background-image: url('../assets/images/gan-1.png');
+}
+
+.measure-card.measure-body {
+  background-image: url('../assets/images/gan-2.png');
+}
+
+.measure-card.mail-in {
+  background-image: url('../assets/images/gan-3.png');
+}
+
+.measure-card.schedule-visit {
+  background-image: url('../assets/images/gan-1.png');
+}
+
+.fi-bg {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.measure-card-content:hover .fi-bg{
+  background-color: #A5845A;
+}
+
+.fi-bg i {
+  font-size: 25px;
+  color: #1E1E1E;
+  display: flex;
+}
+
+.measure-card-content:hover .fi-bg i {
+  color: #FFFFFF;
+}
+
+/* steps css */
+
+#profile-listing .accordion-button {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #131313;
+}
+
+#profile-listing .accordion-extra-text {
+  position: absolute;
+  right: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #131313;
+}
+
+#profile-listing .accordion-button:focus {
+  box-shadow: none;
+}
+
+#profile-listing .accordion-item {
+  border: none !important;
+}
+
+#profile-listing .accordion-header {
+  border-bottom: 0.6px solid #C4C4C4;
+}
+
+#profile-listing .accordion-body {
+  background-color: #F8F8F8;
+  padding: 40px;
+}
+
+#profile-listing .form-section {
+  margin-bottom: 20px;
+}
+
+#profile-listing .height-selector button {
+  margin: 8px;
+  border: 0.4px solid #C4C4C4;
+  border-radius: 0px;
+  background-color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #818181;
+  padding: 10px 20px;
+}
+
+#profile-listing .height-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#profile-listing .height-inputs input {
+  width: 100px;
+  border-radius: 0px;
+}
+
+#profile-listing .height-inputs input:focus {
+  box-shadow: none;
+}
+
+#profile-listing .btn-done {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  border-radius: 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+#progressBar {
+  background-color: #A5845A;
+}
+
+.progress {
+  border-radius: 0px;
+}
+

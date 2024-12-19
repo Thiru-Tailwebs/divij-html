@@ -9,6 +9,9 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +34,7 @@
   <link rel="stylesheet" href="css/product_list.css">
   <link rel="stylesheet" href="css/garment.css">
 
-  <title>Divij</title>
+  <title>Garment Option</title>
 </head>
 
 <body>
@@ -97,180 +100,652 @@
 
   </header>
 
-  <article>
-    <section class="garment-image-container">
-      <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
-      <div class="garment-overlay-text">
-        <h1 class="text-style-2 white-tw">Select A Garment Option</h1>
-        <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
-      </div>
-    </section>
-    <section>
-      <div class="container w-80p-tw my-5">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <div class="garment-card dress-shirt">
-              <div class="garment-card-content">
-                <h5 class="garment-card-title">Dress Shirt</h5>
-                <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+  <div>
+    <article id="garment-option">
+      <section class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">Select A Garment Option</h1>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
+        </div>
+      </section>
+      <section>
+        <div class="container w-80p-tw my-5">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="garment-card dress-shirt" onclick="toggleArticles()">
+                <div class="garment-card-content">
+                  <h5 class="garment-card-title">Dress Shirt</h5>
+                  <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
 
+                  </div>
+                  <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for either a dress shirt.</p>
                 </div>
-                <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for either a dress shirt.</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="garment-card casual-shirt">
-              <div class="garment-card-content">
-                <h5 class="garment-card-title">Casual Shirt</h5>
-                <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
-                
+            <div class="col-md-6">
+              <div class="garment-card casual-shirt" onclick="toggleArticles()">
+                <div class="garment-card-content">
+                  <h5 class="garment-card-title">Casual Shirt</h5>
+                  <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+                  
+                  </div>
+                  <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a casual shirt.</p>
                 </div>
-                <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a casual shirt.</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="garment-card jacket">
-              <div class="garment-card-content">
-                <h5 class="garment-card-title">Jacket</h5>
-                <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
-                
+            <div class="col-md-6">
+              <div class="garment-card jacket" onclick="toggleArticles()">
+                <div class="garment-card-content">
+                  <h5 class="garment-card-title">Jacket</h5>
+                  <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+                  
+                  </div>
+                  <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a jacket.</p>
                 </div>
-                <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a jacket.</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="garment-card trousers">
-              <div class="garment-card-content">
-                <h5 class="garment-card-title">Trousers</h5>
-                <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
-                
+            <div class="col-md-6">
+              <div class="garment-card trousers" onclick="toggleArticles()">
+                <div class="garment-card-content">
+                  <h5 class="garment-card-title">Trousers</h5>
+                  <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+                  
+                  </div>
+                  <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for trousers.</p>
                 </div>
-                <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for trousers.</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 mx-auto">
-            <div class="garment-card vest">
-              <div class="garment-card-content">
-                <h5 class="garment-card-title">Vest</h5>
-                <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+            <div class="col-md-6 mx-auto">
+              <div class="garment-card vest" onclick="toggleArticles()">
+                <div class="garment-card-content">
+                  <h5 class="garment-card-title">Vest</h5>
+                  <div class="border-bottom-2-tw w-50p-tw mt-30-tw">
+                  </div>
+                  <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a vest.</p>
                 </div>
-                <p class="garment-card-text w-50p-tw mt-30-tw">Create a new size profile for a vest.</p>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </article>
+
+    <article id="measurement-process">
+      <section class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">CREATE A NEW SHIRT</h1>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
+          <h3 class="text-style-2 white-tw fs-24-tw mt-4">Choose a measurement Process</h3>
+        </div>
+      </section>
+      <section>
+        <div class="container w-80p-tw my-5">
+          <div class="text-style-3 black-3-tw fs-24-tw text-center">
+            Create your own custom size profile. <br> Or <a class="text-style-5 sandal-1-tw" href="">login</a> for your saved sizes.
+          </div>
+          <div class="row g-3 mt-50-tw">
+            <div class="col-md-6">
+              <div class="measure-card size-profiler">
+                <div class="measure-card-content">
+                  <div class="fi-bg">
+                    <i class="fi fi-rr-chart-network"></i>
+                  </div>
+                  <h5 class="measure-card-title mt-30-tw">Intelligent <br> Size Profiler</h5>
+                  <p class="measure-card-text w-70p-tw mt-30-tw">By using our custom Intelligent Size Profiler, no tape measuring is necessary and you save the most time.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="measure-card fitting-garment">
+                <div class="measure-card-content">
+                  <div class="fi-bg">
+                    <i class="fi fi-rr-vector"></i>
+                  </div>
+                  <h5 class="measure-card-title mt-30-tw">Best <br> Fitting Garment</h5>
+                  <p class="measure-card-text w-70p-tw mt-30-tw">Select your best fitting garment, grab a tape measure and follow along with our simple and easy videos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="measure-card measure-body">
+                <div class="measure-card-content">
+                  <div class="fi-bg">
+                    <i class="fi fi-rr-vector-alt"></i>
+                  </div>
+                  <h5 class="measure-card-title mt-30-tw">Measure <br> Body</h5>
+                  <p class="measure-card-text w-70p-tw mt-30-tw">You'll need some help from a friend. Follow along with our simple and easy body measurement videos.
+                   </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="measure-card mail-in">
+                <div class="measure-card-content">
+                  <div class="fi-bg">
+                    <i class="fi fi-rr-envelope"></i>
+                  </div>
+                  <h5 class="measure-card-title mt-30-tw">Mail- In <br> Garment</h5>
+                  <p class="measure-card-text w-70p-tw mt-30-tw">Select your best fitting garment and mail-in your garment to be measured by one of our Master Tailors.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+              <div class="measure-card schedule-visit">
+                <div class="measure-card-content">
+                  <div class="fi-bg">
+                    <i class="fi fi-tr-phone-flip"></i>
+                  </div>
+                  <h5 class="measure-card-title mt-30-tw">Schedule a <br> Visit</h5>
+                  <p class="measure-card-text w-70p-tw mt-30-tw">Schedule a fitting with one of our Master Tailors in a city, state, or country near you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <article id="profile-listing">
+      <section class="garment-image-container">
+        <img src="assets/images/process-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
+          <h1 class="text-style-2 white-tw">Intelligent Size Profiler</h1>
+        </div>
+      </section>
+      <!-- Progress Bar -->
+      <div class="progress mb-4">
+        <div class="progress-bar" id="progressBar" role="progressbar"></div>
       </div>
-    </section>
-    <section class="mt-30-tw">
-      <div class="bg-black2-tw py-50-tw">
-        <div class="container">
-          <div class="text-center w-50p-tw text-style-3 text-style-3 white-tw fs-18-tw m-auto">
-            For advice on our products or for help placing an order, please call <a href="tel:+1-888-263-2406">+1-888-263-2406</a>
+      <div class="container w-80p-tw">
+        <div class="form-container">
+          <div class="accordion" id="formAccordion">
+            <!-- Body Height Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHeight"
+                  aria-expanded="true" aria-controls="collapseHeight">
+                  Body Height 
+                  <span class="accordion-extra-text ms-auto">Select your body height</span>
+                </button>
+              </h2>
+              <div id="collapseHeight" class="accordion-collapse collapse show" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">5'5"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'6"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'7"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'8"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'9"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'10"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'11"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'0"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'1"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'2"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'3"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'1"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'2"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'3"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'4"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'5"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'6"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'7"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'8"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'9"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'10"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'11"</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="heightFeet" class="form-label mb-0 text-style-4">Height:</label>
+                    </div>
+                    <div class="d-flex align-items-center ms-4">
+                      <input type="number" class="form-control" id="heightFeet">
+                      <label class="form-label mb-0 ms-2 text-style-6">Feet</label>
+                    </div>
+                    <div class="d-flex align-items-center ms-4">
+                      <input type="number" class="form-control" id="heightInches">
+                      <label class="form-label mb-0 ms-2 text-style-6">Inches</label>
+                    </div>
+                    <button type="button" class="btn btn-done ms-auto" onclick="goToNextStep(2)">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Body Weight Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseWeight" aria-expanded="false" aria-controls="collapseWeight" disabled>
+                  Body Weight
+                  <span class="accordion-extra-text ms-auto">Select your body weight</span>
+                </button>
+              </h2>
+              <div id="collapseWeight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">125</button>
+                    <button type="button" class="btn btn-outline-secondary">130</button>
+                    <button type="button" class="btn btn-outline-secondary">135</button>
+                    <button type="button" class="btn btn-outline-secondary">140</button>
+                    <button type="button" class="btn btn-outline-secondary">145</button>
+                    <button type="button" class="btn btn-outline-secondary">150</button>
+                    <button type="button" class="btn btn-outline-secondary">155</button>
+                    <button type="button" class="btn btn-outline-secondary">160</button>
+                    <button type="button" class="btn btn-outline-secondary">165</button>
+                    <button type="button" class="btn btn-outline-secondary">170</button>
+                    <button type="button" class="btn btn-outline-secondary">175</button>
+                    <button type="button" class="btn btn-outline-secondary">180</button>
+                    <button type="button" class="btn btn-outline-secondary">185</button>
+                    <button type="button" class="btn btn-outline-secondary">190</button>
+                    <button type="button" class="btn btn-outline-secondary">195</button>
+                    <button type="button" class="btn btn-outline-secondary">200</button>
+                    <button type="button" class="btn btn-outline-secondary">205</button>
+                    <button type="button" class="btn btn-outline-secondary">210</button>
+                    <button type="button" class="btn btn-outline-secondary">215</button>
+                    <button type="button" class="btn btn-outline-secondary">220</button>
+                    <button type="button" class="btn btn-outline-secondary">225</button>
+                    <button type="button" class="btn btn-outline-secondary">230</button>
+                    <button type="button" class="btn btn-outline-secondary">235</button>
+                    <button type="button" class="btn btn-outline-secondary">240</button>
+                    <button type="button" class="btn btn-outline-secondary">245</button>
+                    <button type="button" class="btn btn-outline-secondary">250</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Weight:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <button type="button" class="btn btn-done ms-auto" onclick="goToNextStep(3)">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Shirt Neck Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNeck" aria-expanded="false" aria-controls="collapseNeck" disabled>
+                  Shirt Neck
+                  <span class="accordion-extra-text ms-auto">Select your off-the-rack neck size</span>
+                </button>
+              </h2>
+              <div id="collapseNeck" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">14</button>
+                    <button type="button" class="btn btn-outline-secondary">14.25</button>
+                    <button type="button" class="btn btn-outline-secondary">14.5</button>
+                    <button type="button" class="btn btn-outline-secondary">14.75</button>
+                    <button type="button" class="btn btn-outline-secondary">15</button>
+                    <button type="button" class="btn btn-outline-secondary">15.25</button>
+                    <button type="button" class="btn btn-outline-secondary">15.5</button>
+                    <button type="button" class="btn btn-outline-secondary">15.75</button>
+                    <button type="button" class="btn btn-outline-secondary">16</button>
+                    <button type="button" class="btn btn-outline-secondary">16.25</button>
+                    <button type="button" class="btn btn-outline-secondary">16.5</button>
+                    <button type="button" class="btn btn-outline-secondary">16.75</button>
+                    <button type="button" class="btn btn-outline-secondary">17</button>
+                    <button type="button" class="btn btn-outline-secondary">17.25</button>
+                    <button type="button" class="btn btn-outline-secondary">17.5</button>
+                    <button type="button" class="btn btn-outline-secondary">17.75</button>
+                    <button type="button" class="btn btn-outline-secondary">18</button>
+                    <button type="button" class="btn btn-outline-secondary">18.25</button>
+                    <button type="button" class="btn btn-outline-secondary">18.5</button>
+                    <button type="button" class="btn btn-outline-secondary">18.75</button>
+                    <button type="button" class="btn btn-outline-secondary">19</button>
+                    <button type="button" class="btn btn-outline-secondary">19.25</button>
+                    <button type="button" class="btn btn-outline-secondary">19.5</button>
+                    <button type="button" class="btn btn-outline-secondary">19.75</button>
+                    <button type="button" class="btn btn-outline-secondary">20</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Neck Size:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3" onclick="goToNextStep(4)">I Don't Know - Skip for now</button>
+                      <button type="button" class="btn btn-done" onclick="goToNextStep(4)">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sleeve Length -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSleeve" aria-expanded="false" aria-controls="collapseSleeve" disabled>
+                  Sleeve Length
+                  <span class="accordion-extra-text ms-auto">Select your OFF-THE-RACK sleeve Length</span>
+                </button>
+              </h2>
+              <div id="collapseSleeve" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">30</button>
+                    <button type="button" class="btn btn-outline-secondary">30.25</button>
+                    <button type="button" class="btn btn-outline-secondary">30.5</button>
+                    <button type="button" class="btn btn-outline-secondary">30.75</button>
+                    <button type="button" class="btn btn-outline-secondary">31</button>
+                    <button type="button" class="btn btn-outline-secondary">31.25</button>
+                    <button type="button" class="btn btn-outline-secondary">31.5</button>
+                    <button type="button" class="btn btn-outline-secondary">31.75</button>
+                    <button type="button" class="btn btn-outline-secondary">32</button>
+                    <button type="button" class="btn btn-outline-secondary">32.25</button>
+                    <button type="button" class="btn btn-outline-secondary">32.5</button>
+                    <button type="button" class="btn btn-outline-secondary">32.75</button>
+                    <button type="button" class="btn btn-outline-secondary">33</button>
+                    <button type="button" class="btn btn-outline-secondary">33.25</button>
+                    <button type="button" class="btn btn-outline-secondary">33.5</button>
+                    <button type="button" class="btn btn-outline-secondary">33.75</button>
+                    <button type="button" class="btn btn-outline-secondary">34</button>
+                    <button type="button" class="btn btn-outline-secondary">34.25</button>
+                    <button type="button" class="btn btn-outline-secondary">34.5</button>
+                    <button type="button" class="btn btn-outline-secondary">34.75</button>
+                    <button type="button" class="btn btn-outline-secondary">35</button>
+                    <button type="button" class="btn btn-outline-secondary">35.25</button>
+                    <button type="button" class="btn btn-outline-secondary">35.5</button>
+                    <button type="button" class="btn btn-outline-secondary">35.75</button>
+                    <button type="button" class="btn btn-outline-secondary">36</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Sleeve Length:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3" onclick="goToNextStep(5)">I Don't Know - Skip for now</button>
+                      <button type="button" class="btn btn-done" onclick="goToNextStep(5)">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shirt Fit Type -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShirtFit" aria-expanded="false" aria-controls="collapseShirtFit" disabled>
+                  Shirt Fit Type
+                  <span class="accordion-extra-text ms-auto">Select your shirt fit type</span>
+                </button>
+              </h2>
+              <div id="collapseShirtFit" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3 row">
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-secondary"><img src="assets/images/shirt_slim.png" class="w-100" alt="slim-shirt"></button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-secondary"><img src="assets/images/shirt_tailored.png" class="w-100" alt="tailored-shirt"></button>
+                    </div>
+                    <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary"><img src="assets/images/shirt_slim.png" class="w-100" alt="slim-shirt"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Add more sections similarly -->
           </div>
         </div>
       </div>
-    </section>
-  </article>
+    </article>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-black2-tw mt-30-tw py-5 white-tw">
+    <!-- Top Banner -->
+    <div class="container-fluid text-center mb-4">
+      <p class="text-style-3 fs-20-tw white-tw">
+        For advice on our products or for help placing an order, please <br> call
+        <a href="tel:+1-888-263-2406" class="text-decoration-none sandal-1-tw text-style-5 fs-20-tw">+1-888-263-2406</a>
+      </p>
+    </div>
+  
+    <div class="border-bottom-2-tw opacity-20p">
+    </div>
+  
+    <!-- Main Footer Content -->
+    <div class="container py-5">
+      <div class="row">
+        <!-- Newsletter Section -->
+        <div class="col-lg-4 mb-4">
+          <h3 class="h4 mb-4 text-style-2 fs-24-tw white-tw">Stay In The Loop With Our Newsletter!</h3>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <label for="newsletterEmail" class="form-label text-style-3 grey-3-tw fs-16-tw mb-0">Define E-Mail
+                Address</label>
+              <button class="btn" type="submit">
+                <img src="assets/images/footer-arrow.png" alt="footer-arrow" width="16">
+              </button>
+            </div>
+            <div class="input-group mt-2">
+              <input type="email" id="newsletterEmail" class="form-control text-style-3 bg-transparent white-tw fs-16-tw"
+                aria-label="Email Address">
+            </div>
+          </div>
+          <p class="text-style-3 white-tw opacity-60p">
+            Subscribe to our newsletter and unlock a world of exclusive benefits.
+            Be the first to know about our latest products, special promotions,
+            and exciting updates.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="social-icons mt-4">
+            <a href="#" class="text-light me-3"><img src="assets/images/footer-fb.png" alt="facebook" width="35"></a>
+            <a href="#" class="text-light me-3"><img src="assets/images/footer-twit.png" alt="twitter" width="35"></i></a>
+            <a href="#" class="text-light"><img src="assets/images/footer-insta.png" alt="instagram" width="35"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-1">
+  
+        </div>
+  
+        <!-- Quick Links Columns -->
+        <div class="col-lg-7">
+          <div class="row">
+            <!-- Shop By -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4 text-style-1 white-tw fs-16-tw">Shop By</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Tailored</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Shirts</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Suits</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Trousers</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Blazers &
+                    Vests</a></li>
+              </ul>
+            </div>
+  
+            <!-- Support -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">Support</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Shipping &
+                    Delivery</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Return &
+                    Exchange</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Perfect Fit
+                    Guides</a></li>
+              </ul>
+            </div>
+  
+            <!-- Services -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">Services</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Schedule Your
+                    Visit</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Customize
+                    Clothings</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Measurements</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Clothing
+                    Styles</a></li>
+              </ul>
+            </div>
+  
+            <!-- About Us -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">About Us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Our Process</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Showroom
+                    Experience</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The
+                    Constructions</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The Silhouette
+                    Fit</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The Shoulders
+                    Selections</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="bg-black3-tw br-25">
+        <div class="row mt-4 pt-4">
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-phone.png" alt="footer-phone" width="35">
+            <div class="mt-3">
+              <a href="tel:+1-888-263-2406"
+                class="text-style-3 fs-16-tw white-tw text-decoration-none">+1-888-263-2406</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-location.png" alt="footer-location" width="35">
+            <div class="mt-3">
+              <span class="text-style-3 fs-16-tw white-tw">940 S Coast Drive, Ste. 240,Costa <br> Mesa, CA 92626</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-mail.png" alt="footer-mail" width="35">
+            <div class="mt-3">
+              <a href="mailto:info@divij.com"
+                class="text-style-3 fs-16-tw white-tw text-decoration-none">info@divij.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="border-bottom-2-tw opacity-20p">
+    </div>
+  
+    <!-- Bottom Footer -->
+    <div class="container-fluid mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <span class="text-style-3 fs-16-tw white-tw">© 2023 All Rights Reserved</span>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none me-3"><small>Privacy Policy</small></a>
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none me-3"><small>Terms &
+                Conditions</small></a>
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none"><small>Cookies Policy</small></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <style>
-    .garment-card {
-      position: relative;
-      overflow: hidden;
-      border: none;
-      border-radius: 0;
-      text-align: center;
-      color: white;
-      background-size: cover;
-      background-position: center;
-      transition: all 0.3s ease-in-out;
-      height: 350px;
-    }
-  
-    .garment-card:hover {
-      background-color: #FEF1DF;
-      color: black;
-      background-image: none !important;
-      border: 1px solid #C4C4C4;
-      cursor: pointer;
-    }
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initially hide second and third articles
+        document.getElementById('measurement-process').style.display = 'none';
+        document.getElementById('profile-listing').style.display = 'none';
 
-    .garment-card:hover .garment-card-title {
-      color: #1E1E1E;
-    }
+        // Add click handler for back button
+        document.querySelector('.fa-arrow-left').closest('a').addEventListener('click', function (e) {
+          e.preventDefault();
+          handleBackNavigation();
+        });
 
-    .garment-card:hover .border-bottom-2-tw {
-      border-bottom: 1px solid #000000;
-    }
+        // Add click handler for size-profiler card
+        document.querySelector('.measure-card.size-profiler').addEventListener('click', function () {
+          document.getElementById('measurement-process').style.display = 'none';
+          document.getElementById('profile-listing').style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
 
-    .garment-card:hover .garment-card-text {
-      color: #222222;
+      function handleBackNavigation() {
+        const garmentOption = document.getElementById('garment-option');
+        const measurementProcess = document.getElementById('measurement-process');
+        const profileListing = document.getElementById('profile-listing');
+
+        // If we're on the third article (profile listing)
+        if (profileListing.style.display === 'block') {
+          profileListing.style.display = 'none';
+          measurementProcess.style.display = 'block';
+          garmentOption.style.display = 'none';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // If we're on the second article (measurement process)
+        else if (measurementProcess.style.display === 'block') {
+          measurementProcess.style.display = 'none';
+          garmentOption.style.display = 'block';
+          profileListing.style.display = 'none';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // If we're on the first article (garment option)
+        else {
+          window.history.back(); // Goes to previous page in browser history
+        }
+      }
+
+      // Keep your existing toggleArticles function
+      function toggleArticles() {
+        document.getElementById('garment-option').style.display = 'none';
+        document.getElementById('measurement-process').style.display = 'block';
+        document.getElementById('profile-listing').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+    let currentStep = 1;
+
+    function goToNextStep(nextStep) {
+      if (nextStep > currentStep) {
+        // Enable the next accordion section
+        const nextAccordionButton = document.querySelector(`.accordion-item:nth-child(${nextStep}) .accordion-button`);
+        if (nextAccordionButton) {
+          nextAccordionButton.removeAttribute('disabled');
+          const currentCollapse = document.querySelector(`.accordion-item:nth-child(${currentStep}) .accordion-collapse`);
+          const nextCollapse = document.querySelector(`.accordion-item:nth-child(${nextStep}) .accordion-collapse`);
+
+          // Collapse current and expand next
+          const bsCollapseCurrent = bootstrap.Collapse.getOrCreateInstance(currentCollapse);
+          const bsCollapseNext = bootstrap.Collapse.getOrCreateInstance(nextCollapse);
+          bsCollapseCurrent.hide();
+          bsCollapseNext.show();
+
+          // Update progress bar
+          const progressBar = document.getElementById('progressBar');
+          progressBar.style.width = `${nextStep * 20}%`;
+          currentStep = nextStep;
+        }
+      }
     }
-  
-    .garment-card::before {
-      content: '';  
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000000B5;
-      transition: opacity 0.3s ease-in-out;
-      z-index: 1;
-    }
-  
-    .garment-card:hover::before {
-      opacity: 0;
-    }
-  
-    .garment-card-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
-  
-    .garment-card-title {
-      font-size: 35px;
-      font-weight: 400;
-      color: #FFFFFF;
-      font-family: "DM Serif Display", system-ui;
-    }
-  
-    .garment-card-text {
-      font-family: "Nunito", sans-serif;
-      color: #FFFFFF;
-      font-size: 18px;
-      font-weight: 400;
-    }
-  
-    /* Background images */
-    .garment-card.dress-shirt {
-      background-image: url('./assets/images/feat-3.jpg');
-    }
-  
-    .garment-card.casual-shirt {
-      background-image: url('./assets/images/ga-casual.png');
-    }
-  
-    .garment-card.jacket {
-      background-image: url('./assets/images/ga-jacket.png');
-    }
-  
-    .garment-card.trousers {
-      background-image: url('./assets/images/ga-trousers.png');
-    }
-  
-    .garment-card.vest {
-      background-image: url('./assets/images/ga-vest.png');
-    }
-  </style>
+  </script>
 
   <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"

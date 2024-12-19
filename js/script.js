@@ -107,6 +107,49 @@ function updateImage(imageSrc) {
 }
 
 
+// book an appointment
+
+// Update your JavaScript function
+function changeTab(tabId) {
+  // Remove active class from all cards
+  document.querySelectorAll('.book-card').forEach(card => {
+    card.classList.remove('active');
+  });
+
+  // Remove active class from all tab panes
+  document.querySelectorAll('.tab-pane').forEach(tab => {
+    tab.classList.remove('show', 'active');
+  });
+
+  // Add active class to selected card and tab
+  const selectedCard = document.querySelector(`[data-tab="${tabId}"]`);
+  selectedCard.classList.add('active');
+  document.getElementById(tabId).classList.add('show', 'active');
+
+  // Update country name in indicator
+  const countryName = selectedCard.querySelector('.book-overlay h3').textContent;
+  document.querySelector('.country-name').textContent = countryName;
+
+  // Calculate and set indicator position
+  const cardWidth = selectedCard.offsetWidth;
+  const cardLeft = selectedCard.offsetLeft;
+  const indicator = document.querySelector('.active-indicator');
+  indicator.style.left = `${cardLeft}px`;
+  indicator.style.width = `${cardWidth}px`;
+}
+
+// Initialize the first tab on page load
+document.addEventListener('DOMContentLoaded', function () {
+  // Set initial state
+  const firstCard = document.querySelector('.book-card');
+  if (firstCard) {
+    const tabId = firstCard.getAttribute('data-tab');
+    changeTab(tabId);
+  }
+});
+
+
+
 
 
 

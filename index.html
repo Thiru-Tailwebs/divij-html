@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <!-- slick-carosuel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
@@ -1249,19 +1251,47 @@
         <div class="tab-content mt-30-tw" id="countryTabsContent">
           <!-- United States Tab -->
           <div class="tab-pane fade show active" id="united-states" role="tabpanel" aria-labelledby="united-states-tab">
-            <img src="assets/images/map-us.jpg" alt="United States Image" class="w-100">
+            <div class="location-container">
+              <div class="locations-list">
+                <!-- Location cards will be dynamically inserted here -->
+              </div>
+              <div class="map-container">
+                <div id="map-united-states"></div>
+              </div>
+            </div>
           </div>
           <!-- Hong Kong Tab -->
           <div class="tab-pane fade" id="hong-kong" role="tabpanel" aria-labelledby="hong-kong-tab">
-            <img src="assets/images/map-us.jpg" alt="Hong Kong Image" class="w-100">
+            <div class="location-container">
+              <div class="locations-list">
+                <!-- Location cards will be dynamically inserted here -->
+              </div>
+              <div class="map-container">
+                <div id="map-hong-kong"></div>
+              </div>
+            </div>
           </div>
           <!-- Canada Tab -->
           <div class="tab-pane fade" id="canada" role="tabpanel" aria-labelledby="canada-tab">
-            <img src="assets/images/map-us.jpg" alt="Canada Image" class="w-100">
+            <div class="location-container">
+              <div class="locations-list">
+                <!-- Location cards will be dynamically inserted here -->
+              </div>
+              <div class="map-container">
+                <div id="map-canada"></div>
+              </div>
+            </div>
           </div>
           <!-- United Kingdom Tab -->
           <div class="tab-pane fade" id="united-kingdom" role="tabpanel" aria-labelledby="united-kingdom-tab">
-            <img src="assets/images/map-us.jpg" alt="United Kingdom Image" class="w-100">
+            <div class="location-container">
+              <div class="locations-list">
+                <!-- Location cards will be dynamically inserted here -->
+              </div>
+              <div class="map-container">
+                <div id="map-united-kingdom"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1493,9 +1523,310 @@
     </div>
   </footer>
 
-  <style>
-  
-  </style>
+  <script>
+    // Sample location data
+    const locations = {
+        'united-states': [
+          {
+            state: 'CALIFORNIA',
+            name: 'Costa Mesa Showroom',
+            address: '940 S Coast Dr Suite 240',
+            city: 'Costa Mesa, CA 92626',
+            dates: 'Sep 04 - Oct 03',
+            coords: [33.6931, -117.9195]
+          },
+          {
+            state: 'NEW YORK',
+            name: 'Times Square Store',
+            address: '1535 Broadway',
+            city: 'New York, NY 10036',
+            dates: 'All Year',
+            coords: [40.7580, -73.9855]
+          },
+          {
+            state: 'LOS ANGELES',
+            name: 'Beverly Hills Hotel',
+            address: '9641 Sunset Boulevard',
+            city: 'Beverly Hills, CA 90210',
+            dates: 'All Year',
+            coords: [34.0736, -118.4004]
+          },
+          {
+            state: 'FLORIDA',
+            name: 'Miami Beach Gallery',
+            address: '1001 Ocean Drive',
+            city: 'Miami Beach, FL 33139',
+            dates: 'Oct 15 - Dec 31',
+            coords: [25.7825, -80.1340]
+          },
+          {
+            state: 'TEXAS',
+            name: 'Dallas Design District',
+            address: '1400 Hi Line Drive',
+            city: 'Dallas, TX 75207',
+            dates: 'Year Round',
+            coords: [32.7948, -96.8285]
+          },
+          {
+            state: 'ILLINOIS',
+            name: 'Chicago Magnificent Mile',
+            address: '900 N Michigan Ave',
+            city: 'Chicago, IL 60611',
+            dates: 'Sep 01 - Nov 30',
+            coords: [41.8988, -87.6245]
+          }
+        ],
+        'hong-kong': [
+          {
+            state: 'CENTRAL',
+            name: 'IFC Mall Gallery',
+            address: '8 Finance Street',
+            city: 'Central, Hong Kong',
+            dates: 'Permanent',
+            coords: [22.2849, 114.1577]
+          },
+          {
+            state: 'TSIM SHA TSUI',
+            name: 'K11 MUSEA',
+            address: '18 Salisbury Road',
+            city: 'Tsim Sha Tsui, Kowloon',
+            dates: 'Year Round',
+            coords: [22.2940, 114.1744]
+          },
+          {
+            state: 'CAUSEWAY BAY',
+            name: 'Times Square HK',
+            address: '1 Matheson Street',
+            city: 'Causeway Bay, Hong Kong',
+            dates: 'Sep 15 - Dec 15',
+            coords: [22.2782, 114.1826]
+          },
+          {
+            state: 'ADMIRALTY',
+            name: 'Pacific Place',
+            address: '88 Queensway',
+            city: 'Admiralty, Hong Kong',
+            dates: 'All Year',
+            coords: [22.2774, 114.1655]
+          }
+        ],
+        'canada': [
+          {
+            state: 'ONTARIO',
+            name: 'Toronto Yorkdale',
+            address: '3401 Dufferin Street',
+            city: 'Toronto, ON M6A 2T9',
+            dates: 'Permanent',
+            coords: [43.7255, -79.4521]
+          },
+          {
+            state: 'BRITISH COLUMBIA',
+            name: 'Vancouver Pacific Centre',
+            address: '701 W Georgia Street',
+            city: 'Vancouver, BC V7Y 1G5',
+            dates: 'Year Round',
+            coords: [49.2827, -123.1207]
+          },
+          {
+            state: 'QUEBEC',
+            name: 'Montreal Luxury Hall',
+            address: '1307 Sainte-Catherine Street W',
+            city: 'Montreal, QC H3G 1P7',
+            dates: 'Oct 01 - Dec 31',
+            coords: [45.4984, -73.5748]
+          },
+          {
+            state: 'ALBERTA',
+            name: 'Calgary Core Shopping',
+            address: '751 3rd Street SW',
+            city: 'Calgary, AB T2P 4K8',
+            dates: 'Sep 01 - Nov 30',
+            coords: [51.0447, -114.0719]
+          }
+        ],
+        'united-kingdom': [
+          {
+            state: 'LONDON',
+            name: 'Harrods Knightsbridge',
+            address: '87-135 Brompton Road',
+            city: 'London, SW1X 7XL',
+            dates: 'Permanent',
+            coords: [51.4994, -0.1631]
+          },
+          {
+            state: 'MANCHESTER',
+            name: 'Exchange Square',
+            address: '1 Exchange Square',
+            city: 'Manchester, M3 1BD',
+            dates: 'Year Round',
+            coords: [53.4839, -2.2446]
+          },
+          {
+            state: 'EDINBURGH',
+            name: 'Multrees Walk',
+            address: '23-24 Multrees Walk',
+            city: 'Edinburgh, EH1 3DQ',
+            dates: 'Sep 15 - Dec 15',
+            coords: [55.9533, -3.1883]
+          },
+          {
+            state: 'BIRMINGHAM',
+            name: 'Bullring Shopping Centre',
+            address: 'Upper Mall East',
+            city: 'Birmingham, B5 4BF',
+            dates: 'Oct 01 - Dec 31',
+            coords: [52.4776, -1.8927]
+          },
+          {
+            state: 'GLASGOW',
+            name: 'Buchanan Street',
+            address: '220 Buchanan Street',
+            city: 'Glasgow, G1 2FF',
+            dates: 'Year Round',
+            coords: [55.8642, -4.2518]
+          }
+        ]
+      };
+
+    let maps = {};
+    let markers = {};
+    let activeMap = null;
+
+    function initMap() {
+      Object.keys(locations).forEach((country) => {
+        const mapId = `map-${country}`;
+        maps[country] = L.map(mapId).setView([37.8, -96], 4);
+
+        // Add tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '© OpenStreetMap contributors',
+          backgroundColor: '#F0F0F0'
+        }).addTo(maps[country]);
+
+        markers[country] = L.layerGroup().addTo(maps[country]);
+      });
+
+      // Show initial locations for the active tab
+      showLocations('united-states');
+    }
+
+
+    function showLocations(country) {
+        // Clear markers for the current country
+        markers[country].clearLayers();
+
+        const locationsList = document.querySelector(`#${country} .locations-list`);
+        locationsList.innerHTML = '';
+
+        locations[country]?.forEach((location, index) => {
+          // Create location card
+          const card = createLocationCard(location, index, country);
+          locationsList.appendChild(card);
+
+          // Create marker
+          const marker = L.marker(location.coords, {
+            icon: L.icon({
+              iconUrl: 'assets/images/marker-map.png',
+              iconSize: [30, 40], // size of the icon
+              iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+              popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+            })
+          }).bindPopup(createPopupContent(location));
+
+          marker.on('click', () => {
+            highlightLocation(index, country);
+            maps[country].setView(location.coords, 15);
+          });
+
+          markers[country].addLayer(marker);
+        });
+
+        // Fit map bounds to show all markers
+        if (markers[country].getLayers().length > 0) {
+          const group = L.featureGroup(markers[country].getLayers());
+          maps[country].fitBounds(group.getBounds().pad(0.1));
+        }
+      }
+
+
+    function createLocationCard(location, index, country) {
+        const div = document.createElement('div');
+        div.className = 'location-card';
+        div.innerHTML = `
+      <h5>${location.state}</h5>
+      <h6>${location.name}</h6>
+      <p>${location.address}<br>${location.city}</p>
+      <small>${location.dates}</small>
+  `;
+
+        div.addEventListener('click', () => {
+          highlightLocation(index, country);
+          maps[country].setView(location.coords, 15);
+          markers[country].getLayers()[index].openPopup();
+        });
+
+        return div;
+      }
+
+    function createPopupContent(location) {
+      return `
+        <div class="popup-content">
+          <h5>${location.state}</h5>
+          <h6>${location.name}</h6>
+          <p>${location.address}<br>${location.city}</p>
+        </div>
+        <button class="btn">Book Visit</button>
+      `;
+    }
+
+    function highlightLocation(index, country) {
+      const tabPane = document.querySelector(`#${country}`);
+      const cards = tabPane.querySelectorAll('.location-card');
+      cards.forEach(card => card.classList.remove('active'));
+      cards[index].classList.add('active');
+    }
+
+    // Initialize map when the page loads
+    window.addEventListener('load', initMap);
+
+    // Handle tab changes
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener('shown.bs.tab', (e) => {
+          const country = e.target.getAttribute('href').substring(1);
+          showLocations(country);
+
+          // Resize and fit bounds of the map
+          const map = maps[country];
+          setTimeout(() => {
+            map.invalidateSize();
+            if (markers[country].getLayers().length > 0) {
+              const group = L.featureGroup(markers[country].getLayers());
+              map.fitBounds(group.getBounds().pad(0.1));
+            }
+          }, 100);
+        });
+      });
+
+
+    // Add this function to handle resize events
+      function handleResize() {
+        if (map) {
+          map.invalidateSize();
+          if (markers.length > 0) {
+            const group = L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+          }
+        }
+      }
+
+      // Add resize event listener
+      window.addEventListener('resize', handleResize);
+
+      // Add orientation change handler for mobile devices
+      window.addEventListener('orientationchange', () => {
+        setTimeout(handleResize, 100);
+      });
+  </script>
 
   <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -1505,6 +1836,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- slick-carosuel -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
