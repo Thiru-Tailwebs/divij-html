@@ -286,6 +286,12 @@
   padding: 10px 20px;
 }
 
+#profile-listing .height-selector button:hover {
+  border: 0.7px solid #131313;
+  background-color: #131313;
+  color: #FFFFFF;
+}
+
 #profile-listing .height-inputs {
   display: flex;
   align-items: center;
@@ -312,11 +318,397 @@
   padding: 10px 20px;
 }
 
+#profile-listing .accordion-extra-text.selected-value {
+  color: #1E1E1E;
+  font-weight: 500;
+  font-style: italic;
+}
+
 #progressBar {
   background-color: #A5845A;
 }
 
+.progress-container {
+  position: sticky;
+  top: 73px;
+  z-index: 1000;
+  width: 100%;
+  background-color: white;
+  /* Or any color that matches your design */
+}
+
 .progress {
+  height: 10px;
+  border-radius: 0;
+}
+
+.progress-bar {
+  background-color: #A5845A;
+  /* Your theme color */
+  transition: width 0.3s ease;
+}
+
+#profile-listing .height-selector button.active {
+  border: 0.7px solid #131313 !important;
+  background-color: #131313;
+  color: #FFFFFF !important;
+}
+
+.toast {
+  z-index: 9999;
+}
+
+.toast-container {
+  z-index: 9999;
+}
+
+.fit-type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 !important;
+  border: 1px solid #cfcfcf;
+  background-color: transparent !important;
+  width: 100%;
+}
+
+.fit-type-btn:hover {
+  border: 1px solid #131313 !important;
+}
+
+.fit-type-btn.active {
+  border: 1px solid #131313 !important;
+  background-color: transparent !important;
+}
+
+.fit-type-text {
+  margin-top: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #818181;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.fit-type-btn:hover .fit-type-text {
+  color: #131313;
+  border-bottom: 2px solid #131313;
+}
+
+.fit-type-btn.active .fit-type-text {
+  color: #131313;
+  border-bottom: 2px solid #131313;
+}
+
+.watch-options button,
+.watch-size button,
+.watch-side button {
+  min-width: 120px;
+  border: 0.4px solid #C4C4C4;
+  border-radius: 0px;
+  background-color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #818181;
+  padding: 10px 20px;
+}
+
+.watch-options button:hover,
+.watch-size button:hover,
+.watch-side button:hover,
+.watch-options button.active,
+.watch-size button.active,
+.watch-side button.active {
+  border: 0.7px solid #131313;
+  background-color: #131313;
+  color: #FFFFFF;
+}
+
+.watch-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #C4C4C4;
+}
+
+#saved-size table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  border-bottom: 0.6px solid #C4C4C4
+}
+
+#saved-size table th,
+#saved-size table td {
+  border: none;
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#saved-size table td {
+  color: #131313;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#saved-size .table-dark {
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+#saved-size .text-start {
+  padding-left: 60px;
+}
+
+#saved-size button {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #818181;
+}
+
+#saved-size button:hover {
+  color: #1E1E1E;
+  cursor: pointer;
+}
+
+#saved-size .value {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+}
+
+.measure-btn-1 {
+  background-color: #E5E5E5 !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 18px !important;
+  color: #131313 !important;
+  padding: 15px 20px;
+  width: 100%;
   border-radius: 0px;
 }
 
+.measure-btn-2 {
+  background-color: #1E1E1E !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 18px !important;
+  color: #FFFFFF !important;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 0px;
+}
+
+/* Loader styles */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-content .spinner-border {
+  width: 4rem;
+  height: 4rem;
+  color: #A5845A !important;
+}
+
+.loader-content h3 {
+  font-family: "DM Serif Display", system-ui;
+  color: #FFFFFF;
+}
+
+.loader-content p {
+  font-family: "Nunito", sans-serif;
+  color: #FFFFFF;
+}
+
+#thank-you-section .video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#thank-you-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Best Fitting Garment */
+
+/* Best Fitting Garment Styles */
+.measurement-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-family: "DM Serif Display", system-ui;
+  color: #131313;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navigation-buttons button {
+  min-width: 150px;
+}
+
+#best-fitting-garment .height-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#best-fitting-garment .height-selector button {
+  margin: 5px;
+  min-width: 80px;
+  border: 0.4px solid #C4C4C4;
+  border-radius: 0px;
+  background-color: #FFFFFF;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #818181;
+  padding: 10px 20px;
+}
+
+#best-fitting-garment .height-selector button:hover {
+  border: 0.7px solid #131313;
+  background-color: #131313;
+  color: #FFFFFF;
+}
+
+#best-fitting-garment .height-selector button.active {
+  border: 0.7px solid #131313;
+  background-color: #131313;
+  color: #FFFFFF;
+}
+
+#best-fitting-garment .height-inputs {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#best-fitting-garment .height-inputs input {
+  width: 100px;
+  border-radius: 0;
+}
+
+#best-fitting-garment .height-inputs input:focus {
+  box-shadow: none;
+  border-color: #A5845A;
+}
+
+.section-subtitle {
+  font-family: "Nunito", sans-serif;
+  color: #818181;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instructions-container {
+  background-color: #FEF1DF;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  border-radius: 4px;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.instruction-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.instruction-number {
+  background-color: #131313;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.instruction-text {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #131313;
+  line-height: 1.5;
+}
+
+/* Video Tutorial Section Styles */
+.video-tutorial-container {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.video-wrapper {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.measurement-input-container {
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.measurement-input-container .form-control {
+  text-align: center;
+  border: 1px solid #C4C4C4;
+  border-radius: 0;
+  padding: 12px;
+  font-family: "Nunito", sans-serif;
+}
+
+.measurement-input-container .form-control:focus {
+  border-color: #A5845A;
+  box-shadow: none;
+}
