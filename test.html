@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- Intelligent Size Profiler js for Dress shirt -->
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hide all sections initially except the one in the URL hash
+      const sections = ['profile-listing', 'best-fitting-garment', 'measure-body', 'mail-in-garment', 'schedule-visit', 'saved-size', 'thank-you-section'];
+      sections.forEach(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          element.style.display = 'none';
+        }
+      });
+
+      // Show the section based on URL hash
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+          targetSection.style.display = 'block';
+        }
+      }
+
+      // Handle accordion completion for profile-listing
+      const accordion = document.getElementById('formAccordion');
+      if (accordion) {
+        const accordionItems = accordion.querySelectorAll('.accordion-item');
+        const lastAccordionButton = accordionItems[accordionItems.length - 1].querySelector('.accordion-button');
+
+        // Function to check if all accordions are completed
+        function checkAccordionCompletion() {
+          let allCompleted = true;
+          accordionItems.forEach(item => {
+            const extraText = item.querySelector('.accordion-extra-text');
+            if (!extraText || !extraText.textContent) {
+              allCompleted = false;
+            }
+          });
+          return allCompleted;
+        }
+
+        // Function to show saved size section
+        function showSavedSize() {
+          document.getElementById('profile-listing').style.display = 'none';
+          document.getElementById('saved-size').style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add event listener to the last "Done" button
+        const lastDoneButton = accordionItems[accordionItems.length - 1].querySelector('.btn-done');
+        if (lastDoneButton) {
+          lastDoneButton.addEventListener('click', function () {
+            if (checkAccordionCompletion()) {
+              showSavedSize();
+            }
+          });
+        }
+      }
+
+      // Handle saved size to thank you section transition
+      const savedSizeNextButton = document.querySelector('#saved-size .measure-btn-2');
+      if (savedSizeNextButton) {
+        savedSizeNextButton.addEventListener('click', function () {
+          document.getElementById('saved-size').style.display = 'none';
+          document.getElementById('thank-you-section').style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+
+    // Intelligent Size Profiler
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   // Initially hide second and third articles
+    //   document.getElementById('measurement-process').style.display = 'none';
+    //   document.getElementById('profile-listing').style.display = 'none';
+    //   document.getElementById('saved-size').style.display = 'none';
+
+    //   // Add click handler for back button
+    //   document.querySelector('.fa-arrow-left').closest('a').addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     handleBackNavigation();
+    //   });
+
+    //   // Add click handler for size-profiler card
+    //   document.querySelector('.measure-card.size-profiler').addEventListener('click', function () {
+    //     document.getElementById('measurement-process').style.display = 'none';
+    //     document.getElementById('profile-listing').style.display = 'block';
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    //   });
+    // });
+
+    // document.querySelector('.measure-card.fitting-garment').addEventListener('click', function () {
+    //   document.getElementById('measurement-process').style.display = 'none';
+    //   document.getElementById('best-fitting-garment').style.display = 'block';
+    //   window.scrollTo({ top: 0, behavior: 'smooth' });
+    // });
+
+    function handleBackNavigation() {
+      const garmentOption = document.getElementById('garment-option');
+      const measurementProcess = document.getElementById('measurement-process');
+      const profileListing = document.getElementById('profile-listing');
+      const fourthArticle = document.getElementById('saved-size'); // Updated ID to match your HTML
+      const thankYouSection = document.getElementById('thank-you-section');
+
+      // If we're on the thank you section
+      if (thankYouSection.style.display === 'block') {
+        thankYouSection.style.display = 'none';
+        savedSize.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      // If we're on the fourth article
+      if (fourthArticle.style.display === 'block') {
+        fourthArticle.style.display = 'none';
+        profileListing.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      // If we're on the third article (profile listing)
+      if (profileListing.style.display === 'block') {
+        profileListing.style.display = 'none';
+        measurementProcess.style.display = 'block';
+        garmentOption.style.display = 'none';
+        fourthArticle.style.display = 'none'; // Ensure fourth article is hidden
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      // If we're on the second article (measurement process)
+      else if (measurementProcess.style.display === 'block') {
+        measurementProcess.style.display = 'none';
+        garmentOption.style.display = 'block';
+        profileListing.style.display = 'none';
+        fourthArticle.style.display = 'none'; // Ensure fourth article is hidden
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      // If we're on the first article (garment option)
+      else {
+        window.history.back(); // Goes to previous page in browser history
+      }
+    }
+
+    // Keep your existing toggleArticles function
+    function toggleArticles() {
+      document.getElementById('garment-option').style.display = 'none';
+      document.getElementById('measurement-process').style.display = 'block';
+      document.getElementById('profile-listing').style.display = 'none';
+      document.getElementById('saved-size').style.display = 'none'; // Add this line
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let currentStep = 1;
+
+    function showValidationMessage(message) {
+      const toastEl = document.getElementById('validationToast');
+      const toast = new bootstrap.Toast(toastEl);
+      document.getElementById('toastMessage').textContent = message;
+      toast.show();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initially hide second and third articles
+      // document.getElementById('measurement-process').style.display = 'none';
+      // document.getElementById('profile-listing').style.display = 'none';
+
+      // Add click handler for back button
+      document.querySelector('.fa-arrow-left').closest('a').addEventListener('click', function (e) {
+        e.preventDefault();
+        handleBackNavigation();
+      });
+
+      // Add click handler for size-profiler card
+      // document.querySelector('.measure-card.size-profiler').addEventListener('click', function () {
+      //   document.getElementById('measurement-process').style.display = 'none';
+      //   document.getElementById('profile-listing').style.display = 'block';
+      //   window.scrollTo({ top: 0, behavior: 'smooth' });
+      // });
+
+      // Add click handlers for height/weight/measurement buttons
+      const selectionButtons = document.querySelectorAll('.height-selector button, .fit-type-btn');
+      selectionButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const parentSection = this.closest('.accordion-body');
+
+          if (this.classList.contains('fit-type-btn')) {
+            // For fit-type buttons
+            parentSection.querySelectorAll('.fit-type-btn').forEach(btn => {
+              btn.classList.remove('active');
+            });
+            // Update header with selected body/stomach type
+            updateAccordionHeader(currentStep, this.querySelector('.fit-type-text').textContent);
+          } else {
+            // For height-selector buttons
+            parentSection.querySelectorAll('.height-selector button').forEach(btn => {
+              btn.classList.remove('active');
+            });
+            // Update header with selected measurement
+            updateAccordionHeader(currentStep, this.textContent);
+          }
+          this.classList.add('active');
+        });
+      });
+
+      // Wrist watch handling
+      const watchOptions = document.querySelectorAll('[data-watch]');
+      const watchDetails = document.getElementById('watchDetails');
+
+      watchOptions.forEach(button => {
+        button.addEventListener('click', function () {
+          watchOptions.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          if (this.dataset.watch === 'yes') {
+            watchDetails.style.display = 'block';
+            updateAccordionHeader(currentStep, 'Yes');
+          } else {
+            watchDetails.style.display = 'none';
+            updateAccordionHeader(currentStep, 'No');
+          }
+        });
+      });
+
+      // Watch size and side handling
+      const watchSizeButtons = document.querySelectorAll('[data-size]');
+      const watchSideButtons = document.querySelectorAll('[data-side]');
+
+      watchSizeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          watchSizeButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          updateWatchSelection();
+        });
+      });
+
+      watchSideButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          watchSideButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          updateWatchSelection();
+        });
+      });
+
+      // Handle number input changes
+      const numberInputs = document.querySelectorAll('input[type="number"]');
+      numberInputs.forEach(input => {
+        input.addEventListener('change', function () {
+          if (this.value) {
+            const label = this.closest('.height-inputs').querySelector('label').textContent;
+            updateAccordionHeader(currentStep, `${this.value} ${label}`);
+          }
+        });
+      });
+
+      // Add click handlers for accordion buttons
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      accordionButtons.forEach((button, index) => {
+        button.addEventListener('click', function (e) {
+          if (!this.hasAttribute('disabled')) {
+            const targetId = this.getAttribute('data-bs-target');
+            const targetCollapse = document.querySelector(targetId);
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(targetCollapse);
+
+            // Update current step when manually opening an accordion
+            currentStep = index + 1;
+          }
+        });
+      });
+    });
+
+    // Helper function for watch selection
+    function updateWatchSelection() {
+      const selectedSize = document.querySelector('[data-size].active');
+      const selectedSide = document.querySelector('[data-side].active');
+      if (selectedSize && selectedSide) {
+        const summary = `${selectedSize.textContent} - ${selectedSide.textContent}`;
+        updateAccordionHeader(currentStep, summary);
+      }
+    }
+
+    function goToNextStep(nextStep) {
+      // Check if this is the last step
+      const totalSteps = document.querySelectorAll('.accordion-item').length;
+
+      if (currentStep === totalSteps) {
+        // Show loader
+        showLoader();
+
+        // Simulate loading time (3 seconds) and then show the 4th article
+        setTimeout(() => {
+          hideLoader();
+          showFourthArticle();
+        }, 3000);
+
+        return;
+      }
+      // Check if the click came from a skip button
+      const isSkipButton = event.target.classList.contains('btn-skip');
+
+      if (isSkipButton) {
+        // Update the accordion header to show "Skipped"
+        updateAccordionHeader(currentStep, "Skipped");
+        // Proceed to next step
+        proceedToNextStep(nextStep);
+        return;
+      }
+
+      // Rest of the validation logic remains the same
+      const currentAccordion = document.querySelector(`.accordion-item:nth-child(${currentStep})`);
+      let isValid = false;
+      let errorMessage = '';
+
+      switch (currentStep) {
+        case 1: // Height section
+          const heightButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const heightInputs = currentAccordion.querySelectorAll('input[type="number"]');
+          isValid = Array.from(heightButtons).some(btn => btn.classList.contains('active')) ||
+            Array.from(heightInputs).some(input => input.value);
+          errorMessage = 'Please enter your height before continuing';
+          break;
+
+        case 2: // Weight section
+          const weightButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const weightInput = currentAccordion.querySelector('input[type="number"]');
+          isValid = Array.from(weightButtons).some(btn => btn.classList.contains('active')) ||
+            weightInput.value;
+          errorMessage = 'Please enter your weight before continuing';
+          break;
+
+        case 3: // Neck size section
+          const neckButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const neckInput = currentAccordion.querySelector('input[type="number"]');
+          isValid = Array.from(neckButtons).some(btn => btn.classList.contains('active')) ||
+            neckInput.value;
+          errorMessage = 'Please enter your neck size before continuing';
+          break;
+
+        case 4: // Sleeve length section
+          const sleeveButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const sleeveInput = currentAccordion.querySelector('input[type="number"]');
+          isValid = Array.from(sleeveButtons).some(btn => btn.classList.contains('active')) ||
+            sleeveInput.value;
+          errorMessage = 'Please enter your sleeve length before continuing';
+          break;
+
+        case 5: // Shirt fit type section
+          const shirtFitButtons = currentAccordion.querySelectorAll('.height-selector button');
+          isValid = Array.from(shirtFitButtons).some(btn => btn.classList.contains('active'));
+          errorMessage = 'Please select a shirt fit type before continuing';
+          break;
+
+        case 6: // Wrist watch section
+          const watchOption = document.querySelector('.watch-options button.active');
+          if (!watchOption) {
+            showValidationMessage('Please select whether you wear a watch');
+            return;
+          }
+          if (watchOption.dataset.watch === 'yes') {
+            const watchSize = document.querySelector('[data-size].active');
+            const watchSide = document.querySelector('[data-side].active');
+            if (!watchSize || !watchSide) {
+              showValidationMessage('Please complete all watch details');
+              return;
+            }
+          }
+          isValid = true; // Add this line to indicate validation passed
+          errorMessage = ''; // Clear any error message
+          break;
+
+        case 7: // Jacket Size
+          const jacketSizeButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const jacketSizeInput = currentAccordion.querySelector('input[type="number"]');
+          isValid = Array.from(jacketSizeButtons).some(btn => btn.classList.contains('active')) ||
+            jacketSizeInput.value;
+          errorMessage = 'Please enter your jacket size before continuing';
+          break;
+
+        case 8: // Trousers Waist
+          const trousersButtons = currentAccordion.querySelectorAll('.height-selector button');
+          const trousersInput = currentAccordion.querySelector('input[type="number"]');
+          isValid = Array.from(trousersButtons).some(btn => btn.classList.contains('active')) ||
+            trousersInput.value;
+          errorMessage = 'Please enter your trousers waist size before continuing';
+          break;
+
+        case 9: // Body type section
+          const bodyTypeButtons = currentAccordion.querySelectorAll('.fit-type-btn');
+          isValid = Array.from(bodyTypeButtons).some(btn => btn.classList.contains('active'));
+          errorMessage = 'Please select a body type before continuing';
+          break;
+
+        case 10: // Stomach Type
+          const stomachTypeButtons = currentAccordion.querySelectorAll('.fit-type-btn');
+          isValid = Array.from(stomachTypeButtons).some(btn => btn.classList.contains('active'));
+          errorMessage = 'Please select your stomach type before continuing';
+          break;
+
+      }
+
+      if (isValid) {
+        proceedToNextStep(nextStep);
+      } else {
+        showValidationMessage(errorMessage);
+      }
+    }
+
+    function showLoader() {
+      const loader = document.getElementById('loader-container');
+      loader.classList.remove('d-none');
+      // Prevent scrolling while loader is shown
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideLoader() {
+      const loader = document.getElementById('loader-container');
+      loader.classList.add('d-none');
+      // Re-enable scrolling
+      document.body.style.overflow = 'auto';
+    }
+
+    function showFourthArticle() {
+      // Hide current articles
+      document.getElementById('garment-option').style.display = 'none';
+      document.getElementById('measurement-process').style.display = 'none';
+      document.getElementById('profile-listing').style.display = 'none';
+
+      // Show fourth article (replace 'fourth-article' with your actual article ID)
+      document.getElementById('saved-size').style.display = 'block';
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function proceedToNextStep(nextStep) {
+      // Enable all previous accordion buttons up to the next step
+      for (let i = 1; i <= nextStep; i++) {
+        const accordionButton = document.querySelector(`.accordion-item:nth-child(${i}) .accordion-button`);
+        if (accordionButton) {
+          accordionButton.removeAttribute('disabled');
+        }
+      }
+
+      // Update progress bar based on the highest completed step
+      updateProgressBar(nextStep);
+
+      if (nextStep > currentStep) {
+        const nextAccordionButton = document.querySelector(`.accordion-item:nth-child(${nextStep}) .accordion-button`);
+        if (nextAccordionButton) {
+          const currentCollapse = document.querySelector(`.accordion-item:nth-child(${currentStep}) .accordion-collapse`);
+          const nextCollapse = document.querySelector(`.accordion-item:nth-child(${nextStep}) .accordion-collapse`);
+
+          const bsCollapseCurrent = bootstrap.Collapse.getOrCreateInstance(currentCollapse);
+          const bsCollapseNext = bootstrap.Collapse.getOrCreateInstance(nextCollapse);
+          bsCollapseCurrent.hide();
+          bsCollapseNext.show();
+
+          currentStep = nextStep;
+        }
+      }
+    }
+
+    function updateProgressBar(step) {
+      const totalSteps = document.querySelectorAll('.accordion-item').length;
+      const progressBar = document.getElementById('progressBar');
+      const percentage = (step / totalSteps) * 100;
+      progressBar.style.width = `${percentage}%`;
+    }
+
+    function updateAccordionHeader(step, selectedValue) {
+      const accordionButton = document.querySelector(`.accordion-item:nth-child(${step}) .accordion-button`);
+      const extraTextSpan = accordionButton.querySelector('.accordion-extra-text');
+
+      if (extraTextSpan) {
+        extraTextSpan.textContent = selectedValue;
+        extraTextSpan.classList.add('selected-value');
+      }
+    }
+
+    // Function to adjust value based on button click
+    function adjustValue(id, change) {
+      const element = document.getElementById(id);
+      let currentValue = parseFloat(element.textContent);
+      currentValue += change;
+      element.textContent = currentValue.toFixed(3); // Keep 3 decimal places
+    }
+
+    document.querySelector('#saved-size .measure-btn-2').addEventListener('click', function () {
+      // Show loader
+      showLoader();
+
+      // Simulate saving process (2 seconds)
+      setTimeout(() => {
+        hideLoader();
+        showThankYouSection();
+      }, 2000);
+    });
+
+    function showThankYouSection() {
+      // Hide all other sections
+      document.getElementById('garment-option').style.display = 'none';
+      document.getElementById('measurement-process').style.display = 'none';
+      document.getElementById('profile-listing').style.display = 'none';
+      document.getElementById('saved-size').style.display = 'none';
+
+      // Show thank you section
+      document.getElementById('thank-you-section').style.display = 'block';
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  
+  <!-- Best Fitting Garment js for Dress shirt -->
+  <script>
+    // Track current step and total steps
+    let bestFitCurrentStep = 1;
+    const bestFitTotalSteps = 12;
+
+    // Progress bar update function
+    function updateProgressBar() {
+      const progressBar = document.getElementById('bestFitProgressBar');
+      const progress = (bestFitCurrentStep / bestFitTotalSteps) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    // Show validation toast message
+    function showValidationMessage(message) {
+      const toastEl = document.getElementById('validationToast');
+      const toast = new bootstrap.Toast(toastEl);
+      document.getElementById('toastMessage').textContent = message;
+      toast.show();
+    }
+
+    // Show/hide loader
+    function showLoader() {
+      document.getElementById('loader-container').classList.remove('d-none');
+    }
+
+    function hideLoader() {
+      document.getElementById('loader-container').classList.add('d-none');
+    }
+
+    // Get current section based on step
+    function getCurrentSection() {
+      switch (bestFitCurrentStep) {
+        case 1: return 'heightSection';
+        case 2: return 'weightSection';
+        case 3: return 'instructionsSection';
+        case 4: return 'neckSection';
+        case 5: return 'chestSection';
+        case 6: return 'waistSection';
+        case 7: return 'hipsSection';
+        case 8: return 'shoulderSection';
+        case 9: return 'bicepSection';
+        case 10: return 'sleevesSection';
+        case 11: return 'cuffsSection';
+        case 12: return 'lengthSection';
+        default: return 'heightSection';
+      }
+    }
+
+    // Validate current section
+    function validateCurrentSection() {
+      const currentSection = document.getElementById(getCurrentSection());
+      let isValid = true;
+      let message = '';
+
+      switch (bestFitCurrentStep) {
+        case 1: // Height
+          const heightFeet = document.getElementById('heightFeet').value;
+          const heightInches = document.getElementById('heightInches').value;
+          isValid = heightFeet !== '' && heightInches !== '';
+          message = 'Please enter your height';
+          break;
+
+        case 2: // Weight
+          const weightInput = document.getElementById('weightInput').value;
+          isValid = weightInput !== '';
+          message = 'Please enter your weight';
+          break;
+
+        case 3: // Instructions
+          isValid = true; // No validation needed
+          break;
+
+        case 10: // Sleeves
+          const leftSleeve = document.getElementById('leftSleeve').value;
+          const rightSleeve = document.getElementById('rightSleeve').value;
+          isValid = leftSleeve !== '' && rightSleeve !== '';
+          message = 'Please enter both sleeve measurements';
+          break;
+
+        case 11: // Cuffs
+          const leftCuff = document.getElementById('leftCuff').value;
+          const rightCuff = document.getElementById('rightCuff').value;
+          isValid = leftCuff !== '' && rightCuff !== '';
+          message = 'Please enter both cuff measurements';
+          break;
+
+        default: // All other measurements
+          const input = currentSection.querySelector('input[type="number"]');
+          isValid = input && input.value !== '';
+          message = 'Please enter the measurement';
+      }
+
+      if (!isValid) {
+        showValidationMessage(message);
+      }
+      return isValid;
+    }
+
+    function handleVideoPlayback(currentSectionId) {
+      // Stop all videos first
+      const allVideos = document.querySelectorAll('video');
+      allVideos.forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+      });
+
+      // Play video in current section if it exists
+      const currentSection = document.getElementById(currentSectionId);
+      if (currentSection) {
+        const video = currentSection.querySelector('video');
+        if (video) {
+          video.play();
+        }
+      }
+    }
+
+    // Navigate to next step
+    function bestFitGoToNextStep() {
+      if (!validateCurrentSection()) {
+        return;
+      }
+
+      const currentSection = document.getElementById(getCurrentSection());
+      currentSection.style.display = 'none';
+
+      // Check if we're on the last step
+      if (bestFitCurrentStep === bestFitTotalSteps) {
+        showLoader();
+        setTimeout(() => {
+          hideLoader();
+          document.getElementById('best-fitting-garment').style.display = 'none'; // Hide main container
+          document.getElementById('best-fit-saved-size').style.display = 'block';
+        }, 2000);
+        return;
+      }
+
+      // Move to next step
+      bestFitCurrentStep++;
+      const nextSection = document.getElementById(getCurrentSection());
+      nextSection.style.display = 'block';
+
+      // Handle video playback for the new section
+      handleVideoPlayback(getCurrentSection());
+
+      updateProgressBar();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Navigate to previous step
+    function bestFitGoToPreviousStep() {
+      const currentSection = document.getElementById(getCurrentSection());
+      currentSection.style.display = 'none';
+
+      if (bestFitCurrentStep === 1) {
+        document.getElementById('best-fitting-garment').style.display = 'none';
+        document.getElementById('measurement-process').style.display = 'block';
+        return;
+      }
+
+      bestFitCurrentStep--;
+      const previousSection = document.getElementById(getCurrentSection());
+      previousSection.style.display = 'block';
+
+      // Handle video playback for the new section
+      handleVideoPlayback(getCurrentSection());
+
+      updateProgressBar();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Save measurements
+    function saveBestFitMeasurements() {
+      showLoader();
+      setTimeout(() => {
+        hideLoader();
+        document.getElementById('best-fitting-garment').style.display = 'none'; // Hide main container
+        document.getElementById('best-fit-saved-size').style.display = 'none';
+        document.getElementById('best-fit-thank-you').style.display = 'block';
+      }, 2000);
+    }
+
+    // Initialize measurement sections
+    function initializeBestFittingGarment() {
+      // Reset to first step
+      bestFitCurrentStep = 1;
+
+      // Hide all sections except height
+      const sections = document.querySelectorAll('.measurement-section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById('heightSection').style.display = 'block';
+
+      // Reset progress bar
+      updateProgressBar();
+
+      // Add click handlers for height buttons
+      const heightButtons = document.querySelectorAll('#heightSection .height-selector button');
+      heightButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          heightButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          const heightText = this.textContent;
+          const [feet, inches] = heightText.replace('"', '').split("'");
+          document.getElementById('heightFeet').value = feet;
+          document.getElementById('heightInches').value = inches || '0';
+        });
+      });
+
+      // Add click handlers for weight buttons
+      const weightButtons = document.querySelectorAll('#weightSection .height-selector button');
+      weightButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          weightButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          const weightText = this.textContent;
+          const weight = weightText.replace(' lbs', '');
+          document.getElementById('weightInput').value = weight;
+        });
+      });
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add click handler for the "Best Fitting Garment" card
+      const bestFitCard = document.querySelector('.measure-card.fitting-garment');
+      if (bestFitCard) {
+        bestFitCard.addEventListener('click', function () {
+          document.getElementById('measurement-process').style.display = 'none';
+          document.getElementById('best-fitting-garment').style.display = 'block';
+          initializeBestFittingGarment();
+        });
+      }
+
+      // Add click handler for save button in saved size section
+      const saveButton = document.querySelector('#best-fit-saved-size .measure-btn-2');
+      if (saveButton) {
+        saveButton.addEventListener('click', saveBestFitMeasurements);
+      }
+    });
+  </script>
+  
+  <!-- Measure Fit Js for Dress Shirt -->
+  <script>
+    // Global variables for measure body section
+    let currentMeasureBodyStep = 1;
+    const totalMeasureBodySteps = 12; // Update this based on total number of sections
+
+    // Function to update progress bar
+    function updateMeasureBodyProgress() {
+      const progressBar = document.getElementById('measureBodyProgressBar');
+      const progress = (currentMeasureBodyStep / totalMeasureBodySteps) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    // Function to show specific section and hide others
+    function showMeasureBodySection(sectionId) {
+      // Get all measurement sections
+      const sections = document.querySelectorAll('#measure-body .measurement-section');
+
+      // Hide all sections
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the target section
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.style.display = 'block';
+      }
+
+      // Update progress bar
+      updateMeasureBodyProgress();
+    }
+
+    // Add this to your existing JavaScript code
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the measure body card
+      const measureBodyCard = document.querySelector('.measure-card.measure-body');
+
+      // Add click event listener
+      // measureBodyCard.addEventListener('click', function () {
+      //   // Hide other main sections
+      //   document.getElementById('garment-option').style.display = 'none';
+      //   document.getElementById('measurement-process').style.display = 'none';
+      //   document.getElementById('profile-listing').style.display = 'none';
+      //   document.getElementById('best-fitting-garment').style.display = 'none';
+      //   document.getElementById('best-fit-saved-size').style.display = 'none';
+      //   document.getElementById('best-fit-thank-you').style.display = 'none';
+
+      //   // Show measure body container
+      //   document.getElementById('measure-body').style.display = 'block';
+
+      //   // Show first measurement section
+      //   showMeasureBodySection('bodyHeightSection');
+
+      //   // Reset progress and current step
+      //   currentMeasureBodyStep = 1;
+      //   updateMeasureBodyProgress();
+
+      //   // Scroll to top
+      //   window.scrollTo({ top: 0, behavior: 'smooth' });
+      // });
+    });
+
+    // Function to handle height button selection
+    function initializeHeightButtons() {
+      const heightButtons = document.querySelectorAll('#bodyHeightSection .height-selector button');
+      heightButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          heightButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          // Update height inputs
+          const height = this.textContent;
+          const [feet, inches] = height.replace('"', '').split("'");
+          document.getElementById('bodyHeightFeet').value = feet;
+          document.getElementById('bodyHeightInches').value = inches;
+        });
+      });
+    }
+
+    // Function to handle weight button selection
+    function initializeWeightButtons() {
+      const weightButtons = document.querySelectorAll('#bodyWeightSection .height-selector button');
+      weightButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          weightButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          // Update weight input
+          const weight = this.textContent.replace(' lbs', '');
+          document.getElementById('bodyWeight').value = weight;
+        });
+      });
+    }
+
+    // Function to go to next step
+    function measureBodyNextStep() {
+      if (!validateCurrentStep()) {
+        showValidationToast();
+        return;
+      }
+
+      currentMeasureBodyStep++;
+      switch (currentMeasureBodyStep) {
+        case 1:
+          showMeasureBodySection('bodyHeightSection');
+          break;
+        case 2:
+          showMeasureBodySection('bodyWeightSection');
+          break;
+        case 3:
+          showMeasureBodySection('chestMeasureSection');
+          break;
+        case 4:
+          showMeasureBodySection('neckMeasureSection');
+          break;
+        case 5:
+          showMeasureBodySection('abdomenMeasureSection');
+          break;
+        case 6:
+          showMeasureBodySection('hipsMeasureSection');
+          break;
+        case 7:
+          showMeasureBodySection('shoulderMeasureSection');
+          break;
+        case 8:
+          showMeasureBodySection('armLenghtSection');
+          break;
+        case 9:
+          showMeasureBodySection('bicepMeasureSection');
+          break;
+        case 10:
+          showMeasureBodySection('wristLenghtSection');
+          break;
+        case 11:
+          showMeasureBodySection('shirtFitSection');
+          break;
+        case 12:
+          showMeasureBodySection('bodyTypeSection');
+          break;
+        default:
+          handleMeasureBodyCompletion();
+          break;
+      }
+    }
+
+    // Function to go to previous step
+    function measureBodyPrevStep() {
+      if (currentMeasureBodyStep > 1) {
+        currentMeasureBodyStep--;
+        measureBodyNextStep(); // Reuse next step function to show correct section
+      }
+    }
+
+    // Validation function
+    function validateCurrentStep() {
+      let isValid = true;
+
+      switch (currentMeasureBodyStep) {
+        case 1: // Height validation
+          const feet = document.getElementById('bodyHeightFeet').value;
+          const inches = document.getElementById('bodyHeightInches').value;
+          isValid = feet && inches;
+          break;
+        case 2: // Weight validation
+          isValid = document.getElementById('bodyWeight').value;
+          break;
+        case 3: // Chest validation
+          isValid = document.getElementById('chestMeasurement').value;
+          break;
+        // Add validation for other steps as needed
+      }
+
+      return isValid;
+    }
+
+    // Function to show validation toast
+    function showValidationToast() {
+      const toast = new bootstrap.Toast(document.getElementById('validationToast'));
+      toast.show();
+    }
+
+    // Function to handle completion of measurements
+    function handleMeasureBodyCompletion() {
+      // Hide measurement sections
+      document.getElementById('measure-body').style.display = 'none';
+
+      // Show loader
+      document.getElementById('loader-container').classList.remove('d-none');
+
+      // Simulate processing time
+      setTimeout(() => {
+        // Hide loader
+        document.getElementById('loader-container').classList.add('d-none');
+
+        // Show thank you section
+        document.getElementById('best-fit-thank-you').style.display = 'block';
+      }, 2000);
+    }
+
+    // Initialize when document is ready
+    document.addEventListener('DOMContentLoaded', function () {
+      initializeHeightButtons();
+      initializeWeightButtons();
+      showMeasureBodySection('bodyHeightSection'); // Show first section by default
+      updateMeasureBodyProgress();
+    });
+  </script>
+  
+  <!-- mail in garment js for Dress Shirt -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the mail-in card
+      const mailInCard = document.querySelector('.measure-card.mail-in');
+
+      // Add click event listener
+      // mailInCard.addEventListener('click', function () {
+      //   // Hide other main sections
+      //   document.getElementById('garment-option').style.display = 'none';
+      //   document.getElementById('measurement-process').style.display = 'none';
+      //   document.getElementById('profile-listing').style.display = 'none';
+      //   document.getElementById('best-fitting-garment').style.display = 'none';
+      //   document.getElementById('measure-body').style.display = 'none';
+
+      //   // Show mail-in garment section
+      //   document.getElementById('mail-in-garment').style.display = 'block';
+
+      //   // Scroll to top
+      //   window.scrollTo({ top: 0, behavior: 'smooth' });
+      // });
+
+      // Handle height button selection
+      const heightButtons = document.querySelectorAll('#mail-in-garment .height-selector button');
+      heightButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const heightSection = this.closest('.measurements-section');
+          const heightButtons = heightSection.querySelectorAll('.height-selector button');
+
+          heightButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          if (this.textContent.includes("'")) {
+            // Handle height buttons
+            const [feet, inches] = this.textContent.replace('"', '').split("'");
+            document.getElementById('heightFeet').value = feet;
+            document.getElementById('heightInches').value = inches || '0';
+          } else {
+            // Handle weight buttons
+            document.getElementById('weight').value = this.textContent;
+          }
+        });
+      });
+
+      // Handle form submission
+      document.querySelector('#mail-in-garment .measure-btn-2').addEventListener('click', function () {
+        // Show loader
+        document.getElementById('loader-container').classList.remove('d-none');
+
+        // Simulate processing time
+        setTimeout(() => {
+          // Hide loader
+          document.getElementById('loader-container').classList.add('d-none');
+
+          // Show thank you section
+          document.getElementById('best-fit-thank-you').style.display = 'block';
+          document.getElementById('mail-in-garment').style.display = 'none';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

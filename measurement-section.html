@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- slick-carosuel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/product_show.css">
+  <link rel="stylesheet" href="css/product_list.css">
+  <link rel="stylesheet" href="css/garment.css">
+
+  <title>Garment Option</title>
+</head>
+
+<body>
+
+  <!-- Small Header -->
+  <div class="small-header py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-right contact-text">Contact Us? <span class="ms-2 fw-400-tw">|</span> <span
+              class="ms-2 fw-400-tw"><a href="tel:+1-888-263-2406" class="white-tw">+1-888-263-2406</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header py-3">
+    <div class="mx-60-tw">
+      <div class="row align-items-center">
+        <div class="col-4 col-md-4">
+          <a href="javascript:history.back()" class="d-flex align-items-center text-style-1 fs-16-tw black-3-tw text-decoration-none">
+            <i class="fa-solid fa-arrow-left me-3"></i>
+            <h3 class="text-style-1 fs-16-tw black-3-tw mb-0">Back</h3>
+          </a>
+        </div>
+
+        <!-- logo-tw -->
+        <div class="col-4 col-md-4">
+          <div class="logo-tw m-auto">
+            <a href="index.html">
+              <img src="assets/images/divij-logo.png" alt="logo-tw" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <!-- Images and Hamburger Menu -->
+        <div class="col-4 col-md-4 d-flex justify-content-end align-items-center">
+          <div class="header-images d-flex align-items-center justify-content-end">
+            <div class="w-13p-tw ms-3">
+              <img src="assets/images/user-icon.png" alt="Profile" class="w-100">
+            </div>
+            <div class="w-13p-tw ms-3">
+              <img src="assets/images/store-icon.png" alt="Store" class="w-100">
+            </div>
+            <div class="search-container">
+              <input type="text" class="search-box" placeholder="Search...">
+              <div class="w-35p-tw ms-3">
+                <img src="assets/images/search-icon.png" alt="Search" class="search-icon w-100">
+              </div>
+            </div>
+          </div>
+          <!-- Hamburger Button -->
+          <div class="d-lg-none d-md-block ms-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Intelligent Size Profiler for Dress shirt -->
+  <article class="dress-shirt-profiler">
+    <section id="profile-listing">
+      <div class="garment-image-container">
+        <img src="assets/images/process-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
+          <h1 class="text-style-2 white-tw">Intelligent Size Profiler</h1>
+        </div>
+      </div>
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" id="progressBar" role="progressbar"></div>
+        </div>
+      </div>
+      <div class="container w-80p-tw my-4">
+        <div class="form-container">
+          <div class="accordion" id="formAccordion">
+            <!-- Body Height Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHeight"
+                  aria-expanded="true" aria-controls="collapseHeight">
+                  Body Height
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseHeight" class="accordion-collapse collapse show" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">5'5"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'6"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'7"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'8"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'9"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'10"</button>
+                    <button type="button" class="btn btn-outline-secondary">5'11"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'0"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'1"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'2"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'3"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'4"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'5"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'6"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'7"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'8"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'9"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'10"</button>
+                    <button type="button" class="btn btn-outline-secondary">6'11"</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="heightFeet" class="form-label mb-0 text-style-4">Height:</label>
+                    </div>
+                    <div class="d-flex align-items-center ms-4">
+                      <input type="number" class="form-control" id="heightFeet">
+                      <label class="form-label mb-0 ms-2 text-style-6">Feet</label>
+                    </div>
+                    <div class="d-flex align-items-center ms-4">
+                      <input type="number" class="form-control" id="heightInches">
+                      <label class="form-label mb-0 ms-2 text-style-6">Inches</label>
+                    </div>
+                    <button type="button" class="btn btn-done ms-auto">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Body Weight Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseWeight" aria-expanded="false" aria-controls="collapseWeight" disabled>
+                  Body Weight
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseWeight" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">125</button>
+                    <button type="button" class="btn btn-outline-secondary">130</button>
+                    <button type="button" class="btn btn-outline-secondary">135</button>
+                    <button type="button" class="btn btn-outline-secondary">140</button>
+                    <button type="button" class="btn btn-outline-secondary">145</button>
+                    <button type="button" class="btn btn-outline-secondary">150</button>
+                    <button type="button" class="btn btn-outline-secondary">155</button>
+                    <button type="button" class="btn btn-outline-secondary">160</button>
+                    <button type="button" class="btn btn-outline-secondary">165</button>
+                    <button type="button" class="btn btn-outline-secondary">170</button>
+                    <button type="button" class="btn btn-outline-secondary">175</button>
+                    <button type="button" class="btn btn-outline-secondary">180</button>
+                    <button type="button" class="btn btn-outline-secondary">185</button>
+                    <button type="button" class="btn btn-outline-secondary">190</button>
+                    <button type="button" class="btn btn-outline-secondary">195</button>
+                    <button type="button" class="btn btn-outline-secondary">200</button>
+                    <button type="button" class="btn btn-outline-secondary">205</button>
+                    <button type="button" class="btn btn-outline-secondary">210</button>
+                    <button type="button" class="btn btn-outline-secondary">215</button>
+                    <button type="button" class="btn btn-outline-secondary">220</button>
+                    <button type="button" class="btn btn-outline-secondary">225</button>
+                    <button type="button" class="btn btn-outline-secondary">230</button>
+                    <button type="button" class="btn btn-outline-secondary">235</button>
+                    <button type="button" class="btn btn-outline-secondary">240</button>
+                    <button type="button" class="btn btn-outline-secondary">245</button>
+                    <button type="button" class="btn btn-outline-secondary">250</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Weight:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <button type="button" class="btn btn-done ms-auto">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Shirt Neck Section -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNeck" aria-expanded="false" aria-controls="collapseNeck" disabled>
+                  Shirt Neck
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseNeck" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">14</button>
+                    <button type="button" class="btn btn-outline-secondary">14.25</button>
+                    <button type="button" class="btn btn-outline-secondary">14.5</button>
+                    <button type="button" class="btn btn-outline-secondary">14.75</button>
+                    <button type="button" class="btn btn-outline-secondary">15</button>
+                    <button type="button" class="btn btn-outline-secondary">15.25</button>
+                    <button type="button" class="btn btn-outline-secondary">15.5</button>
+                    <button type="button" class="btn btn-outline-secondary">15.75</button>
+                    <button type="button" class="btn btn-outline-secondary">16</button>
+                    <button type="button" class="btn btn-outline-secondary">16.25</button>
+                    <button type="button" class="btn btn-outline-secondary">16.5</button>
+                    <button type="button" class="btn btn-outline-secondary">16.75</button>
+                    <button type="button" class="btn btn-outline-secondary">17</button>
+                    <button type="button" class="btn btn-outline-secondary">17.25</button>
+                    <button type="button" class="btn btn-outline-secondary">17.5</button>
+                    <button type="button" class="btn btn-outline-secondary">17.75</button>
+                    <button type="button" class="btn btn-outline-secondary">18</button>
+                    <button type="button" class="btn btn-outline-secondary">18.25</button>
+                    <button type="button" class="btn btn-outline-secondary">18.5</button>
+                    <button type="button" class="btn btn-outline-secondary">18.75</button>
+                    <button type="button" class="btn btn-outline-secondary">19</button>
+                    <button type="button" class="btn btn-outline-secondary">19.25</button>
+                    <button type="button" class="btn btn-outline-secondary">19.5</button>
+                    <button type="button" class="btn btn-outline-secondary">19.75</button>
+                    <button type="button" class="btn btn-outline-secondary">20</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Neck Size:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3 btn-skip">I Don't Know
+                        -
+                        Skip for now</button>
+                      <button type="button" class="btn btn-done">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Sleeve Length -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSleeve" aria-expanded="false" aria-controls="collapseSleeve" disabled>
+                  Sleeve Length
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseSleeve" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">30</button>
+                    <button type="button" class="btn btn-outline-secondary">30.25</button>
+                    <button type="button" class="btn btn-outline-secondary">30.5</button>
+                    <button type="button" class="btn btn-outline-secondary">30.75</button>
+                    <button type="button" class="btn btn-outline-secondary">31</button>
+                    <button type="button" class="btn btn-outline-secondary">31.25</button>
+                    <button type="button" class="btn btn-outline-secondary">31.5</button>
+                    <button type="button" class="btn btn-outline-secondary">31.75</button>
+                    <button type="button" class="btn btn-outline-secondary">32</button>
+                    <button type="button" class="btn btn-outline-secondary">32.25</button>
+                    <button type="button" class="btn btn-outline-secondary">32.5</button>
+                    <button type="button" class="btn btn-outline-secondary">32.75</button>
+                    <button type="button" class="btn btn-outline-secondary">33</button>
+                    <button type="button" class="btn btn-outline-secondary">33.25</button>
+                    <button type="button" class="btn btn-outline-secondary">33.5</button>
+                    <button type="button" class="btn btn-outline-secondary">33.75</button>
+                    <button type="button" class="btn btn-outline-secondary">34</button>
+                    <button type="button" class="btn btn-outline-secondary">34.25</button>
+                    <button type="button" class="btn btn-outline-secondary">34.5</button>
+                    <button type="button" class="btn btn-outline-secondary">34.75</button>
+                    <button type="button" class="btn btn-outline-secondary">35</button>
+                    <button type="button" class="btn btn-outline-secondary">35.25</button>
+                    <button type="button" class="btn btn-outline-secondary">35.5</button>
+                    <button type="button" class="btn btn-outline-secondary">35.75</button>
+                    <button type="button" class="btn btn-outline-secondary">36</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label for="weight" class="form-label mb-0 text-style-4">Sleeve Length:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control" id="weight">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3 btn-skip">I Don't Know
+                        -
+                        Skip for now</button>
+                      <button type="button" class="btn btn-done">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Shirt Fit Type -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseShirtFit" aria-expanded="false" aria-controls="collapseShirtFit" disabled>
+                  Shirt Fit Type
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseShirtFit" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3 row">
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/shirt-type-1.png" class="w-100" alt="slim-shirt">
+                        <span class="fit-type-text">Slim Fit</span>
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/shirt-type-2.png" class="w-100" alt="tailored-shirt">
+                        <span class="fit-type-text">Tailored Fit</span>
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/shirt-type-3.png" class="w-100" alt="slim-shirt">
+                        <span class="fit-type-text">Regular Fit</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex ms-auto justify-content-center">
+                    <button type="button" class="btn btn-done">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Wrist Watch -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseWristWatch" aria-expanded="false" aria-controls="collapseWristWatch" disabled>
+                  Wrist Watch
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseWristWatch" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="mb-4">
+                    <h5 class="text-style-1 black-3-tw">Would you like your shirt to accommodate a wrist watch?</h5>
+                  </div>
+                  <div class="watch-options mb-4">
+                    <button type="button" class="btn btn-outline-secondary me-3" data-watch="yes">Yes</button>
+                    <button type="button" class="btn btn-outline-secondary" data-watch="no">No</button>
+                  </div>
+  
+                  <div id="watchDetails" class="watch-details" style="display: none;">
+                    <div class="watch-size mb-4">
+                      <label class="form-label mb-2">What is the size?</label>
+                      <div>
+                        <button type="button" class="btn btn-outline-secondary me-3" data-size="medium">Medium</button>
+                        <button type="button" class="btn btn-outline-secondary" data-size="large">Large</button>
+                      </div>
+                    </div>
+  
+                    <div class="watch-side mb-4">
+                      <label class="form-label mb-2">Which side?</label>
+                      <div>
+                        <button type="button" class="btn btn-outline-secondary me-3" data-side="left">Left
+                          Wrist</button>
+                        <button type="button" class="btn btn-outline-secondary" data-side="right">Right Wrist</button>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-done">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Jacket Size -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseJacketSize" aria-expanded="false" aria-controls="collapseJacketSize" disabled>
+                  Jacket Size
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseJacketSize" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <!-- Similar to neck size section -->
+                  <div class="height-selector mb-3">
+                    <!-- Add jacket sizes 34-54 -->
+                    <button type="button" class="btn btn-outline-secondary">34</button>
+                    <button type="button" class="btn btn-outline-secondary">35</button>
+                    <button type="button" class="btn btn-outline-secondary">36</button>
+                    <button type="button" class="btn btn-outline-secondary">37</button>
+                    <button type="button" class="btn btn-outline-secondary">38</button>
+                    <button type="button" class="btn btn-outline-secondary">39</button>
+                    <button type="button" class="btn btn-outline-secondary">40</button>
+                    <button type="button" class="btn btn-outline-secondary">41</button>
+                    <button type="button" class="btn btn-outline-secondary">42</button>
+                    <button type="button" class="btn btn-outline-secondary">43</button>
+                    <button type="button" class="btn btn-outline-secondary">44</button>
+                    <button type="button" class="btn btn-outline-secondary">45</button>
+                    <button type="button" class="btn btn-outline-secondary">46</button>
+                    <button type="button" class="btn btn-outline-secondary">47</button>
+                    <button type="button" class="btn btn-outline-secondary">48</button>
+                    <button type="button" class="btn btn-outline-secondary">49</button>
+                    <button type="button" class="btn btn-outline-secondary">50</button>
+                    <button type="button" class="btn btn-outline-secondary">51</button>
+                    <button type="button" class="btn btn-outline-secondary">52</button>
+                    <button type="button" class="btn btn-outline-secondary">53</button>
+                    <button type="button" class="btn btn-outline-secondary">54</button>
+                    <button type="button" class="btn btn-outline-secondary">55</button>
+                    <button type="button" class="btn btn-outline-secondary">56</button>
+                    <button type="button" class="btn btn-outline-secondary">57</button>
+                    <button type="button" class="btn btn-outline-secondary">58</button>
+                    <button type="button" class="btn btn-outline-secondary">59</button>
+                    <button type="button" class="btn btn-outline-secondary">60</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label class="form-label mb-0 text-style-4">Jacket Size:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3 btn-skip">I Don't Know
+                        -
+                        Skip for
+                        now</button>
+                      <button type="button" class="btn btn-done">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Trousers Waist -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTrousersWaist" aria-expanded="false" aria-controls="collapseTrousersWaist"
+                  disabled>
+                  Trousers Waist
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseTrousersWaist" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="height-selector mb-3">
+                    <button type="button" class="btn btn-outline-secondary">28</button>
+                    <button type="button" class="btn btn-outline-secondary">29</button>
+                    <button type="button" class="btn btn-outline-secondary">30</button>
+                    <button type="button" class="btn btn-outline-secondary">31</button>
+                    <button type="button" class="btn btn-outline-secondary">32</button>
+                    <button type="button" class="btn btn-outline-secondary">33</button>
+                    <button type="button" class="btn btn-outline-secondary">34</button>
+                    <button type="button" class="btn btn-outline-secondary">35</button>
+                    <button type="button" class="btn btn-outline-secondary">36</button>
+                    <button type="button" class="btn btn-outline-secondary">37</button>
+                    <button type="button" class="btn btn-outline-secondary">38</button>
+                    <button type="button" class="btn btn-outline-secondary">39</button>
+                    <button type="button" class="btn btn-outline-secondary">40</button>
+                    <button type="button" class="btn btn-outline-secondary">41</button>
+                    <button type="button" class="btn btn-outline-secondary">42</button>
+                    <button type="button" class="btn btn-outline-secondary">43</button>
+                    <button type="button" class="btn btn-outline-secondary">44</button>
+                    <button type="button" class="btn btn-outline-secondary">45</button>
+                    <button type="button" class="btn btn-outline-secondary">46</button>
+                    <button type="button" class="btn btn-outline-secondary">47</button>
+                    <button type="button" class="btn btn-outline-secondary">48</button>
+                  </div>
+                  <div class="height-inputs">
+                    <div>
+                      <label class="form-label mb-0 text-style-4">Waist Size:</label>
+                    </div>
+                    <div class="ms-4">
+                      <input type="number" class="form-control">
+                    </div>
+                    <div class="d-flex ms-auto">
+                      <button type="button" class="btn btn-done me-3 btn-skip">I Don't Know
+                        -
+                        Skip for
+                        now</button>
+                      <button type="button" class="btn btn-done">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Body Type -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseBodyType" aria-expanded="false" aria-controls="collapseBodyType" disabled>
+                  Body Type
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseBodyType" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="row g-3">
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/body-type-1.png" class="w-100" alt="slim">
+                        <span class="fit-type-text">Slim</span>
+                      </button>
+                    </div>
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/body-type-2.png" class="w-100" alt="regular">
+                        <span class="fit-type-text">Regular</span>
+                      </button>
+                    </div>
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/body-type-3.png" class="w-100" alt="athletic">
+                        <span class="fit-type-text">Athletic</span>
+                      </button>
+                    </div>
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/body-type-4.png" class="w-100" alt="hefty">
+                        <span class="fit-type-text">Hefty</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-done">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Stomach Type -->
+            <div class="accordion-item">
+              <h2 class="accordion-header d-flex">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseStomachType" aria-expanded="false" aria-controls="collapseStomachType"
+                  disabled>
+                  Stomach Type
+                  <span class="accordion-extra-text ms-auto"></span>
+                </button>
+              </h2>
+              <div id="collapseStomachType" class="accordion-collapse collapse" data-bs-parent="#formAccordion">
+                <div class="accordion-body">
+                  <div class="row g-3">
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/lower-body-1.png" class="w-100" alt="slim">
+                        <span class="fit-type-text">Slim</span>
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/lower-body-2.png" class="w-100" alt="regular">
+                        <span class="fit-type-text">Regular</span>
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/lower-body-3.png" class="w-100" alt="athletic">
+                        <span class="fit-type-text">Athletic</span>
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/lower-body-4.png" class="w-100" alt="hefty">
+                        <span class="fit-type-text">Hefty</span>
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-secondary fit-type-btn">
+                        <img src="assets/images/lower-body-5.png" class="w-100" alt="large">
+                        <span class="fit-type-text">Large</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-done">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="saved-size" class="text-center" style="display: none;">
+      <div class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">CREATE A NEW SHIRT</h1>
+          <h3 class="text-style-2 white-tw fs-24-tw mt-4">Your Calculated Measurements</h3>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">We have adjusted for shrinkage, allowances and comfort
+            in
+            your new shirt sizes</h4>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="mt-5 w-80p-tw mx-auto">
+          <div class="table-responsive">
+            <table class="table align-middle table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th class="text-start py-3">Units</th>
+                  <th class="text-center py-3">New Sizes</th>
+                </tr>
+              </thead>
+              <tbody class="mt-2">
+                <tr>
+                  <td class="text-start">Collar</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('collar', -1)">−</button>
+                    <span id="collar" class="value">19.125</span>
+                    <button onclick="adjustValue('collar', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Chest</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('chest', -1)">−</button>
+                    <span id="chest" class="value">48.05</span>
+                    <button onclick="adjustValue('chest', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Waist</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('waist', -1)">−</button>
+                    <span id="waist" class="value">43.05</span>
+                    <button onclick="adjustValue('waist', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Hips</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('hips', -1)">−</button>
+                    <span id="hips" class="value">43.05</span>
+                    <button onclick="adjustValue('hips', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Shoulders</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('shoulders', -1)">−</button>
+                    <span id="shoulders" class="value">43.05</span>
+                    <button onclick="adjustValue('shoulders', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Biceps</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('biceps', -1)">−</button>
+                    <span id="biceps" class="value">43.05</span>
+                    <button onclick="adjustValue('biceps', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Left Sleeves Length</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('leftSleeve', -1)">−</button>
+                    <span id="leftSleeve" class="value">43.05</span>
+                    <button onclick="adjustValue('leftSleeve', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Right Sleeves Length</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('rightSleeve', -1)">−</button>
+                    <span id="rightSleeve" class="value">43.05</span>
+                    <button onclick="adjustValue('rightSleeve', 1)">+</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row justify-content-between mt-4">
+            <div class="col-md-6">
+              <button class="btn measure-btn-1">Back</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn measure-btn-2" id="saveButton">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="thank-you-section" class="text-center" style="display: none;">
+      <section class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">Thank You!</h1>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">Your measurements have been saved successfully</h4>
+        </div>
+      </section>
+  
+      <section class="container my-5">
+        <div class="w-80p-tw mx-auto">
+          <!-- Video Container -->
+          <div class="video-container mb-5">
+            <video width="100%" controls autoplay>
+              <source src="assets/videos/end_of_measurements.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+  
+          <!-- Continue Shopping Button -->
+          <div class="mt-4 w-50p-tw mx-auto">
+            <a href="index.html" class="btn measure-btn-2">
+              Continue Shopping at Divij Bespoke
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  
+    <aside class="toast-container position-fixed top-50 start-50 translate-middle">
+      <div class="toast align-items-center text-white bg-danger border-0" role="alert" id="validationToast">
+        <div class="d-flex">
+          <div class="toast-body" id="toastMessage">
+            Please make a selection before continuing.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </aside>
+  
+    <div id="loader-container" class="loader-overlay d-none">
+      <div class="loader-content">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <h3 class="mt-3 text-white">Generating Your Profile...</h3>
+        <p class="text-white">Please wait while we process your measurements</p>
+      </div>
+    </div>
+  </article>
+  
+  <!-- Best Fitting Garment for Dress shirt -->
+  <article class="best-fitting-garment-container">
+    <section id="best-fitting-garment">
+      <div class="garment-image-container">
+        <img src="assets/images/process-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">MEASUREMENT PROCESS</h4>
+          <h1 class="text-style-2 white-tw">Best Fitting Garment</h1>
+        </div>
+      </div>
+  
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" id="bestFitProgressBar" role="progressbar"></div>
+        </div>
+      </div>
+  
+      <div class="container w-80p-tw">
+        <!-- Height Section -->
+        <div class="measurement-section" id="heightSection">
+          <h3 class="section-title">Body Height</h3>
+          <h4 class="section-subtitle">Select your body height</h4>
+          <div class="height-selector mb-3">
+            <button type="button" class="btn btn-outline-secondary">5'5"</button>
+            <button type="button" class="btn btn-outline-secondary">5'6"</button>
+            <button type="button" class="btn btn-outline-secondary">5'7"</button>
+            <button type="button" class="btn btn-outline-secondary">5'8"</button>
+            <button type="button" class="btn btn-outline-secondary">5'9"</button>
+            <button type="button" class="btn btn-outline-secondary">5'10"</button>
+            <button type="button" class="btn btn-outline-secondary">5'11"</button>
+            <button type="button" class="btn btn-outline-secondary">6'0"</button>
+            <button type="button" class="btn btn-outline-secondary">6'1"</button>
+            <button type="button" class="btn btn-outline-secondary">6'2"</button>
+            <button type="button" class="btn btn-outline-secondary">6'3"</button>
+            <button type="button" class="btn btn-outline-secondary">6'4"</button>
+            <button type="button" class="btn btn-outline-secondary">6'5"</button>
+            <button type="button" class="btn btn-outline-secondary">6'6"</button>
+            <button type="button" class="btn btn-outline-secondary">6'7"</button>
+            <button type="button" class="btn btn-outline-secondary">6'8"</button>
+            <button type="button" class="btn btn-outline-secondary">6'9"</button>
+            <button type="button" class="btn btn-outline-secondary">6'10"</button>
+            <button type="button" class="btn btn-outline-secondary">6'11"</button>
+          </div>
+          <div class="height-inputs">
+            <div>
+              <label for="heightFeet" class="form-label mb-0 text-style-4">Height:</label>
+            </div>
+            <div class="d-flex ms-4">
+              <input type="number" class="form-control me-2" id="heightFeet" placeholder="Feet">
+              <input type="number" class="form-control" id="heightInches" placeholder="Inches">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Weight Section -->
+        <div class="measurement-section" id="weightSection" style="display: none;">
+          <h3 class="section-title">Body Weight</h3>
+          <h4 class="section-subtitle">Select your body weight</h4>
+          <div class="height-selector mb-3">
+            <button type="button" class="btn btn-outline-secondary">120 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">130 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">140 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">150 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">160 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">170 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">180 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">190 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">200 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">210 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">220 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">230 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">240 lbs</button>
+            <button type="button" class="btn btn-outline-secondary">250 lbs</button>
+          </div>
+          <div class="height-inputs">
+            <div>
+              <label for="weightInput" class="form-label mb-0 text-style-4">Weight:</label>
+            </div>
+            <div class="ms-4">
+              <input type="number" class="form-control" id="weightInput" placeholder="lbs">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Instructions Section -->
+        <div class="measurement-section" id="instructionsSection" style="display: none;">
+          <h3 class="section-title">Instructions</h3>
+          <h4 class="section-subtitle">Please follow these instructions carefully</h4>
+  
+          <div class="instructions-container">
+            <div class="instruction-item">
+              <span class="instruction-number">1</span>
+              <p class="instruction-text">Please make sure to use a shirt that has been laundered at least 3 times.</p>
+            </div>
+            <div class="instruction-item">
+              <span class="instruction-number">2</span>
+              <p class="instruction-text">Lay the garment flat on a table or hard surface.</p>
+            </div>
+            <div class="instruction-item">
+              <span class="instruction-number">3</span>
+              <p class="instruction-text">Do not stretch the garment while measuring.</p>
+            </div>
+          </div>
+  
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Video Tutorial Section -->
+        <div class="measurement-section" id="neckSection" style="display: none;">
+          <h3 class="section-title">sample shirt neck</h3>
+  
+          <div class="video-tutorial-container">
+            <!-- Video Player -->
+            <div class="video-wrapper">
+              <video id="tutorialVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+  
+            <!-- Measurement Input -->
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtNeck" placeholder="Enter measurement">
+            </div>
+          </div>
+  
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Chest Section -->
+        <div class="measurement-section" id="chestSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Chest</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="chestVideo" controls muted>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtChest" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Waist Section -->
+        <div class="measurement-section" id="waistSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Waist</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="waistVideo" controls muted>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtWaist" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Hips Section -->
+        <div class="measurement-section" id="hipsSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Hips</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="hipsVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtHips" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Shoulder Section -->
+        <div class="measurement-section" id="shoulderSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Shoulder</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="shoulderVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtShoulder" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Bicep Section -->
+        <div class="measurement-section" id="bicepSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Bicep</h3>
+          <div class="video-tutorial-container">
+            <div class="image-wrapper text-center">
+              <img src="assets/images/about-1.png" alt="Shirt Bicep Measurement" class="img-fluid">
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtBicep" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Sleeves Section -->
+        <div class="measurement-section" id="sleevesSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Sleeves</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="sleevesVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container d-flex justify-content-between gap-4">
+              <div class="flex-grow-1">
+                <label class="form-label">Left Sleeve</label>
+                <input type="number" class="form-control" id="leftSleeve" placeholder="Enter measurement">
+              </div>
+              <div class="flex-grow-1">
+                <label class="form-label">Right Sleeve</label>
+                <input type="number" class="form-control" id="rightSleeve" placeholder="Enter measurement">
+              </div>
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Cuffs Section -->
+        <div class="measurement-section" id="cuffsSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Cuffs</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="cuffsVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container d-flex justify-content-between gap-4">
+              <div class="flex-grow-1">
+                <label class="form-label">Left Cuff</label>
+                <input type="number" class="form-control" id="leftCuff" placeholder="Enter measurement">
+              </div>
+              <div class="flex-grow-1">
+                <label class="form-label">Right Cuff</label>
+                <input type="number" class="form-control" id="rightCuff" placeholder="Enter measurement">
+              </div>
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+  
+        <!-- Sample Shirt Length Section -->
+        <div class="measurement-section" id="lengthSection" style="display: none;">
+          <h3 class="section-title">Sample Shirt Length</h3>
+          <div class="video-tutorial-container">
+            <div class="video-wrapper">
+              <video id="lengthVideo" controls>
+                <source src="assets/videos/sample_shirt_neck.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="measurement-input-container">
+              <input type="number" class="form-control" id="sampleShirtLength" placeholder="Enter measurement">
+            </div>
+          </div>
+          <div class="navigation-buttons mt-4">
+            <button type="button" class="btn measure-btn-1">Back</button>
+            <button type="button" class="btn measure-btn-2">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Saved Size Section (copied from Intelligent Size Profiler) -->
+    <section id="best-fit-saved-size" class="text-center" style="display: none;">
+      <div class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">CREATE A NEW SHIRT</h1>
+          <h3 class="text-style-2 white-tw fs-24-tw mt-4">Your Calculated Measurements</h3>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">We have adjusted for shrinkage, allowances and comfort
+            in
+            your new shirt sizes</h4>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="mt-5 w-80p-tw mx-auto">
+          <div class="table-responsive">
+            <table class="table align-middle table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th class="text-start py-3">Units</th>
+                  <th class="text-center py-3">New Sizes</th>
+                </tr>
+              </thead>
+              <tbody class="mt-2">
+                <tr>
+                  <td class="text-start">Collar</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('collar', -1)">−</button>
+                    <span id="collar" class="value">19.125</span>
+                    <button onclick="adjustValue('collar', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Chest</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('chest', -1)">−</button>
+                    <span id="chest" class="value">48.05</span>
+                    <button onclick="adjustValue('chest', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Waist</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('waist', -1)">−</button>
+                    <span id="waist" class="value">43.05</span>
+                    <button onclick="adjustValue('waist', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Hips</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('hips', -1)">−</button>
+                    <span id="hips" class="value">43.05</span>
+                    <button onclick="adjustValue('hips', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Shoulders</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('shoulders', -1)">−</button>
+                    <span id="shoulders" class="value">43.05</span>
+                    <button onclick="adjustValue('shoulders', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Biceps</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('biceps', -1)">−</button>
+                    <span id="biceps" class="value">43.05</span>
+                    <button onclick="adjustValue('biceps', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Left Sleeves Length</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('leftSleeve', -1)">−</button>
+                    <span id="leftSleeve" class="value">43.05</span>
+                    <button onclick="adjustValue('leftSleeve', 1)">+</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-start">Right Sleeves Length</td>
+                  <td class="text-center">
+                    <button onclick="adjustValue('rightSleeve', -1)">−</button>
+                    <span id="rightSleeve" class="value">43.05</span>
+                    <button onclick="adjustValue('rightSleeve', 1)">+</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row justify-content-between mt-4">
+            <div class="col-md-6">
+              <button class="btn measure-btn-1">Back</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn measure-btn-2" id="saveButton">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Thank You Section (copied from Intelligent Size Profiler) -->
+    <section id="best-fit-thank-you" class="text-center" style="display: none;">
+      <div class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">Thank You!</h1>
+          <h4 class="text-style-1 grey-6-tw text-center mt-3">Your measurements have been saved successfully</h4>
+        </div>
+      </div>
+  
+      <div class="container my-5">
+        <div class="w-80p-tw mx-auto">
+          <!-- Video Container -->
+          <div class="video-container mb-5">
+            <video width="100%" controls autoplay>
+              <source src="assets/videos/end_of_measurements.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+  
+          <!-- Continue Shopping Button -->
+          <div class="mt-4 w-50p-tw mx-auto">
+            <a href="index.html" class="btn measure-btn-2">
+              Continue Shopping at Divij Bespoke
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="toast-container position-fixed top-50 start-50 translate-middle">
+      <div class="toast align-items-center text-white bg-danger border-0" role="alert" id="validationToast">
+        <div class="d-flex">
+          <div class="toast-body" id="toastMessage">
+            Please make a selection before continuing.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </aside>
+  </article>
+  
+  <!-- measure-body for Dress shirt -->
+  
+  
+  <!-- mail in garment for Dress shirt-->
+  <article class="mail-in-grament-container">
+    <!-- Mail In Garment Section -->
+    <section id="mail-in-garment" class="text-center" style="display: none;">
+      <div class="garment-image-container">
+        <img src="assets/images/grament-banner.png" alt="Sample Image" class="img-fluid">
+        <div class="garment-overlay-text">
+          <h1 class="text-style-2 white-tw">MEASUREMENT PROCESS</h1>
+          <h3 class="text-style-2 white-tw fs-24-tw mt-4">Mail In Your Best Fitting Trousers</h3>
+        </div>
+      </div>
+  
+      <div class="container my-5">
+        <div class="mail-in-content w-80p-tw mx-auto">
+          <p class="text-center mb-0">Unsure about the measurements of your garment(s) or maybe you just don't have the
+            time?</p>
+          <p class="text-center mb-4">Would you like to replicate specific measurements or styling from your favorite
+            garment?</p>
+  
+          <p class="text-center mb-4">Send in your garment(s) to be measured by one of our Master Tailors.<br>
+            Please include the following information with your garment(s):</p>
+  
+          <!-- Form Section -->
+          <div class="mail-in-form mb-4">
+            <img src="assets/images/mail-in-divij-logo.png" alt="Divij Bespoke" class="mb-4" style="width: 200px;">
+  
+            <div class="form-group mb-3">
+              <label for="yourName" class="white-tw mb-2">Your Name</label>
+              <input type="text" class="form-control" id="yourName" placeholder="Enter Your Name">
+            </div>
+  
+            <div class="form-group mb-3">
+              <label for="emailAddress" class="white-tw mb-2">Email Address</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="Enter Email Address">
+            </div>
+          </div>
+          <!-- Office Information -->
+          <p class="text-center mb-0">If you are located in the U.S., please send your garment(s) to our U.S. Office.</p>
+          <p class="text-center mb-4">If you are located outside of the U.S., please send your garment(s) to our Hong Kong
+            Office.</p>
+  
+          <div class="row justify-content-center g-4 mt-2">
+            <div class="col-md-6">
+              <div class="office-card p-4">
+                <h4 class="sandal-1-tw mb-4">U.S. Office</h4>
+                <p class="white-tw mb-1">Divij Bespoke</p>
+                <p class="white-tw mb-1">940 South Coast Dr. Suite. 240</p>
+                <p class="white-tw">Costa Mesa, CA 92626</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="office-card p-4">
+                <h4 class="sandal-1-tw mb-4">Hong Kong Office</h4>
+                <p class="white-tw mb-1">Divij Bespoke</p>
+                <p class="white-tw mb-1">Unit 1206 12/F Harbour Centre Tower 1,</p>
+                <p class="white-tw mb-1">1 Hok Cheung Street,</p>
+                <p class="white-tw">Kowloon Hong Kong</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container w-80p-tw">
+        <!-- Body Measurements -->
+        <div class="measurements-section mt-5">
+          <h3 class="text-style-2 mb-4">Body Height</h3>
+          <div class="bg-grey-tw-2 p-5">
+            <div class="height-selector mb-4">
+              <button type="button" class="btn">5'5"</button>
+              <button type="button" class="btn">5'6"</button>
+              <button type="button" class="btn">5'7"</button>
+              <button type="button" class="btn">5'8"</button>
+              <button type="button" class="btn">5'9"</button>
+              <button type="button" class="btn">5'10"</button>
+              <button type="button" class="btn">5'11"</button>
+              <button type="button" class="btn">6'0"</button>
+              <button type="button" class="btn">6'1"</button>
+              <button type="button" class="btn">6'2"</button>
+              <button type="button" class="btn">6'3"</button>
+              <button type="button" class="btn">6'4"</button>
+              <button type="button" class="btn">6'5"</button>
+              <button type="button" class="btn">6'6"</button>
+              <button type="button" class="btn">6'7"</button>
+              <button type="button" class="btn">6'8"</button>
+              <button type="button" class="btn">6'9"</button>
+              <button type="button" class="btn">6'10"</button>
+              <button type="button" class="btn">6'11"</button>
+            </div>
+            <div class="height-inputs d-flex align-items-center justify-content-center gap-3 mb-3">
+              <p class="mb-0">Height:</p>
+              <div class="input-group">
+                <input type="number" class="form-control" id="heightFeet">
+                <label class="input-group-text border-0 ">Feet</label>
+              </div>
+              <div class="input-group">
+                <input type="number" class="form-control" id="heightInches">
+                <label class="input-group-text border-0">Inches</label>
+              </div>
+            </div>
+          </div>
+  
+          <h3 class="text-style-2 mb-4 mt-4">Body Weight</h3>
+          <div class="text-style-2 mb-4">
+            <div class="bg-grey-tw-2 p-5">
+              <div class="height-selector mb-4">
+                <button type="button" class="btn">125</button>
+                <button type="button" class="btn">130</button>
+                <button type="button" class="btn">135</button>
+                <button type="button" class="btn">140</button>
+                <button type="button" class="btn">145</button>
+                <button type="button" class="btn">150</button>
+                <button type="button" class="btn">155</button>
+                <button type="button" class="btn">160</button>
+                <button type="button" class="btn">165</button>
+                <button type="button" class="btn">170</button>
+                <button type="button" class="btn">175</button>
+                <button type="button" class="btn">180</button>
+                <button type="button" class="btn">185</button>
+                <button type="button" class="btn">190</button>
+                <button type="button" class="btn">195</button>
+                <button type="button" class="btn">200</button>
+                <button type="button" class="btn">205</button>
+                <button type="button" class="btn">210</button>
+                <button type="button" class="btn">215</button>
+                <button type="button" class="btn">220</button>
+              </div>
+  
+              <div class="weight-input d-flex justify-content-center gap-3 mb-3">
+                <div class="input-group">
+                  <input type="number" class="form-control" id="weight">
+                  <span class="input-group-text border-0">LBS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="mt-4">
+          <button class="btn measure-btn-2 w-60p m-auto">
+            I've mailed out my trousers garments
+          </button>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- Footer -->
+  <footer class="bg-black2-tw mt-30-tw py-5 white-tw">
+    <!-- Top Banner -->
+    <div class="container-fluid text-center mb-4">
+      <p class="text-style-3 fs-20-tw white-tw">
+        For advice on our products or for help placing an order, please <br> call
+        <a href="tel:+1-888-263-2406" class="text-decoration-none sandal-1-tw text-style-5 fs-20-tw">+1-888-263-2406</a>
+      </p>
+    </div>
+  
+    <div class="border-bottom-2-tw opacity-20p">
+    </div>
+  
+    <!-- Main Footer Content -->
+    <div class="container py-5">
+      <div class="row">
+        <!-- Newsletter Section -->
+        <div class="col-lg-4 mb-4">
+          <h3 class="h4 mb-4 text-style-2 fs-24-tw white-tw">Stay In The Loop With Our Newsletter!</h3>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <label for="newsletterEmail" class="form-label text-style-3 grey-3-tw fs-16-tw mb-0">Define E-Mail
+                Address</label>
+              <button class="btn" type="submit">
+                <img src="assets/images/footer-arrow.png" alt="footer-arrow" width="16">
+              </button>
+            </div>
+            <div class="input-group mt-2">
+              <input type="email" id="newsletterEmail" class="form-control text-style-3 bg-transparent white-tw fs-16-tw"
+                aria-label="Email Address">
+            </div>
+          </div>
+          <p class="text-style-3 white-tw opacity-60p">
+            Subscribe to our newsletter and unlock a world of exclusive benefits.
+            Be the first to know about our latest products, special promotions,
+            and exciting updates.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="social-icons mt-4">
+            <a href="#" class="text-light me-3"><img src="assets/images/footer-fb.png" alt="facebook" width="35"></a>
+            <a href="#" class="text-light me-3"><img src="assets/images/footer-twit.png" alt="twitter" width="35"></i></a>
+            <a href="#" class="text-light"><img src="assets/images/footer-insta.png" alt="instagram" width="35"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-1">
+  
+        </div>
+  
+        <!-- Quick Links Columns -->
+        <div class="col-lg-7">
+          <div class="row">
+            <!-- Shop By -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4 text-style-1 white-tw fs-16-tw">Shop By</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Tailored</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Shirts</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Suits</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Trousers</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Blazers &
+                    Vests</a></li>
+              </ul>
+            </div>
+  
+            <!-- Support -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">Support</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Shipping &
+                    Delivery</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Return &
+                    Exchange</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Perfect Fit
+                    Guides</a></li>
+              </ul>
+            </div>
+  
+            <!-- Services -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">Services</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Schedule Your
+                    Visit</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Customize
+                    Clothings</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Measurements</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Clothing
+                    Styles</a></li>
+              </ul>
+            </div>
+  
+            <!-- About Us -->
+            <div class="col-md-3 mb-4">
+              <h5 class="mb-4">About Us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Our Process</a>
+                </li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">Showroom
+                    Experience</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The
+                    Constructions</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The Silhouette
+                    Fit</a></li>
+                <li><a href="#" class="text-style-3 white-tw fs-14-tw text-decoration-none mb-3 d-block">The Shoulders
+                    Selections</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="bg-black3-tw br-25">
+        <div class="row mt-4 pt-4">
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-phone.png" alt="footer-phone" width="35">
+            <div class="mt-3">
+              <a href="tel:+1-888-263-2406"
+                class="text-style-3 fs-16-tw white-tw text-decoration-none">+1-888-263-2406</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-location.png" alt="footer-location" width="35">
+            <div class="mt-3">
+              <span class="text-style-3 fs-16-tw white-tw">940 S Coast Drive, Ste. 240,Costa <br> Mesa, CA 92626</span>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3">
+            <img src="assets/images/footer-mail.png" alt="footer-mail" width="35">
+            <div class="mt-3">
+              <a href="mailto:info@divij.com"
+                class="text-style-3 fs-16-tw white-tw text-decoration-none">info@divij.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="border-bottom-2-tw opacity-20p">
+    </div>
+  
+    <!-- Bottom Footer -->
+    <div class="container-fluid mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <span class="text-style-3 fs-16-tw white-tw">© 2023 All Rights Reserved</span>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none me-3"><small>Privacy
+                Policy</small></a>
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none me-3"><small>Terms &
+                Conditions</small></a>
+            <a href="#" class="text-style-3 fs-16-tw white-tw text-decoration-none"><small>Cookies Policy</small></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Common utility functions
+    const utils = {
+      showToast(message) {
+        const toastMessage = document.getElementById('toastMessage');
+        const validationToast = document.getElementById('validationToast');
+        if (toastMessage && validationToast) {
+          toastMessage.textContent = message;
+          const toast = new bootstrap.Toast(validationToast);
+          toast.show();
+        }
+      },
+
+      updateProgressBar(currentStep, totalSteps, barId = 'progressBar') {
+        const progressBar = document.getElementById(barId);
+        if (progressBar) {
+          const percentage = Math.min((currentStep / totalSteps) * 100, 100);
+          progressBar.style.width = `${percentage}%`;
+        }
+      },
+
+      transitionSections(hideId, showId) {
+        const hideElement = document.getElementById(hideId);
+        const showElement = document.getElementById(showId);
+
+        if (hideElement) hideElement.style.display = 'none';
+        if (showElement) showElement.style.display = 'block';
+      },
+
+      showLoader() {
+        const loader = document.getElementById('loader-container');
+        if (loader) {
+          loader.classList.remove('d-none');
+        }
+      },
+
+      hideLoader() {
+        const loader = document.getElementById('loader-container');
+        if (loader) {
+          loader.classList.add('d-none');
+        }
+      }
+    };
+
+    // Intelligent Size Profiler functionality
+    const intelligentProfiler = {
+      currentStep: 0,
+      totalSteps: 11, // Update this based on total number of accordions
+
+      init() {
+        this.initAccordionListeners();
+        this.initDoneButtons(); 
+        this.initSavedSizeButtons();
+      },
+
+      initAccordionListeners() {
+        const accordionItems = document.querySelectorAll('#formAccordion .accordion-item');
+        accordionItems.forEach((item, index) => {
+          // Disable all accordion buttons except first
+          if (index > 0) {
+            const button = item.querySelector('.accordion-button');
+            button.disabled = true;
+          }
+
+          // Add click listeners to selection buttons
+          const selectionButtons = item.querySelectorAll('.btn-outline-secondary, .fit-type-btn');
+          selectionButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              // Remove active class from other buttons
+              selectionButtons.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+
+              // Update extra text
+              const extraText = item.querySelector('.accordion-extra-text');
+              if (extraText) {
+                extraText.textContent = btn.textContent.trim();
+              }
+            });
+          });
+        });
+      },
+
+      initDoneButtons() {
+        const doneButtons = document.querySelectorAll('#formAccordion .btn-done');
+        doneButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+            const accordionItem = e.target.closest('.accordion-item');
+
+            // Handle skip button
+            if (button.classList.contains('btn-skip')) {
+              const extraText = accordionItem.querySelector('.accordion-extra-text');
+              if (extraText) {
+                extraText.textContent = 'Skipped';
+              }
+              this.moveToNextAccordion(accordionItem);
+              return;
+            }
+
+            // Special handling for wrist watch section
+            if (accordionItem.querySelector('#watchDetails')) {
+              const watchButtons = accordionItem.querySelectorAll('.watch-options .btn');
+              const selectedWatchBtn = Array.from(watchButtons).find(btn => btn.classList.contains('active'));
+              
+              if (!selectedWatchBtn) {
+                utils.showToast('Please select Yes or No for wrist watch');
+                return;
+              }
+
+              const extraText = accordionItem.querySelector('.accordion-extra-text');
+              if (selectedWatchBtn.dataset.watch === 'yes') {
+                const watchDetails = accordionItem.querySelector('#watchDetails');
+                watchDetails.style.display = 'block';
+                
+                // Validate watch size and side selections
+                const sizeSelected = accordionItem.querySelector('.watch-size .btn.active');
+                const sideSelected = accordionItem.querySelector('.watch-side .btn.active');
+                
+                if (!sizeSelected || !sideSelected) {
+                  utils.showToast('Please select both watch size and side');
+                  return;
+                }
+
+                // Update extra text with all selections
+                if (extraText) {
+                  extraText.textContent = `${selectedWatchBtn.textContent.trim()} - ${sizeSelected.textContent.trim()} - ${sideSelected.textContent.trim()}`;
+                }
+              } else {
+                // Update extra text for "No" selection
+                if (extraText) {
+                  extraText.textContent = selectedWatchBtn.textContent.trim();
+                }
+              }
+            }
+
+            const hasSelection = this.validateAccordionSelection(accordionItem);
+            if (!hasSelection) {
+              utils.showToast('Please make a selection before continuing');
+              return;
+            }
+
+            // Handle last accordion
+            if (!accordionItem.nextElementSibling) {
+              utils.showLoader();
+              setTimeout(() => {
+                utils.hideLoader();
+                document.getElementById('profile-listing').style.display = 'none';
+                document.getElementById('saved-size').style.display = 'block';
+              }, 2000);
+              return;
+            }
+
+            this.moveToNextAccordion(accordionItem);
+          });
+        });
+
+        // Enhanced click handlers for watch options
+        const watchButtons = document.querySelectorAll('.watch-options .btn, .watch-size .btn, .watch-side .btn');
+        watchButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const accordionItem = btn.closest('.accordion-item');
+            const extraText = accordionItem.querySelector('.accordion-extra-text');
+            
+            // Remove active class from siblings only
+            const siblings = btn.parentElement.querySelectorAll('.btn');
+            siblings.forEach(sibling => sibling.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Handle watch details visibility and update extra text
+            if (btn.closest('.watch-options')) {
+              const watchDetails = document.getElementById('watchDetails');
+              watchDetails.style.display = btn.dataset.watch === 'yes' ? 'block' : 'none';
+              
+              // Reset size and side selections when switching between yes/no
+              const sizeButtons = accordionItem.querySelectorAll('.watch-size .btn');
+              const sideButtons = accordionItem.querySelectorAll('.watch-side .btn');
+              sizeButtons.forEach(b => b.classList.remove('active'));
+              sideButtons.forEach(b => b.classList.remove('active'));
+              
+              // Update extra text
+              if (extraText) {
+                extraText.textContent = btn.dataset.watch === 'no' ? 'No' : 'Yes';
+              }
+            } else {
+              // Update extra text when size or side is selected
+              const watchOption = accordionItem.querySelector('.watch-options .btn.active');
+              const sizeSelected = accordionItem.querySelector('.watch-size .btn.active');
+              const sideSelected = accordionItem.querySelector('.watch-side .btn.active');
+              
+              if (watchOption && watchOption.dataset.watch === 'yes' && extraText) {
+                let text = 'Yes';
+                if (sizeSelected) text += ` - ${sizeSelected.textContent.trim()}`;
+                if (sideSelected) text += ` - ${sideSelected.textContent.trim()}`;
+                extraText.textContent = text;
+              }
+            }
+          });
+        });
+      },
+
+      validateAccordionSelection(accordionItem) {
+        // Skip validation for skipped sections
+        if (accordionItem.querySelector('.btn-skip:focus')) {
+          return true;
+        }
+
+        // Special validation for wrist watch section
+        if (accordionItem.querySelector('#watchDetails')) {
+          const selectedWatchBtn = accordionItem.querySelector('.watch-options .btn.active');
+          if (!selectedWatchBtn) return false;
+
+          if (selectedWatchBtn.dataset.watch === 'yes') {
+            const sizeSelected = accordionItem.querySelector('.watch-size .btn.active');
+            const sideSelected = accordionItem.querySelector('.watch-side .btn.active');
+            return sizeSelected && sideSelected;
+          }
+          return true;
+        }
+
+        return accordionItem.querySelector('.btn-outline-secondary.active, .fit-type-btn.active') ||
+          accordionItem.querySelector('input[type="radio"]:checked');
+      },
+
+      moveToNextAccordion(currentAccordion) {
+        this.currentStep++;
+        const progress = (this.currentStep / this.totalSteps) * 100;
+        utils.updateProgressBar(this.currentStep, this.totalSteps);
+
+        const nextAccordion = currentAccordion.nextElementSibling;
+        if (nextAccordion) {
+          const nextButton = nextAccordion.querySelector('.accordion-button');
+          nextButton.disabled = false;
+          nextButton.click();
+        }
+      },
+
+      initSavedSizeButtons() {
+        // Initialize adjustment buttons
+        const adjustButtons = document.querySelectorAll('[onclick^="adjustValue"]');
+        adjustButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const [, id, change] = button.getAttribute('onclick').match(/adjustValue\('(.+)',\s*(-?\d+)\)/);
+            this.adjustValue(id, parseInt(change));
+          });
+        });
+
+        // Save button
+        const saveButton = document.querySelector('#saved-size .measure-btn-2');
+        if (saveButton) {
+          saveButton.addEventListener('click', () => {
+            utils.showLoader();
+            setTimeout(() => {
+              utils.hideLoader();
+              document.getElementById('thank-you-section').style.display = 'block';
+              document.getElementById('saved-size').style.display = 'none';
+            }, 2000);
+          });
+        }
+      },
+
+      adjustValue(id, change) {
+        const element = document.getElementById(id);
+        if (element) {
+          let value = parseFloat(element.textContent);
+          value += change;
+          element.textContent = value.toFixed(3);
+        }
+      },
+
+      showSavedSize() {
+        document.getElementById('profile-listing').classList.add('measure-section-hidden');
+        document.getElementById('saved-size').classList.remove('measure-section-hidden');
+        document.getElementById('saved-size').classList.add('measure-section-visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+    };
+
+    // Best Fitting Garment functionality
+    const bestFittingGarment = {
+        currentStep: 0,
+        sections: null,
+        totalSteps: 0,
+
+        init() {
+          this.sections = document.querySelectorAll('#best-fitting-garment .measurement-section');
+          this.totalSteps = this.sections.length;
+          this.initButtons();
+          this.initSelectionButtons();
+          this.initVideoSections();
+          this.showCurrentSection();
+        },
+
+        initButtons() {
+          document.querySelectorAll('#best-fitting-garment .measure-btn-2').forEach(button => {
+            button.addEventListener('click', () => this.goToNextStep());
+          });
+
+          document.querySelectorAll('#best-fitting-garment .measure-btn-1').forEach(button => {
+            button.addEventListener('click', () => this.goToPreviousStep());
+          });
+        },
+
+        initSelectionButtons() {
+          document.querySelectorAll('#best-fitting-garment .btn-outline-secondary').forEach(button => {
+            button.addEventListener('click', function () {
+              const parent = this.closest('.measurement-section');
+              const input = parent.querySelector('input[type="number"]');
+
+              // Remove active class from other buttons
+              parent.querySelectorAll('.btn-outline-secondary').forEach(btn => {
+                btn.classList.remove('active');
+              });
+              button.classList.add('active');
+
+              // Update input value
+              if (input) {
+                input.value = button.textContent.trim().replace(/[^0-9.]/g, '');
+              }
+            });
+          });
+        },
+
+        initVideoSections() {
+          const videos = document.querySelectorAll('#best-fitting-garment video');
+          videos.forEach(video => {
+            video.muted = false;
+
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  video.play();
+                } else {
+                  video.pause();
+                }
+              });
+            });
+
+            observer.observe(video);
+          });
+        },
+
+        validateSection(section) {
+          if (!section) return false;
+
+          // Validate inputs if present
+          const inputs = section.querySelectorAll('input[type="number"]');
+          if (inputs.length > 0) {
+            const allInputsFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            if (!allInputsFilled) {
+              utils.showToast('Please enter all measurements');
+              return false;
+            }
+          }
+
+          // Validate button selection if no inputs present
+          if (inputs.length === 0) {
+            const buttons = section.querySelectorAll('.btn-outline-secondary');
+            const hasSelection = Array.from(buttons).some(btn => btn.classList.contains('active'));
+            if (!hasSelection) {
+              utils.showToast('Please make a selection');
+              return false;
+            }
+          }
+
+          return true;
+        },
+
+        showCurrentSection() {
+          this.sections.forEach((section, index) => {
+            section.style.display = index === this.currentStep ? 'block' : 'none';
+          });
+          // Update progress bar (add 1 to currentStep because it's 0-based)
+          utils.updateProgressBar(this.currentStep + 1, this.totalSteps, 'bestFitProgressBar');
+        },
+
+        goToNextStep() {
+          const currentSection = this.sections[this.currentStep];
+          if (!this.validateSection(currentSection)) {
+            return;
+          }
+
+          if (this.currentStep < this.totalSteps - 1) {
+            this.currentStep++;
+            this.showCurrentSection();
+          } else {
+            // Last step completed, show saved size section
+            document.getElementById('best-fitting-garment').style.display = 'none';
+            document.getElementById('best-fit-saved-size').style.display = 'block';
+          }
+        },
+
+        goToPreviousStep() {
+          if (this.currentStep > 0) {
+            this.currentStep--;
+            this.showCurrentSection();
+          }
+        }
+      };
+
+    // Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', function () {
+      intelligentProfiler.init();
+      bestFittingGarment.init();
+    });
+
+    // Update the DOM ready handler
+    document.addEventListener('DOMContentLoaded', function () {
+      intelligentProfiler.init();
+      bestFittingGarment.init();
+
+      // Handle saved size to thank you transitions
+      document.querySelectorAll('.measure-btn-2').forEach(button => {
+        if (button.closest('#saved-size')) {
+          button.addEventListener('click', () => {
+            utils.showLoader();
+            setTimeout(() => {
+              utils.hideLoader();
+              document.getElementById('saved-size').classList.add('measure-section-hidden');
+              document.getElementById('thank-you-section').classList.remove('measure-section-hidden');
+              document.getElementById('thank-you-section').classList.add('measure-section-visible');
+            }, 2000);
+          });
+        }
+      });
+    });
+  </script>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- slick-carosuel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- match-height -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -170,6 +170,10 @@
   background-color: #F5F4F0;
 }
 
+.bg-sandal-tw-2 {
+  background-color: #FFFCF8;
+}
+
 .bg-white-1-tw {
   background-color: #FAFAFA;
 }
@@ -367,6 +371,10 @@
   width: 70%;
 }
 
+.w-60p-tw {
+  width: 60%;
+}
+
 .w-50p-tw {
   width: 50%;
 }
@@ -510,6 +518,38 @@
   color: #FFFFFF;
 }
 
+.btn-style-6 {
+  background-color: #000000;
+  border-radius: 0px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14 px;
+  color: #ffffff;
+  padding: 15px 60px;
+}
+
+.btn-style-6:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-style-7 {
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px 20px;
+}
+
+.btn-style-7:hover {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
 /* card-styles */
 
 .card-style-1 {
@@ -556,6 +596,10 @@
 
 .border-bottom-2-tw {
   border-bottom: 1px solid #ffffff;
+}
+
+.border-bottom-3-tw {
+  border-bottom: 0.35px solid #000000;
 }
 
 .border-style-1-tw {
