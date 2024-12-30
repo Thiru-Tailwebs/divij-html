@@ -30,12 +30,26 @@ $(document).ready(function () {
   });
 
 
+  // Initialize Slick Slider on page load
+  $('.page-slider-slider').slick({
+    arrows: true, // Show arrows
+    dots: false,  // Disable dots
+    prevArrow: '<button class="slick-prev slick-arrow">←</button>',
+    nextArrow: '<button class="slick-next slick-arrow">→</button>',
+    slidesToShow: 1, // Show only 1 slide at a time
+    slidesToScroll: 1, // Scroll only 1 slide at a time
+    infinite: true, // Make the slider infinite
+    adaptiveHeight: true, // Make sure height adjusts properly
+  });
+
+  // Force Slick Slider to recalculate when hover
+  $('.page-detail-image-wrapper').hover(function () {
+    $('.page-slider-slider').slick('setPosition'); // Recalculate layout on hover
+  });
+
+
   // Apply matchHeight to all card-style-1 elements in the project
   $('.match-height-1, .match-height-2, .page-height-1').matchHeight();
-
-  // product-show-gallery 
-
-  
 
 });
 
@@ -147,11 +161,3 @@ document.addEventListener('DOMContentLoaded', function () {
     changeTab(tabId);
   }
 });
-
-
-
-
-
-
-
-

@@ -3,11 +3,33 @@
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 80vh;
   position: relative;
 }
 
 .p-style-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* Equivalent to #00000066 (66 in hex = 40% opacity) */
+  z-index: 1;
+  /* Make sure this sits above the background but below the text */
+}
+
+.p-style-detail-bg {
+  background-image: url("../assets/images/page-styles-detail/page-styles-detail-banner.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+
+.p-style-detail-bg::before {
   content: '';
   position: absolute;
   top: 0;
@@ -89,4 +111,121 @@
   justify-content: stretch;
 }
 
+/* page-detail-styles */
 
+.page-detail-slider-container {
+  position: relative;
+  /* Adjust as needed */
+  height: 450px;
+  /* Adjust as needed */
+}
+
+.page-detail-slider-container .slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: #ffffff;
+  border: none;
+}
+
+.page-detail-slider-container .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  border: none;
+}
+
+.page-detail-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent overflow */
+}
+
+.page-detail-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.page-slider-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  /* Use visibility instead of display */
+  opacity: 0;
+  /* Set opacity to fade in */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for visibility */
+}
+
+.page-slider-slider .slider-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-slider-slider .slider-item .slider-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.page-slider-slider .slider-item .slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(348.66deg, rgba(0, 0, 0, 0.48) 48.9%, rgba(102, 102, 102, 0) 95.28%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  /* Prevent interference with slider interaction */
+}
+
+.page-slider-slider .slider-item p {
+  color: #FFFFFF;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  z-index: 1;
+  margin: 0 60px;
+  font-family: "Nunito", sans-serif;
+}
+
+.page-slider-slider .slider-item h3 {
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-slider-slider .slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-detail-image-wrapper:hover .page-detail-main-image {
+  opacity: 0;
+}
+
+.page-detail-image-wrapper:hover .page-slider-slider{
+  visibility: visible;
+  opacity: 1;
+  /* Smooth fade-in for slider and button */
+}
