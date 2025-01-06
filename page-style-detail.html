@@ -566,26 +566,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
 <script src="js/script.js"></script>
 
-<script>
-  $(document).ready(function () {
-    $('.hover-slider').slick({
-      dots: false,
-      arrows: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      autoplay: false
-    });
-
-    // Pause slider when mouse leaves
-    $('.hover-container').on('mouseleave', function () {
-      $('.slider-overlay').css('display', '0');
-      setTimeout(function () {
-        $('.slider-overlay').css('visibility', 'hidden');
-      }, 300);
-    });
-  });
-</script>
-
 </html>

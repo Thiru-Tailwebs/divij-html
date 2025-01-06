@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- slick-carosuel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/product_list.css">
+  <link rel="stylesheet" href="css/product_show.css">
+  <link rel="stylesheet" href="css/checkout.css">
+
+  <title>checkout</title>
+</head>
+
+<body>
+
+  <!-- Small Header -->
+  <div class="small-header py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-right contact-text">Contact Us? <span class="ms-2 fw-400-tw">|</span> <span
+              class="ms-2 fw-400-tw"><a href="tel:+1-888-263-2406" class="white-tw">+1-888-263-2406</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- logo-tw -->
+        <div class="col-6 col-md-4">
+          <div class="logo-tw">
+            <a href="index.html">
+              <img src="assets/images/divij-logo.png" alt="logo-tw" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <!-- Images and Hamburger Menu -->
+        <div class="col-6 col-md-8 d-flex justify-content-end align-items-center">
+          <div class="header-images d-flex align-items-center justify-content-end">
+            <img src="assets/images/user-icon.png" alt="Profile" class="w-13p-tw ms-3">
+            <img src="assets/images/store-icon.png" alt="Store" class="w-13p-tw ms-3">
+            <img src="assets/images/search-icon.png" alt="Search" class="w-13p-tw ms-3">
+          </div>
+          <!-- Hamburger Button -->
+          <div class="d-lg-none d-md-block ms-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-3">
+    <div class="container">
+      <!-- Navigation with Hamburger Menu -->
+      <nav class="navbar navbar-expand-lg py-0-tw">
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Left side Nav (Tailored, Shirts, etc.) -->
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 left-nav-items">
+            <li class="nav-item">
+              <a class="nav-link" href="product_list.html">Tailored</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product_show.html">Shirts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customize.html">Suits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trousers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blazers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vests</a>
+            </li>
+          </ul>
+
+          <!-- Right side Nav (About Us, etc.) -->
+          <ul class="navbar-nav right-nav-items">
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page_style.html">Find Your Style</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Book an Appointment</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-30-tw">
+    <h1 class="text-style-5 black-5-tw fs-18-tw d-inline-flex align-items-center"><span class="d-inline-flex"><i
+          class="fi fi-br-shopping-bag me-3 fs-22-tw d-inline-flex"></i></span>Checkout (1 Item)</h1>
+    <article class="row">
+      <section class="col-md-8">
+        <div class="mt-30-tw">
+          <div class="border-top-1-tw">
+            <div class="row justify-content-between mt-30-tw" id="shippingMainSection">
+              <div class="col-md-9">
+                <div class="d-flex">
+                  <div class="checkout-round-bg">
+                    <div class="checkout-round-bg-1">
+                      <h2 class="mb-0 text-style-1 white-tw fs-16-tw">1</h2>
+                    </div>
+                  </div>
+                  <div class="ml-50-tw w-100">
+                    <div class="d-flex">
+                      <div class="w-40p-tw">
+                        <div>
+                          <h2 class="text-style-1 fs-16-tw black-1-tw mb-0">SHIPPING ADDRESS</h2>
+                        </div>
+                      </div>
+                      <div class="w-60p-tw">
+                        <div class="pr-50-tw">
+                          <p class="text-upper text-style-4 fs-14-tw black-1-tw">Divij Hemrajani
+                            940 S Coast Dr Ste 245COSTA MESA, CA 92626,US</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-30-tw">
+                      <div class="w-40p-tw">
+                        <h2 class="text-style-1 fs-16-tw black-1-tw mb-0">SHIPPING METHOD</h2>
+                      </div>
+                      <div class="w-60p-tw">
+                        <div class="shipping-method">
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="standard" name="shipping" checked>
+                            <label class="form-check-label" for="standard">STANDARD SHIPPING</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" id="expedited" name="shipping">
+                            <label class="form-check-label" for="expedited">EXPEDITED SHIPPING</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-right">
+                  <a class="text-decoation-none text-style-4 text-upper sandal-1-tw" href=""
+                    id="changeAddressBtn">CHANGE</a>
+                </div>
+              </div>
+            </div>
+            <div class="row d-none" id="addressSelectionSection">
+              <div class="col-12">
+                <div class="p-4">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fs-5 fw-bold mb-0">Choose Your Shipping Address</h2>
+                    <button type="button" class="btn-close" id="closeAddressSelection"></button>
+                  </div>
+
+                  <div class="address-list mb-4">
+                    <div class="form-check  p-3">
+                      <input class="form-check-input" type="radio" name="addressRadio" id="address1" checked>
+                      <label class="form-check-label ms-2" for="address1">
+                        <strong>Divij Hemrajani</strong><br>
+                        940 S Coast Dr Ste 245<br>
+                        COSTA MESA, CA 92626<br>
+                        US
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal"
+                    data-bs-target="#addAddressModal">
+                    Add New Address
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Address Modal -->
+            <div class="modal fade" id="addAddressModal" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Enter a New Shipping Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="newAddressForm" class="needs-validation" novalidate>
+                      <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                        <div class="invalid-feedback">
+                          Please enter your full name
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="address1" class="form-label">Street Address, P.O. Box</label>
+                        <input type="text" class="form-control" id="address1" placeholder="Address 1" required>
+                        <div class="invalid-feedback">
+                          Please enter your street address
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="address2" class="form-label">Apartment, Suite, Unit, Building, Floor, etc</label>
+                        <input type="text" class="form-control" id="address2" placeholder="Address 2">
+                      </div>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="city" class="form-label">City/Town/Village</label>
+                          <input type="text" class="form-control" id="city" required>
+                          <div class="invalid-feedback">
+                            Please enter your city
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="state" class="form-label">State/Province/Region</label>
+                          <input type="text" class="form-control" id="state" required>
+                          <div class="invalid-feedback">
+                            Please enter your state
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="postalCode" class="form-label">Postal Code</label>
+                          <input type="text" class="form-control" id="postalCode" required>
+                          <div class="invalid-feedback">
+                            Please enter a valid postal code
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="country" class="form-label">Country</label>
+                          <select class="form-select" id="country" required>
+                            <option value="">Select a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="IN">India</option>
+                            <option value="CN">China</option>
+                            <option value="JP">Japan</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="IT">Italy</option>
+                            <option value="BR">Brazil</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="RU">Russia</option>
+                            <option value="MX">Mexico</option>
+                            <option value="KR">South Korea</option>
+                            <option value="SG">Singapore</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="AR">Argentina</option>
+                            <option value="ES">Spain</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="BE">Belgium</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="TH">Thailand</option>
+                            <option value="VN">Vietnam</option>
+                          </select>
+
+                          <div class="invalid-feedback">
+                            Please select a country
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="defaultAddress">
+                          <label class="form-check-label" for="defaultAddress">
+                            Use as Default Shipping Address
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="text-end">
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Use This Address</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-30-tw">
+          <div class="border-top-1-tw">
+            <div class="row justify-content-between mt-30-tw" id="paymentMainSection">
+              <div class="col-md-9">
+                <div class="d-flex">
+                  <div class="checkout-round-bg">
+                    <div class="checkout-round-bg-1">
+                      <h2 class="mb-0 text-style-1 white-tw fs-16-tw">2</h2>
+                    </div>
+                  </div>
+                  <div class="ml-50-tw w-100">
+                    <div class="d-flex">
+                      <div class="w-40p-tw">
+                        <div>
+                          <h2 class="text-style-1 fs-16-tw black-1-tw mb-0 text-upper">Payment Method</h2>
+                        </div>
+                      </div>
+                      <div class="w-60p-tw">
+                        <div class="pr-50-tw">
+                          <h4 class="text-style-4 fs-14-tw text-upper black-1-tw">AMEX | Ending in 2009</h4>
+                          <h5 class="mt-30-tw sandal-1-tw text-style-3 fs-12-tw">BILLING ADDRESS</h5>
+                          <h4 class="text-style-4 fs-14-tw text-upper black-1-tw mt-20-tw">940 S Coast Dr Ste 245 COSTA
+                            MESA, CA 92626, US</h4>
+                          <p class="text-style-3 fs-12-tw black-1-tw mt-30-tw">Gift Card or Promotional Codes</p>
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter code" aria-label="Enter code"
+                              id="codeInput">
+                            <button class="btn btn-style-4" id="applyButton">Apply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="text-right">
+                  <a class="text-decoation-none text-style-4 text-upper sandal-1-tw" href=""
+                    id="changePaymentBtn">CHANGE</a>
+                </div>
+              </div>
+            </div>
+            <!-- Payment Selection Section -->
+            <div class="row d-none" id="paymentSelectionSection">
+              <div class="col-12">
+                <div class="p-4">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fs-5 fw-bold mb-0">Choose Your Payment Method</h2>
+                    <button type="button" class="btn-close" id="closePaymentSelection"></button>
+                  </div>
+
+                  <div class="payment-cards-list mb-4">
+                    <!-- Existing Card 1 -->
+                    <div class="form-check p-3 border-bottom">
+                      <input class="form-check-input" type="radio" name="paymentRadio" id="card1" checked>
+                      <label class="form-check-label ms-2 w-100" for="card1">
+                        <div class="row align-items-center">
+                          <div class="col-md-4">
+                            <strong>Your credit and debit cards</strong><br>
+                            AMEX ending in 2009
+                          </div>
+                          <div class="col-md-4">
+                            <strong>Name on card</strong><br>
+                            John Doe
+                          </div>
+                          <div class="col-md-4">
+                            <strong>Expires on</strong><br>
+                            12/2025
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <!-- Existing Card 2 -->
+                    <div class="form-check p-3 border-bottom">
+                      <input class="form-check-input" type="radio" name="paymentRadio" id="card2">
+                      <label class="form-check-label ms-2 w-100" for="card2">
+                        <div class="row align-items-center">
+                          <div class="col-md-4">
+                            <strong>Your credit and debit cards</strong><br>
+                            VISA ending in 4242
+                          </div>
+                          <div class="col-md-4">
+                            <strong>Name on card</strong><br>
+                            John Doe
+                          </div>
+                          <div class="col-md-4">
+                            <strong>Expires on</strong><br>
+                            08/2024
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal"
+                    data-bs-target="#addCardModal">
+                    Add a credit or debit card
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Card Modal -->
+            <div class="modal fade" id="addCardModal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Enter a New Credit/Debit Card</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="newCardForm" class="needs-validation" novalidate>
+                      <div class="mb-3">
+                        <label for="cardName" class="form-label">Name on card</label>
+                        <input type="text" class="form-control" id="cardName" required>
+                        <div class="invalid-feedback">
+                          Please enter the name on card
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card number</label>
+                        <input type="text" class="form-control" id="cardNumber" required maxlength="19">
+                        <div class="invalid-feedback">
+                          Please enter a valid card number
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="expiryMonth" class="form-label">Month</label>
+                          <select class="form-select" id="expiryMonth" required>
+                            <option value="">Select Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select expiry month
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="expiryYear" class="form-label">Year</label>
+                          <select class="form-select" id="expiryYear" required>
+                            <option value="">Select Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select expiry year
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="defaultPayment">
+                          <label class="form-check-label" for="defaultPayment">
+                            Use as default payment method
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="text-end">
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Use this card</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-30-tw">
+          <div class="border-top-1-tw">
+            <div class="row justify-content-between mt-30-tw">
+              <div class="col-md-3">
+                <div class="d-flex justify-content-between">
+                  <div class="checkout-round-bg">
+                    <div class="checkout-round-bg-1">
+                      <h2 class="mb-0 text-style-1 white-tw fs-16-tw">3</h2>
+                    </div>
+                  </div>
+                  <div class="ms-2">
+                    <h2 class="text-style-1 fs-16-tw black-1-tw mb-0 text-upper">Review Items</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="d-flex">
+                  <div class="ml-50-tw w-100">
+                    <div class="border-bottom-4-tw">
+                      <div class="d-flex justify-content-between mb-4">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="checkout-border-style">
+                              <img src="assets/images/cart-img-1.png" class="w-100" alt="cart-Image">
+                            </div>
+                          </div>
+                          <div class="col-md-9">
+                            <h3 class="text-style-1 fs-16-tw black-1-tw">The Verginia Sky Blue End to End</h3>
+                            <h4 class="text-style-4 grey-4-tw fs-14-tw">Hemrajani Premium Collection</h4>
+                            <div class="d-flex row align-items-center mt-10-tw">
+                              <div class="w-50p-tw">
+                                <div class="d-flex align-items-center justify-content-between border-7-tw p-2">
+                                  <span class="text-style-3 grey-3-tw">Quantity</span>
+                                  <div class="dropdown">
+                                    <button class="btn border-0 pt-0 pb-0 dropdown-toggle text-style-4 fs-14-tw black-2-tw"
+                                      type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                      01
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <li><a class="dropdown-item" href="#">01</a></li>
+                                      <li><a class="dropdown-item" href="#">02</a></li>
+                                      <li><a class="dropdown-item" href="#">03</a></li>
+                                      <li><a class="dropdown-item" href="#">04</a></li>
+                                      <li><a class="dropdown-item" href="#">05</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-50p-tw">
+                                <button class="btn btn-style-2 checkout-style-btn w-100 p-2" data-target="#checkout-style-section-1">View Styles</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-right">
+                          <h4 class="red-tw text-style-1">$ 1150.00</h4>
+                        </div>
+                      </div>
+                      <div id="checkout-style-section-1" class="checkout-style-section mt-3 mb-3">
+                        <h4 class="mb-3">SHIRT:</h4>
+                        <div class="table-responsive table-custom mb-4">
+                          <table class="table mb-0 table-striped">
+                            <tbody>
+                              <tr>
+                                <td>Collar</td>
+                                <td>Traditional Spread (2.875 x 1.75)</td>
+                              </tr>
+                              <tr>
+                                <td>Cuff</td>
+                                <td>Single Button Rounded</td>
+                              </tr>
+                              <tr>
+                                <td>Front Style</td>
+                                <td>Placket Front</td>
+                              </tr>
+                              <tr>
+                                <td>Pockets</td>
+                                <td>No Pockets</td>
+                              </tr>
+                              <tr>
+                                <td>Collar Stiffness</td>
+                                <td>Stiff</td>
+                              </tr>
+                              <tr>
+                                <td>Buttons</td>
+                                <td>Tahiti Shell Buttons</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      
+                      
+                        <h4 class="mb-3">OTHERS:</h4>
+                        <div class="table-responsive table-custom">
+                          <table class="table mb-0 table-striped">
+                            <tbody>
+                              <tr>
+                                <td>Monogram</td>
+                                <td>Script Straight Across in Color: Accented on Stomach (Initials:HHD)</td>
+                              </tr>
+                              <tr>
+                                <td>Shirt Sizing</td>
+                                <td>Dress Shirt Sizing</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="d-flex justify-content-between mb-4 mt-4">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="checkout-border-style">
+                              <img src="assets/images/cart-img-1.png" class="w-100" alt="cart-Image">
+                            </div>
+                          </div>
+                          <div class="col-md-9">
+                            <h3 class="text-style-1 fs-16-tw black-1-tw">The Verginia Sky Blue End to End</h3>
+                            <h4 class="text-style-4 grey-4-tw fs-14-tw">Hemrajani Premium Collection</h4>
+                            <div class="d-flex row align-items-center mt-10-tw">
+                              <div class="w-50p-tw">
+                                <div class="d-flex align-items-center justify-content-between border-7-tw p-2">
+                                  <span class="text-style-3 grey-3-tw">Quantity</span>
+                                  <div class="dropdown">
+                                    <button class="btn border-0 pt-0 pb-0 dropdown-toggle text-style-4 fs-14-tw black-2-tw" type="button"
+                                      id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                      01
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <li><a class="dropdown-item" href="#">01</a></li>
+                                      <li><a class="dropdown-item" href="#">02</a></li>
+                                      <li><a class="dropdown-item" href="#">03</a></li>
+                                      <li><a class="dropdown-item" href="#">04</a></li>
+                                      <li><a class="dropdown-item" href="#">05</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-50p-tw">
+                                <button class="btn btn-style-2 checkout-style-btn w-100 p-2" data-target="#checkout-style-section-2">View
+                                  Styles</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-right">
+                          <h4 class="red-tw text-style-1">$ 1150.00</h4>
+                        </div>
+                      </div>
+                      <div id="checkout-style-section-2" class="checkout-style-section mt-3 mb-3">
+                        <h4 class="mb-3">SHIRT:</h4>
+                        <div class="table-responsive table-custom mb-4">
+                          <table class="table mb-0 table-striped">
+                            <tbody>
+                              <tr>
+                                <td>Collar</td>
+                                <td>Traditional Spread (2.875 x 1.75)</td>
+                              </tr>
+                              <tr>
+                                <td>Cuff</td>
+                                <td>Single Button Rounded</td>
+                              </tr>
+                              <tr>
+                                <td>Front Style</td>
+                                <td>Placket Front</td>
+                              </tr>
+                              <tr>
+                                <td>Pockets</td>
+                                <td>No Pockets</td>
+                              </tr>
+                              <tr>
+                                <td>Collar Stiffness</td>
+                                <td>Stiff</td>
+                              </tr>
+                              <tr>
+                                <td>Buttons</td>
+                                <td>Tahiti Shell Buttons</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    
+                    
+                        <h4 class="mb-3">OTHERS:</h4>
+                        <div class="table-responsive table-custom">
+                          <table class="table mb-0 table-striped">
+                            <tbody>
+                              <tr>
+                                <td>Monogram</td>
+                                <td>Script Straight Across in Color: Accented on Stomach (Initials:HHD)</td>
+                              </tr>
+                              <tr>
+                                <td>Shirt Sizing</td>
+                                <td>Dress Shirt Sizing</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-50-tw">
+          <div class="bg-grey-tw-4 p-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="d-flex justify-content-evenly">
+                  <div>
+                    <h4 class="text-style-1 fs-18-tw black-1-tw mb-0">ORDER TOTAL:</h4>
+                  </div>
+                  <div>
+                    <h5 class="text-style-1 fs-20-tw red-tw mb-0">$ 2300.00</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-right"> 
+                  <button class="btn place-order-btn text-right">place order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-md-4">
+        <div class="bg-sandal-tw-3 checkout-padding-1 mt-30-tw">
+          <div class="mb-3 ">
+            <h1 class="text-style-1 fs-16-tw black-3-tw">ORDER SUMMARY</h1>
+            <div class="d-flex justify-content-between align-items-center mt-30-tw">
+              <div>
+                <h6 class="text-style-1 fs-14-tw black-3-tw">Items</h6>
+              </div>
+              <div>
+                <h5 class="text-style-1 fs-16-tw black-3-tw">$458.00</h5>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-10-tw">
+              <div>
+                <h6 class="text-style-1 fs-14-tw black-3-tw">Shipping & Processing</h6>
+              </div>
+              <div>
+                <h5 class="text-style-1 fs-16-tw black-3-tw">$30.00</h5>
+              </div>
+            </div>
+            <div>
+              <p class="text-style-4 fs-12-tw grey-5-tw">(Free Shipping over $200 for US orders)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get DOM elements
+    const mainSection = document.getElementById('shippingMainSection');
+    const addressSection = document.getElementById('addressSelectionSection');
+    const changeBtn = document.getElementById('changeAddressBtn');
+    const closeBtn = document.getElementById('closeAddressSelection');
+    const addressForm = document.getElementById('newAddressForm');
+    const addAddressModal = new bootstrap.Modal(document.getElementById('addAddressModal'));
+
+    // Toggle between sections
+    function toggleSections() {
+      mainSection.classList.toggle('d-none');
+      addressSection.classList.toggle('d-none');
+    }
+
+    changeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      toggleSections();
+    });
+
+    closeBtn.addEventListener('click', toggleSections);
+
+    // Form validation and submission
+    addressForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!addressForm.checkValidity()) {
+        event.stopPropagation();
+        addressForm.classList.add('was-validated');
+        return;
+      }
+
+      // Collect form data
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        address1: document.getElementById('address1').value,
+        address2: document.getElementById('address2').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        postalCode: document.getElementById('postalCode').value,
+        country: document.getElementById('country').value,
+        isDefault: document.getElementById('defaultAddress').checked
+      };
+
+      // Create new address radio option
+      const addressList = document.querySelector('.address-list');
+      const newAddress = createAddressElement(formData);
+      addressList.appendChild(newAddress);
+
+      // Reset form and close modal
+      addressForm.reset();
+      addressForm.classList.remove('was-validated');
+      addAddressModal.hide();
+    });
+
+    // Create new address element
+    function createAddressElement(data) {
+      const div = document.createElement('div');
+      div.className = 'form-check border rounded p-3 mt-2';
+      div.innerHTML = `
+      <input class="form-check-input" type="radio" name="addressRadio" id="address_${Date.now()}">
+      <label class="form-check-label ms-2" for="address_${Date.now()}">
+        <strong>${data.fullName}</strong><br>
+        ${data.address1}${data.address2 ? '<br>' + data.address2 : ''}<br>
+        ${data.city}, ${data.state} ${data.postalCode}<br>
+        ${data.country}
+      </label>
+    `;
+      return div;
+    }
+
+    // Additional field validations
+    const postalCodeInput = document.getElementById('postalCode');
+    postalCodeInput.addEventListener('input', function () {
+      const value = this.value.trim();
+      const isValid = /^\d{5}(-\d{4})?$/.test(value); // US format
+      if (!isValid) {
+        this.setCustomValidity('Please enter a valid postal code (e.g., 12345 or 12345-6789)');
+      } else {
+        this.setCustomValidity('');
+      }
+    });
+
+    const fullNameInput = document.getElementById('fullName');
+    fullNameInput.addEventListener('input', function () {
+      const value = this.value.trim();
+      const isValid = /^[a-zA-Z\s]{2,50}$/.test(value);
+      if (!isValid) {
+        this.setCustomValidity('Please enter a valid name (2-50 characters, letters only)');
+      } else {
+        this.setCustomValidity('');
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get DOM elements
+    const paymentMainSection = document.getElementById('paymentMainSection');
+    const paymentSelectionSection = document.getElementById('paymentSelectionSection');
+    const changePaymentBtn = document.getElementById('changePaymentBtn');
+    const closePaymentBtn = document.getElementById('closePaymentSelection');
+    const cardForm = document.getElementById('newCardForm');
+    const addCardModal = new bootstrap.Modal(document.getElementById('addCardModal'));
+
+    // Toggle between sections
+    function togglePaymentSections() {
+      paymentMainSection.classList.toggle('d-none');
+      paymentSelectionSection.classList.toggle('d-none');
+    }
+
+    changePaymentBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      togglePaymentSections();
+    });
+
+    closePaymentBtn.addEventListener('click', togglePaymentSections);
+
+    // Card number formatting
+    const cardNumberInput = document.getElementById('cardNumber');
+    cardNumberInput.addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      let formattedValue = '';
+
+      for (let i = 0; i < value.length; i++) {
+        if (i > 0 && i % 4 === 0) {
+          formattedValue += ' ';
+        }
+        formattedValue += value[i];
+      }
+
+      e.target.value = formattedValue;
+    });
+
+    // Form validation and submission
+    cardForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!cardForm.checkValidity()) {
+        event.stopPropagation();
+        cardForm.classList.add('was-validated');
+        return;
+      }
+
+      // Collect form data
+      const formData = {
+        cardName: document.getElementById('cardName').value,
+        cardNumber: document.getElementById('cardNumber').value,
+        expiryMonth: document.getElementById('expiryMonth').value,
+        expiryYear: document.getElementById('expiryYear').value,
+        isDefault: document.getElementById('defaultPayment').checked
+      };
+
+      // Create new card radio option
+      const cardsList = document.querySelector('.payment-cards-list');
+      const newCard = createCardElement(formData);
+      cardsList.appendChild(newCard);
+
+      // Reset form and close modal
+      cardForm.reset();
+      cardForm.classList.remove('was-validated');
+      addCardModal.hide();
+    });
+
+    // Create new card element
+    function createCardElement(data) {
+      const div = document.createElement('div');
+      div.className = 'form-check p-3 border-bottom';
+      const lastFour = data.cardNumber.replace(/\s/g, '').slice(-4);
+      const cardType = getCardType(data.cardNumber);
+
+      div.innerHTML = `
+      <input class="form-check-input" type="radio" name="paymentRadio" id="card_${Date.now()}">
+      <label class="form-check-label ms-2 w-100" for="card_${Date.now()}">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <strong>Your credit and debit cards</strong><br>
+            ${cardType} ending in ${lastFour}
+          </div>
+          <div class="col-md-4">
+            <strong>Name on card</strong><br>
+            ${data.cardName}
+          </div>
+          <div class="col-md-4">
+            <strong>Expires on</strong><br>
+            ${data.expiryMonth}/${data.expiryYear}
+          </div>
+        </div>
+      </label>
+    `;
+      return div;
+    }
+
+    // Detect card type based on number
+    function getCardType(number) {
+      const firstNum = number.charAt(0);
+      const secondNum = number.charAt(1);
+      if (firstNum === '4') return 'VISA';
+      if (firstNum === '5') return 'MASTERCARD';
+      if (firstNum === '3' && (secondNum === '4' || secondNum === '7')) return 'AMEX';
+      if (firstNum === '6') return 'DISCOVER';
+      return 'CARD';
+    }
+
+    // Name validation
+    const cardNameInput = document.getElementById('cardName');
+    cardNameInput.addEventListener('input', function () {
+      const value = this.value.trim();
+      const isValid = /^[a-zA-Z\s]{2,50}$/.test(value);
+      if (!isValid) {
+        this.setCustomValidity('Please enter a valid name (2-50 characters, letters only)');
+      } else {
+        this.setCustomValidity('');
+      }
+    });
+  });
+
+  document.querySelectorAll('.checkout-style-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const target = document.querySelector(this.dataset.target);
+
+      // Close any currently open sections
+      document.querySelectorAll('.checkout-style-section.open').forEach(section => {
+        if (section !== target) {
+          section.classList.remove('open');
+          setTimeout(() => {
+            section.style.display = 'none';
+          }, 300); // Wait for transition
+        }
+      });
+
+      // Toggle the clicked section
+      if (target.classList.contains('open')) {
+        target.classList.remove('open');
+        setTimeout(() => {
+          target.style.display = 'none';
+        }, 300); // Wait for the transition to complete
+      } else {
+        target.style.display = 'block';
+        setTimeout(() => {
+          target.classList.add('open');
+        }, 10); // Slight delay for smooth transition
+      }
+    });
+  });
+</script>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- slick-carosuel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- match-height -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+<script src="js/script.js"></script>
+
+</html>

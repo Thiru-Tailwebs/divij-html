@@ -1,0 +1,283 @@
+/* user-account-styles */
+
+.user-account-card {
+  background-color: #F4F4F4;
+  padding: 40px;
+  text-align: center;
+}
+
+.user-account-card h1{
+  color: #131313;
+  font-family: "DM Serif Display", system-ui;
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.user-account-card:hover,
+.user-account-card:focus,
+.user-account-card:active {
+  background-color: #000000;
+}
+
+.user-account-card:hover h1,
+.user-account-card:focus h1,
+.user-account-card.active h1 {
+  color: #ffffff;
+}
+
+/* account-setting-styles */
+
+.account-setting-form label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #3A3A3A;
+  text-transform: uppercase;
+}
+
+.account-setting-form input {
+  border: 0.5px solid #C6C6C6;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+.account-setting-form .change-tag {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #A5845A;
+  margin-left: 20px;
+}
+
+.account-setting-form .form-check {
+  margin: 10px 0px;
+}
+
+.account-setting-form .form-check label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #919191;
+  margin-left: 10px;
+}
+
+.account-setting-form .form-check-input:checked {
+  background-color: #A5845A;
+  border-color: #A5845A;
+}
+
+.account-setting-form .btn-save {
+  background-color: #1E1E1E;
+  padding: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 0px;
+  margin-top: 40px;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+
+/* change-password-styles */
+
+
+.change-password-form label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #3A3A3A;
+  text-transform: uppercase;
+}
+
+.change-password-form input {
+  border: 0.5px solid #C6C6C6;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+.change-password-form .btn-save {
+  background-color: #1E1E1E;
+  padding: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 0px;
+  margin-top: 40px;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+/* wishlist-style */
+
+.wishlist-card {
+  border: 0.8px solid #D5D5D5;
+  height: 350px;
+  padding: 20px 40px;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.wishlist-card img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.wishlist-card i {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  font-size: 20px;
+}
+
+.wishlist-dot {
+  background-color: #A4A4A4;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+}
+
+.wishlist-checkbox label{
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #131313;
+}
+
+.wishlist-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.wishlist-checkbox input[type="checkbox"]:checked {
+  background-color: #A5845A;
+  border-color: #A5845A;
+}
+
+.wishlist-checkbox input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.btn-wishlist {
+  border: 0.78px solid #C6C6C6;
+  background-color: #F7F7F7 !important;
+  padding: 7px 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #C6C6C6 !important;
+  border-radius: 0px;
+  width: 100%;
+  cursor: not-allowed;
+}
+
+.btn-wishlist:hover {
+  background-color: #F7F7F7;
+  color: #C6C6C6;
+  border: 0.78px solid #C6C6C6;
+}
+
+.btn-wishlist.enabled {
+  background-color: #A5845A !important;
+  color: white !important;
+  border-color: #A5845A !important;
+  cursor: pointer;
+}
+
+.btn-wishlist.enabled:hover {
+  background-color: #8b6f4c !important;
+  color: white !important;
+  border-color: #8b6f4c !important;
+}
+
+/* saved-styles */
+
+#stylesAccordion .accordion-button:not(.collapsed) {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#stylesAccordion .table td {
+  vertical-align: middle;
+  padding: 20px 60px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #3A3A3A;
+  text-transform: uppercase;
+}
+
+#stylesAccordion .table tr {
+  border-bottom: transparent;
+}
+
+#stylesAccordion .action-buttons .btn {
+  margin-left: 10px;
+}
+
+#stylesAccordion .delete-btn {
+  color: #dc3545;
+  border-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#stylesAccordion .view-btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+#stylesAccordion .edit-btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #3A3A3A;
+  text-decoration: none;
+}
+
+#stylesAccordion .action-buttons {
+  white-space: nowrap;
+}
+
+#stylesAccordion .accordion-item {
+  border: none;
+}
+
+#stylesAccordion .accordion-button{
+  box-shadow: none;
+  border-bottom: 0.6px solid #C4C4C4;
+  color: #3A3A3A;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#stylesAccordion .accordion-body {
+  padding: 0px;
+}
+
+
+
